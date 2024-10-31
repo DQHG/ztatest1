@@ -1,0 +1,6 @@
+aiohttp
+aiortc
+cryptography
+pydantic
+sqlalchemy
+dnslib
