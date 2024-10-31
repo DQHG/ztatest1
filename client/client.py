@@ -48,7 +48,11 @@ class Client:
         self.add_cgnat_route()
 
         # Tạo kết nối RTCPeerConnection với STUN server
-        ice_servers = [RTCIceServer(urls=["stun:stun.l.google.com:19302"])]
+        ice_servers = [RTCIceServer(urls=["stun:stun.l.google.com:19302"]),
+                       RTCIceServer(urls=["stun:stun-us.3cx.com:3478"]),
+                       RTCIceServer(urls=["stun:stun.2talk.com:3478"]),
+                       RTCIceServer(urls=["stun:stun.aa.net.uk:3478"])             
+                       ]
         configuration = RTCConfiguration(iceServers=ice_servers)
         self.pc = RTCPeerConnection(configuration)
 
@@ -61,8 +65,13 @@ class Client:
                 async def on_iceconnectionstatechange():
                     logger.info(f"ICE connection state is {self.pc.iceConnectionState}")
                     if self.pc.iceConnectionState == "failed":
-                        await self.pc.close()
-                        sys.exit(1)
+                        logger.error("ICE connection state is failed, attempting to restart ICE")
+                        try:
+                            await self.pc.restartIce()  # Thử restart ICE nếu thư viện hỗ trợ
+                        except Exception as e:
+                            logger.error(f"Failed to restart ICE: {e}")
+                    elif self.pc.iceConnectionState == "closed":
+                        logger.info("ICE connection state is closed")
 
                 # Tạo DataChannel
                 self.channel = self.pc.createDataChannel("data")

@@ -1,0 +1,752 @@
+2024-10-31 23:13:55,743 [INFO] __main__: Local DNS server started.
+2024-10-31 23:13:55,744 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-10-31 23:13:55,765 [INFO] __main__: CGNAT route added.
+2024-10-31 23:13:56,365 [INFO] __main__: Connected to signaling server.
+2024-10-31 23:13:56,373 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.64.16 - [WinError 10049] The requested address is not valid in its context
+2024-10-31 23:13:56,374 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.250.162 - [WinError 10049] The requested address is not valid in its context
+2024-10-31 23:13:56,375 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.8.53 - [WinError 10049] The requested address is not valid in its context
+2024-10-31 23:13:56,376 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.56.202 - [WinError 10049] The requested address is not valid in its context
+2024-10-31 23:13:56,377 [INFO] aioice.ice: Connection(0) Could not bind to 10.0.85.2 - [WinError 10049] The requested address is not valid in its context
+2024-10-31 23:13:56,378 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.84.115 - [WinError 10049] The requested address is not valid in its context
+2024-10-31 23:13:56,379 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.63.97 - [WinError 10049] The requested address is not valid in its context
+2024-10-31 23:13:56,444 [INFO] client.dns_resolver: Forwarded DNS request for stun.l.google.com to external DNS server
+2024-10-31 23:14:01,384 [INFO] __main__: Sent offer to connector.
+2024-10-31 23:15:50,088 [INFO] __main__: Local DNS server started.
+2024-10-31 23:15:50,089 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-10-31 23:15:50,107 [INFO] __main__: CGNAT route added.
+2024-10-31 23:15:50,708 [INFO] __main__: Connected to signaling server.
+2024-10-31 23:15:50,716 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.64.16 - [WinError 10049] The requested address is not valid in its context
+2024-10-31 23:15:50,718 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.250.162 - [WinError 10049] The requested address is not valid in its context
+2024-10-31 23:15:50,720 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.8.53 - [WinError 10049] The requested address is not valid in its context
+2024-10-31 23:15:50,720 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.56.202 - [WinError 10049] The requested address is not valid in its context
+2024-10-31 23:15:50,722 [INFO] aioice.ice: Connection(0) Could not bind to 10.0.85.2 - [WinError 10049] The requested address is not valid in its context
+2024-10-31 23:15:50,723 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.84.115 - [WinError 10049] The requested address is not valid in its context
+2024-10-31 23:15:50,726 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.63.97 - [WinError 10049] The requested address is not valid in its context
+2024-10-31 23:15:55,728 [INFO] __main__: Sent offer to connector.
+2024-10-31 23:15:55,936 [INFO] __main__: Received answer from connector.
+2024-10-31 23:15:55,937 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 49779) -> ('172.31.5.226', 57007)) State.FROZEN -> State.WAITING
+2024-10-31 23:15:55,937 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 49780) -> ('172.31.5.226', 57007)) State.FROZEN -> State.WAITING
+2024-10-31 23:15:55,938 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 49781) -> ('172.31.5.226', 57007)) State.FROZEN -> State.WAITING
+2024-10-31 23:15:55,938 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 49782) -> ('172.31.5.226', 57007)) State.FROZEN -> State.WAITING
+2024-10-31 23:15:55,939 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 49783) -> ('172.31.5.226', 57007)) State.FROZEN -> State.WAITING
+2024-10-31 23:15:55,939 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 49779) -> ('3.27.123.138', 57007)) State.FROZEN -> State.WAITING
+2024-10-31 23:15:55,940 [INFO] __main__: ICE connection state is checking
+2024-10-31 23:15:55,941 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 49779) -> ('172.31.5.226', 57007)) State.WAITING -> State.IN_PROGRESS
+2024-10-31 23:15:55,974 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 49780) -> ('172.31.5.226', 57007)) State.WAITING -> State.IN_PROGRESS
+2024-10-31 23:15:56,005 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 49781) -> ('172.31.5.226', 57007)) State.WAITING -> State.IN_PROGRESS
+2024-10-31 23:15:56,027 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-10-31 23:15:56,036 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 49782) -> ('172.31.5.226', 57007)) State.WAITING -> State.IN_PROGRESS
+2024-10-31 23:15:56,067 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 49783) -> ('172.31.5.226', 57007)) State.WAITING -> State.IN_PROGRESS
+2024-10-31 23:15:56,099 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 49779) -> ('3.27.123.138', 57007)) State.WAITING -> State.IN_PROGRESS
+2024-10-31 23:15:56,129 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 49780) -> ('3.27.123.138', 57007)) State.FROZEN -> State.IN_PROGRESS
+2024-10-31 23:15:56,161 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 49781) -> ('3.27.123.138', 57007)) State.FROZEN -> State.IN_PROGRESS
+2024-10-31 23:15:56,192 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 49782) -> ('3.27.123.138', 57007)) State.FROZEN -> State.IN_PROGRESS
+2024-10-31 23:15:56,224 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 49783) -> ('3.27.123.138', 57007)) State.FROZEN -> State.IN_PROGRESS
+2024-10-31 23:15:56,421 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 49783) -> ('3.27.123.138', 57007)) State.IN_PROGRESS -> State.SUCCEEDED
+2024-10-31 23:15:56,422 [INFO] aioice.ice: Connection(0) ICE completed
+2024-10-31 23:15:56,423 [INFO] __main__: ICE connection state is completed
+2024-10-31 23:15:57,403 [INFO] __main__: DataChannel opened.
+2024-10-31 23:16:29,989 [INFO] client.dns_resolver: Forwarded DNS request for v10.events.data.microsoft.com to external DNS server
+2024-10-31 23:16:30,798 [INFO] client.dns_resolver: Forwarded DNS request for v20.events.data.microsoft.com to external DNS server
+2024-10-31 23:16:41,253 [ERROR] asyncio: Task exception was never retrieved
+future: <Task finished name='Task-34' coro=<Client.interact_with_connector() done, defined at C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client.py:229> exception=EOFError()>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client.py", line 234, in interact_with_connector
+    choice = input("Select an action: ")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+EOFError
+2024-10-31 23:16:41,257 [INFO] __main__: ICE connection state is closed
+2024-10-31 23:16:41,314 [ERROR] asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-36' coro=<RTCPeerConnection.close() running at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiortc\rtcpeerconnection.py:500> wait_for=<Future finished result=True>>
+2024-10-31 23:49:53,510 [INFO] __main__: Local DNS server started.
+2024-10-31 23:49:53,511 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-10-31 23:49:53,532 [INFO] __main__: CGNAT route added.
+2024-10-31 23:52:12,247 [INFO] __main__: Local DNS server started.
+2024-10-31 23:52:12,248 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-10-31 23:52:12,268 [INFO] __main__: CGNAT route added.
+2024-10-31 23:52:17,371 [INFO] client.dns_resolver: Forwarded DNS request for settings-win.data.microsoft.com to external DNS server
+2024-10-31 23:52:25,038 [INFO] client.dns_resolver: Forwarded DNS request for ctldl.windowsupdate.com to external DNS server
+2024-10-31 23:55:29,734 [INFO] __main__: Local DNS server started.
+2024-10-31 23:55:29,735 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-10-31 23:55:29,755 [INFO] __main__: CGNAT route added.
+2024-10-31 23:55:33,975 [INFO] client.dns_resolver: Forwarded DNS request for incoming.telemetry.mozilla.org to external DNS server
+2024-10-31 23:55:34,046 [INFO] client.dns_resolver: Forwarded DNS request for telemetry-incoming.r53-2.services.mozilla.com to external DNS server
+2024-10-31 23:55:45,009 [INFO] client.dns_resolver: Forwarded DNS request for logs.ap-southeast-2.amazonaws.com to external DNS server
+2024-10-31 23:55:45,077 [INFO] client.dns_resolver: Forwarded DNS request for logs.ap-southeast-2.amazonaws.com to external DNS server
+2024-10-31 23:55:45,143 [INFO] client.dns_resolver: Forwarded DNS request for logs.ap-southeast-2.amazonaws.com to external DNS server
+2024-10-31 23:56:49,448 [INFO] __main__: Local DNS server started.
+2024-10-31 23:56:49,449 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-10-31 23:56:49,467 [INFO] __main__: CGNAT route added.
+2024-10-31 23:56:50,151 [INFO] client.dns_resolver: Forwarded DNS request for safebrowsing.googleapis.com to external DNS server
+2024-10-31 23:57:01,849 [INFO] client.dns_resolver: Forwarded DNS request for safebrowsing.googleapis.com to external DNS server
+2024-10-31 23:57:28,315 [INFO] __main__: Local DNS server started.
+2024-10-31 23:57:28,316 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-10-31 23:57:28,334 [INFO] __main__: CGNAT route added.
+2024-11-01 00:03:10,060 [INFO] __main__: Local DNS server started.
+2024-11-01 00:03:10,060 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-11-01 00:03:10,089 [INFO] __main__: CGNAT route added.
+2024-11-01 00:03:10,700 [INFO] __main__: Connected to signaling server.
+2024-11-01 00:03:10,708 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.64.16 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:03:10,709 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.250.162 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:03:10,711 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.8.53 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:03:10,712 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.56.202 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:03:10,713 [INFO] aioice.ice: Connection(0) Could not bind to 10.0.85.2 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:03:10,714 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.84.115 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:03:10,716 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.63.97 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:03:10,783 [INFO] client.dns_resolver: Forwarded DNS request for stun.l.google.com to external DNS server
+2024-11-01 00:03:15,737 [INFO] __main__: Sent offer to connector.
+2024-11-01 00:03:15,945 [INFO] __main__: Received answer from connector.
+2024-11-01 00:03:15,946 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 64992) -> ('172.31.5.226', 46162)) State.FROZEN -> State.WAITING
+2024-11-01 00:03:15,947 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 64993) -> ('172.31.5.226', 46162)) State.FROZEN -> State.WAITING
+2024-11-01 00:03:15,948 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 64994) -> ('172.31.5.226', 46162)) State.FROZEN -> State.WAITING
+2024-11-01 00:03:15,948 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 64995) -> ('172.31.5.226', 46162)) State.FROZEN -> State.WAITING
+2024-11-01 00:03:15,949 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 64996) -> ('172.31.5.226', 46162)) State.FROZEN -> State.WAITING
+2024-11-01 00:03:15,949 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 64992) -> ('3.27.123.138', 46162)) State.FROZEN -> State.WAITING
+2024-11-01 00:03:15,949 [INFO] __main__: ICE connection state is checking
+2024-11-01 00:03:15,950 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 64992) -> ('172.31.5.226', 46162)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 00:03:15,986 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 64993) -> ('172.31.5.226', 46162)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 00:03:16,017 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 64994) -> ('172.31.5.226', 46162)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 00:03:16,048 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 64995) -> ('172.31.5.226', 46162)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 00:03:16,078 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 64996) -> ('172.31.5.226', 46162)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 00:03:16,109 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 64992) -> ('3.27.123.138', 46162)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 00:03:16,141 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 64993) -> ('3.27.123.138', 46162)) State.FROZEN -> State.IN_PROGRESS
+2024-11-01 00:03:16,171 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 64994) -> ('3.27.123.138', 46162)) State.FROZEN -> State.IN_PROGRESS
+2024-11-01 00:03:16,203 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 64995) -> ('3.27.123.138', 46162)) State.FROZEN -> State.IN_PROGRESS
+2024-11-01 00:03:16,234 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 64996) -> ('3.27.123.138', 46162)) State.FROZEN -> State.IN_PROGRESS
+2024-11-01 00:03:16,433 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 64996) -> ('3.27.123.138', 46162)) State.IN_PROGRESS -> State.SUCCEEDED
+2024-11-01 00:03:16,435 [INFO] aioice.ice: Connection(0) ICE completed
+2024-11-01 00:03:16,436 [INFO] __main__: ICE connection state is completed
+2024-11-01 00:03:17,425 [INFO] __main__: DataChannel opened.
+2024-11-01 00:03:42,783 [INFO] client.dns_resolver: Forwarded DNS request for v10.events.data.microsoft.com to external DNS server
+2024-11-01 00:03:43,993 [INFO] client.dns_resolver: Forwarded DNS request for v20.events.data.microsoft.com to external DNS server
+2024-11-01 00:03:51,901 [INFO] client.dns_resolver: Forwarded DNS request for ec2.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 00:03:51,901 [INFO] client.dns_resolver: Forwarded DNS request for ap-southeast-2.console.aws.amazon.com to external DNS server
+2024-11-01 00:03:51,967 [INFO] client.dns_resolver: Forwarded DNS request for ec2.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 00:03:51,968 [INFO] client.dns_resolver: Forwarded DNS request for a9faf713df4858b6a.awsglobalaccelerator.com to external DNS server
+2024-11-01 00:03:52,030 [INFO] client.dns_resolver: Forwarded DNS request for ec2.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 00:04:29,916 [INFO] client.dns_resolver: Forwarded DNS request for global.console.aws.amazon.com to external DNS server
+2024-11-01 00:04:29,982 [INFO] client.dns_resolver: Forwarded DNS request for a299197c08ba4f000.awsglobalaccelerator.com to external DNS server
+2024-11-01 00:04:30,136 [INFO] client.dns_resolver: Forwarded DNS request for global.ccs.amazonaws.com to external DNS server
+2024-11-01 00:04:30,467 [INFO] client.dns_resolver: Forwarded DNS request for ap-southeast-2.prod.p13n.console.aws.dev to external DNS server
+2024-11-01 00:04:30,522 [INFO] client.dns_resolver: Forwarded DNS request for ap-southeast-1.ccs.amazonaws.com to external DNS server
+2024-11-01 00:04:31,141 [INFO] client.dns_resolver: Forwarded DNS request for a.b.cdn.console.awsstatic.com to external DNS server
+2024-11-01 00:04:31,211 [INFO] client.dns_resolver: Forwarded DNS request for a.b.cdn.console.awsstatic.com to external DNS server
+2024-11-01 00:04:31,281 [INFO] client.dns_resolver: Forwarded DNS request for a.b.cdn.console.awsstatic.com to external DNS server
+2024-11-01 00:04:33,112 [INFO] client.dns_resolver: Forwarded DNS request for ap-southeast-2.ctrl.prod.os.notifications.aws.dev to external DNS server
+2024-11-01 00:04:33,116 [INFO] client.dns_resolver: Forwarded DNS request for d3fqgp9xtrg3cb.cloudfront.net to external DNS server
+2024-11-01 00:04:35,069 [INFO] client.dns_resolver: Forwarded DNS request for compute-optimizer.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 00:04:35,069 [INFO] client.dns_resolver: Forwarded DNS request for monitoring.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 00:04:35,077 [INFO] client.dns_resolver: Forwarded DNS request for ssm.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 00:04:35,139 [INFO] client.dns_resolver: Forwarded DNS request for monitoring.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 00:04:35,144 [INFO] client.dns_resolver: Forwarded DNS request for ssm.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 00:04:35,209 [INFO] client.dns_resolver: Forwarded DNS request for monitoring.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 00:04:35,214 [INFO] client.dns_resolver: Forwarded DNS request for ssm.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 00:04:37,098 [INFO] client.dns_resolver: Forwarded DNS request for safebrowsing.googleapis.com to external DNS server
+2024-11-01 00:04:38,187 [INFO] client.dns_resolver: Forwarded DNS request for logs.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 00:04:38,252 [INFO] client.dns_resolver: Forwarded DNS request for logs.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 00:04:38,318 [INFO] client.dns_resolver: Forwarded DNS request for logs.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 00:05:05,040 [ERROR] asyncio: Task exception was never retrieved
+future: <Task finished name='Task-34' coro=<Client.interact_with_connector() done, defined at C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client.py:229> exception=EOFError()>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client.py", line 234, in interact_with_connector
+    choice = input("Select an action: ")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+EOFError
+2024-11-01 00:05:05,044 [INFO] __main__: ICE connection state is closed
+2024-11-01 00:05:05,089 [ERROR] asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-35' coro=<RTCPeerConnection.close() running at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiortc\rtcpeerconnection.py:500> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2024-11-01 00:05:06,897 [INFO] __main__: Local DNS server started.
+2024-11-01 00:05:06,897 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-11-01 00:05:06,918 [INFO] __main__: CGNAT route added.
+2024-11-01 00:05:12,254 [INFO] client.dns_resolver: Forwarded DNS request for rr5---sn-42u-nboek.googlevideo.com to external DNS server
+2024-11-01 00:05:12,275 [INFO] client.dns_resolver: Forwarded DNS request for i.ytimg.com to external DNS server
+2024-11-01 00:05:12,321 [INFO] client.dns_resolver: Forwarded DNS request for rr5.sn-42u-nboek.googlevideo.com to external DNS server
+2024-11-01 00:05:12,341 [INFO] client.dns_resolver: Forwarded DNS request for i.ytimg.com to external DNS server
+2024-11-01 00:05:12,388 [INFO] client.dns_resolver: Forwarded DNS request for rr5.sn-42u-nboek.googlevideo.com to external DNS server
+2024-11-01 00:05:12,408 [INFO] client.dns_resolver: Forwarded DNS request for i.ytimg.com to external DNS server
+2024-11-01 00:05:16,654 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com to external DNS server
+2024-11-01 00:05:16,717 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com to external DNS server
+2024-11-01 00:05:16,781 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com to external DNS server
+2024-11-01 00:05:16,873 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com.vn to external DNS server
+2024-11-01 00:05:16,936 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com.vn to external DNS server
+2024-11-01 00:05:17,002 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com.vn to external DNS server
+2024-11-01 00:05:18,985 [INFO] client.dns_resolver: Forwarded DNS request for i.ytimg.com to external DNS server
+2024-11-01 00:05:19,408 [INFO] client.dns_resolver: Forwarded DNS request for www.gstatic.com to external DNS server
+2024-11-01 00:05:19,472 [INFO] client.dns_resolver: Forwarded DNS request for www.gstatic.com to external DNS server
+2024-11-01 00:05:19,536 [INFO] client.dns_resolver: Forwarded DNS request for www.gstatic.com to external DNS server
+2024-11-01 00:05:26,973 [INFO] client.dns_resolver: Forwarded DNS request for yt3.ggpht.com to external DNS server
+2024-11-01 00:05:27,037 [INFO] client.dns_resolver: Forwarded DNS request for photos-ugc.l.googleusercontent.com to external DNS server
+2024-11-01 00:05:27,104 [INFO] client.dns_resolver: Forwarded DNS request for photos-ugc.l.googleusercontent.com to external DNS server
+2024-11-01 00:07:36,779 [INFO] __main__: Local DNS server started.
+2024-11-01 00:07:36,780 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-11-01 00:07:36,800 [INFO] __main__: CGNAT route added.
+2024-11-01 00:07:37,419 [INFO] __main__: Connected to signaling server.
+2024-11-01 00:07:37,427 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.64.16 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:07:37,427 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.250.162 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:07:37,429 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.8.53 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:07:37,430 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.56.202 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:07:37,431 [INFO] aioice.ice: Connection(0) Could not bind to 10.0.85.2 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:07:37,433 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.84.115 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:07:37,434 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.63.97 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:07:42,455 [INFO] __main__: Sent offer to connector.
+2024-11-01 00:07:43,763 [INFO] client.dns_resolver: Forwarded DNS request for westus-0.in.applicationinsights.azure.com to external DNS server
+2024-11-01 00:07:53,069 [INFO] client.dns_resolver: Forwarded DNS request for westus-0.in.applicationinsights.azure.com to external DNS server
+2024-11-01 00:08:27,491 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com to external DNS server
+2024-11-01 00:08:27,558 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com to external DNS server
+2024-11-01 00:08:27,623 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com to external DNS server
+2024-11-01 00:08:40,536 [INFO] client.dns_resolver: Forwarded DNS request for activity.windows.com to external DNS server
+2024-11-01 00:09:32,324 [INFO] __main__: Local DNS server started.
+2024-11-01 00:09:32,324 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-11-01 00:09:32,343 [INFO] __main__: CGNAT route added.
+2024-11-01 00:09:32,921 [INFO] __main__: Connected to signaling server.
+2024-11-01 00:09:32,930 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.64.16 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:09:32,931 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.250.162 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:09:32,932 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.8.53 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:09:32,933 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.56.202 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:09:32,935 [INFO] aioice.ice: Connection(0) Could not bind to 10.0.85.2 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:09:32,936 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.84.115 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:09:32,938 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.63.97 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:09:33,009 [INFO] client.dns_resolver: Forwarded DNS request for stun.l.google.com to external DNS server
+2024-11-01 00:09:37,949 [INFO] __main__: Sent offer to connector.
+2024-11-01 00:09:38,146 [INFO] __main__: Received answer from connector.
+2024-11-01 00:09:38,147 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 52754) -> ('172.31.5.226', 45922)) State.FROZEN -> State.WAITING
+2024-11-01 00:09:38,147 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 52755) -> ('172.31.5.226', 45922)) State.FROZEN -> State.WAITING
+2024-11-01 00:09:38,148 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 52756) -> ('172.31.5.226', 45922)) State.FROZEN -> State.WAITING
+2024-11-01 00:09:38,148 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 52757) -> ('172.31.5.226', 45922)) State.FROZEN -> State.WAITING
+2024-11-01 00:09:38,149 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 52758) -> ('172.31.5.226', 45922)) State.FROZEN -> State.WAITING
+2024-11-01 00:09:38,150 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 52754) -> ('3.27.123.138', 45922)) State.FROZEN -> State.WAITING
+2024-11-01 00:09:38,150 [INFO] __main__: ICE connection state is checking
+2024-11-01 00:09:38,151 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 52754) -> ('172.31.5.226', 45922)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 00:09:38,182 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 52755) -> ('172.31.5.226', 45922)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 00:09:38,184 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 52756) -> ('172.31.5.226', 45922)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 00:09:38,213 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 52757) -> ('172.31.5.226', 45922)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 00:09:38,244 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 52758) -> ('172.31.5.226', 45922)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 00:09:38,274 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 52754) -> ('3.27.123.138', 45922)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 00:09:38,305 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 52755) -> ('3.27.123.138', 45922)) State.FROZEN -> State.IN_PROGRESS
+2024-11-01 00:09:38,337 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 52756) -> ('3.27.123.138', 45922)) State.FROZEN -> State.IN_PROGRESS
+2024-11-01 00:09:38,368 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 52757) -> ('3.27.123.138', 45922)) State.FROZEN -> State.IN_PROGRESS
+2024-11-01 00:09:38,398 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 52758) -> ('3.27.123.138', 45922)) State.FROZEN -> State.IN_PROGRESS
+2024-11-01 00:09:40,456 [INFO] client.dns_resolver: Forwarded DNS request for logs.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 00:09:40,521 [INFO] client.dns_resolver: Forwarded DNS request for logs.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 00:09:40,588 [INFO] client.dns_resolver: Forwarded DNS request for logs.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 00:10:03,088 [INFO] client.dns_resolver: Forwarded DNS request for www.youtube.com to external DNS server
+2024-11-01 00:10:03,155 [INFO] client.dns_resolver: Forwarded DNS request for youtube-ui.l.google.com to external DNS server
+2024-11-01 00:10:03,223 [INFO] client.dns_resolver: Forwarded DNS request for youtube-ui.l.google.com to external DNS server
+2024-11-01 00:10:03,470 [INFO] client.dns_resolver: Forwarded DNS request for rr2---sn-42u-nbosk.googlevideo.com to external DNS server
+2024-11-01 00:10:03,492 [INFO] client.dns_resolver: Forwarded DNS request for yt3.ggpht.com to external DNS server
+2024-11-01 00:10:03,492 [INFO] client.dns_resolver: Forwarded DNS request for i.ytimg.com to external DNS server
+2024-11-01 00:10:03,534 [INFO] client.dns_resolver: Forwarded DNS request for rr2.sn-42u-nbosk.googlevideo.com to external DNS server
+2024-11-01 00:10:03,562 [INFO] client.dns_resolver: Forwarded DNS request for photos-ugc.l.googleusercontent.com to external DNS server
+2024-11-01 00:10:03,598 [INFO] client.dns_resolver: Forwarded DNS request for rr2.sn-42u-nbosk.googlevideo.com to external DNS server
+2024-11-01 00:10:04,565 [INFO] client.dns_resolver: Forwarded DNS request for googleads.g.doubleclick.net to external DNS server
+2024-11-01 00:10:04,634 [INFO] client.dns_resolver: Forwarded DNS request for googleads.g.doubleclick.net to external DNS server
+2024-11-01 00:10:04,698 [INFO] client.dns_resolver: Forwarded DNS request for googleads.g.doubleclick.net to external DNS server
+2024-11-01 00:10:06,358 [INFO] client.dns_resolver: Forwarded DNS request for accounts.youtube.com to external DNS server
+2024-11-01 00:10:06,429 [INFO] client.dns_resolver: Forwarded DNS request for www3.l.google.com to external DNS server
+2024-11-01 00:10:06,492 [INFO] client.dns_resolver: Forwarded DNS request for www3.l.google.com to external DNS server
+2024-11-01 00:10:07,862 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com to external DNS server
+2024-11-01 00:10:07,928 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com to external DNS server
+2024-11-01 00:10:08,034 [INFO] client.dns_resolver: Forwarded DNS request for r1---sn-42u-nboek.googlevideo.com to external DNS server
+2024-11-01 00:10:08,139 [INFO] client.dns_resolver: Forwarded DNS request for r1.sn-42u-nboek.googlevideo.com to external DNS server
+2024-11-01 00:10:08,139 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com.vn to external DNS server
+2024-11-01 00:10:08,233 [INFO] client.dns_resolver: Forwarded DNS request for r1.sn-42u-nboek.googlevideo.com to external DNS server
+2024-11-01 00:10:08,233 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com.vn to external DNS server
+2024-11-01 00:10:41,692 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 52754) -> ('172.31.5.226', 45922)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 00:10:41,768 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 52755) -> ('172.31.5.226', 45922)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 00:10:41,770 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 52756) -> ('172.31.5.226', 45922)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 00:10:41,771 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 52757) -> ('172.31.5.226', 45922)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 00:10:41,845 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 52758) -> ('172.31.5.226', 45922)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 00:10:41,846 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 52754) -> ('3.27.123.138', 45922)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 00:10:41,907 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 52755) -> ('3.27.123.138', 45922)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 00:10:41,908 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 52756) -> ('3.27.123.138', 45922)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 00:10:41,969 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 52758) -> ('3.27.123.138', 45922)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 00:10:41,970 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 52757) -> ('3.27.123.138', 45922)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 00:10:41,971 [INFO] aioice.ice: Connection(0) ICE failed
+2024-11-01 00:10:41,972 [INFO] __main__: ICE connection state is failed
+2024-11-01 00:10:41,973 [INFO] __main__: ICE connection state is closed
+2024-11-01 00:10:41,974 [ERROR] asyncio: Exception in callback AsyncIOEventEmitter._emit_run.<locals>.callback(<Task finishe...SystemExit(1)>) at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\asyncio.py:69
+handle: <Handle AsyncIOEventEmitter._emit_run.<locals>.callback(<Task finishe...SystemExit(1)>) at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\asyncio.py:69>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 637, in run_until_complete
+    self.run_forever()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 604, in run_forever
+    self._run_once()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1909, in _run_once
+    handle._run()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client.py", line 65, in on_iceconnectionstatechange
+    sys.exit(1)
+SystemExit: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\asyncio.py", line 77, in callback
+    self.emit("error", exc)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\base.py", line 215, in emit
+    self._emit_handle_potential_error(event, args[0] if args else None)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\base.py", line 175, in _emit_handle_potential_error
+    raise PyeeError(f"Uncaught, unspecified 'error' event: {error}")
+pyee.base.PyeeError: Uncaught, unspecified 'error' event: 1
+2024-11-01 00:13:12,333 [INFO] __main__: Local DNS server started.
+2024-11-01 00:13:12,334 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-11-01 00:13:12,354 [INFO] __main__: CGNAT route added.
+2024-11-01 00:13:12,960 [INFO] __main__: Connected to signaling server.
+2024-11-01 00:13:12,970 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.64.16 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:13:12,971 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.250.162 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:13:12,972 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.8.53 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:13:12,972 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.56.202 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:13:12,973 [INFO] aioice.ice: Connection(0) Could not bind to 10.0.85.2 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:13:12,974 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.84.115 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:13:12,975 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.63.97 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:13:17,970 [INFO] __main__: Sent offer to connector.
+2024-11-01 00:13:31,458 [INFO] __main__: Local DNS server started.
+2024-11-01 00:13:31,459 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-11-01 00:13:31,477 [INFO] __main__: CGNAT route added.
+2024-11-01 00:13:32,049 [INFO] __main__: Connected to signaling server.
+2024-11-01 00:13:32,057 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.64.16 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:13:32,058 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.250.162 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:13:32,060 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.8.53 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:13:32,060 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.56.202 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:13:32,062 [INFO] aioice.ice: Connection(0) Could not bind to 10.0.85.2 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:13:32,062 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.84.115 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:13:32,064 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.63.97 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:13:37,088 [INFO] __main__: Sent offer to connector.
+2024-11-01 00:13:37,282 [INFO] __main__: Received answer from connector.
+2024-11-01 00:13:37,283 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 64306) -> ('172.31.5.226', 54453)) State.FROZEN -> State.WAITING
+2024-11-01 00:13:37,283 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 64307) -> ('172.31.5.226', 54453)) State.FROZEN -> State.WAITING
+2024-11-01 00:13:37,285 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 64308) -> ('172.31.5.226', 54453)) State.FROZEN -> State.WAITING
+2024-11-01 00:13:37,285 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 64309) -> ('172.31.5.226', 54453)) State.FROZEN -> State.WAITING
+2024-11-01 00:13:37,285 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 64310) -> ('172.31.5.226', 54453)) State.FROZEN -> State.WAITING
+2024-11-01 00:13:37,286 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 64306) -> ('3.27.123.138', 54453)) State.FROZEN -> State.WAITING
+2024-11-01 00:13:37,286 [INFO] __main__: ICE connection state is checking
+2024-11-01 00:13:37,287 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 64306) -> ('172.31.5.226', 54453)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 00:13:37,319 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 64307) -> ('172.31.5.226', 54453)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 00:13:37,350 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 64308) -> ('172.31.5.226', 54453)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 00:13:37,381 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 64309) -> ('172.31.5.226', 54453)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 00:13:37,412 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 64310) -> ('172.31.5.226', 54453)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 00:13:37,443 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 64306) -> ('3.27.123.138', 54453)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 00:13:37,473 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 64307) -> ('3.27.123.138', 54453)) State.FROZEN -> State.IN_PROGRESS
+2024-11-01 00:13:37,504 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 64308) -> ('3.27.123.138', 54453)) State.FROZEN -> State.IN_PROGRESS
+2024-11-01 00:13:37,535 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 64309) -> ('3.27.123.138', 54453)) State.FROZEN -> State.IN_PROGRESS
+2024-11-01 00:13:37,567 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 64310) -> ('3.27.123.138', 54453)) State.FROZEN -> State.IN_PROGRESS
+2024-11-01 00:13:39,613 [INFO] client.dns_resolver: Resolved protected.example.com to 100.64.0.1 (CGNAT)
+2024-11-01 00:13:39,615 [INFO] client.dns_resolver: Resolved protected.example.com to 100.64.0.1 (CGNAT)
+2024-11-01 00:13:39,617 [INFO] client.dns_resolver: Resolved protected.example.com to 100.64.0.1 (CGNAT)
+2024-11-01 00:13:41,804 [INFO] client.dns_resolver: Resolved protected.example.com to 100.64.0.1 (CGNAT)
+2024-11-01 00:13:45,824 [INFO] client.dns_resolver: Forwarded DNS request for rr1---sn-42u-nboed.googlevideo.com to external DNS server
+2024-11-01 00:13:45,858 [INFO] client.dns_resolver: Forwarded DNS request for i.ytimg.com to external DNS server
+2024-11-01 00:13:45,862 [INFO] client.dns_resolver: Forwarded DNS request for yt3.ggpht.com to external DNS server
+2024-11-01 00:13:45,892 [INFO] client.dns_resolver: Forwarded DNS request for rr1.sn-42u-nboed.googlevideo.com to external DNS server
+2024-11-01 00:13:45,927 [INFO] client.dns_resolver: Forwarded DNS request for i.ytimg.com to external DNS server
+2024-11-01 00:13:45,930 [INFO] client.dns_resolver: Forwarded DNS request for photos-ugc.l.googleusercontent.com to external DNS server
+2024-11-01 00:13:45,957 [INFO] client.dns_resolver: Forwarded DNS request for rr1.sn-42u-nboed.googlevideo.com to external DNS server
+2024-11-01 00:13:45,992 [INFO] client.dns_resolver: Forwarded DNS request for i.ytimg.com to external DNS server
+2024-11-01 00:13:45,998 [INFO] client.dns_resolver: Forwarded DNS request for photos-ugc.l.googleusercontent.com to external DNS server
+2024-11-01 00:13:55,398 [INFO] client.dns_resolver: Forwarded DNS request for r2---sn-42u-nboez.googlevideo.com to external DNS server
+2024-11-01 00:13:55,466 [INFO] client.dns_resolver: Forwarded DNS request for r2.sn-42u-nboez.googlevideo.com to external DNS server
+2024-11-01 00:13:55,531 [INFO] client.dns_resolver: Forwarded DNS request for r2.sn-42u-nboez.googlevideo.com to external DNS server
+2024-11-01 00:14:39,975 [INFO] client.dns_resolver: Forwarded DNS request for ap-southeast-2.prod.pr.analytics.console.aws.a2z.com to external DNS server
+2024-11-01 00:14:40,039 [INFO] client.dns_resolver: Forwarded DNS request for ap-southeast-2.prod.pr.analytics.console.aws.a2z.com to external DNS server
+2024-11-01 00:14:40,108 [INFO] client.dns_resolver: Forwarded DNS request for ap-southeast-2.prod.pr.analytics.console.aws.a2z.com to external DNS server
+2024-11-01 00:14:40,858 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 64306) -> ('172.31.5.226', 54453)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 00:14:40,858 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 64307) -> ('172.31.5.226', 54453)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 00:14:40,920 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 64308) -> ('172.31.5.226', 54453)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 00:14:40,982 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 64310) -> ('172.31.5.226', 54453)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 00:14:40,983 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 64309) -> ('172.31.5.226', 54453)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 00:14:41,030 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 64306) -> ('3.27.123.138', 54453)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 00:14:41,032 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 64307) -> ('3.27.123.138', 54453)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 00:14:41,108 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 64309) -> ('3.27.123.138', 54453)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 00:14:41,109 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 64308) -> ('3.27.123.138', 54453)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 00:14:41,139 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 64310) -> ('3.27.123.138', 54453)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 00:14:41,140 [INFO] aioice.ice: Connection(0) ICE failed
+2024-11-01 00:14:41,141 [INFO] __main__: ICE connection state is failed
+2024-11-01 00:14:41,142 [INFO] __main__: ICE connection state is closed
+2024-11-01 00:14:41,143 [ERROR] asyncio: Exception in callback AsyncIOEventEmitter._emit_run.<locals>.callback(<Task finishe...SystemExit(1)>) at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\asyncio.py:69
+handle: <Handle AsyncIOEventEmitter._emit_run.<locals>.callback(<Task finishe...SystemExit(1)>) at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\asyncio.py:69>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 637, in run_until_complete
+    self.run_forever()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 604, in run_forever
+    self._run_once()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1909, in _run_once
+    handle._run()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client.py", line 65, in on_iceconnectionstatechange
+    sys.exit(1)
+SystemExit: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\asyncio.py", line 77, in callback
+    self.emit("error", exc)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\base.py", line 215, in emit
+    self._emit_handle_potential_error(event, args[0] if args else None)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\base.py", line 175, in _emit_handle_potential_error
+    raise PyeeError(f"Uncaught, unspecified 'error' event: {error}")
+pyee.base.PyeeError: Uncaught, unspecified 'error' event: 1
+2024-11-01 00:14:41,152 [INFO] client.dns_resolver: Forwarded DNS request for ap-southeast-2.console.aws.amazon.com to external DNS server
+2024-11-01 00:14:41,217 [INFO] client.dns_resolver: Forwarded DNS request for a9faf713df4858b6a.awsglobalaccelerator.com to external DNS server
+2024-11-01 00:14:41,225 [INFO] client.dns_resolver: Forwarded DNS request for ap-southeast-2.console.aws.amazon.com to external DNS server
+2024-11-01 00:14:41,284 [INFO] client.dns_resolver: Forwarded DNS request for a9faf713df4858b6a.awsglobalaccelerator.com to external DNS server
+2024-11-01 00:57:59,835 [INFO] __main__: Local DNS server started.
+2024-11-01 00:57:59,836 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-11-01 00:57:59,858 [INFO] __main__: CGNAT route added.
+2024-11-01 00:58:00,550 [INFO] __main__: Connected to signaling server.
+2024-11-01 00:58:00,560 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.64.16 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:58:00,561 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.250.162 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:58:00,563 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.8.53 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:58:00,564 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.56.202 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:58:00,565 [INFO] aioice.ice: Connection(0) Could not bind to 10.0.85.2 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:58:00,565 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.84.115 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:58:00,566 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.63.97 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 00:58:00,579 [INFO] client.dns_resolver: Forwarded DNS request for api.githubcopilot.com to external DNS server
+2024-11-01 00:58:00,633 [INFO] client.dns_resolver: Forwarded DNS request for stun.l.google.com to external DNS server
+2024-11-01 00:58:05,581 [INFO] __main__: Sent offer to connector.
+2024-11-01 00:58:05,794 [INFO] __main__: Received answer from connector.
+2024-11-01 00:58:05,795 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 63266) -> ('172.31.5.226', 53954)) State.FROZEN -> State.WAITING
+2024-11-01 00:58:05,795 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 63267) -> ('172.31.5.226', 53954)) State.FROZEN -> State.WAITING
+2024-11-01 00:58:05,796 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 63268) -> ('172.31.5.226', 53954)) State.FROZEN -> State.WAITING
+2024-11-01 00:58:05,796 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 63269) -> ('172.31.5.226', 53954)) State.FROZEN -> State.WAITING
+2024-11-01 00:58:05,797 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 63270) -> ('172.31.5.226', 53954)) State.FROZEN -> State.WAITING
+2024-11-01 00:58:05,797 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 63266) -> ('3.27.123.138', 53954)) State.FROZEN -> State.WAITING
+2024-11-01 00:58:05,798 [INFO] __main__: ICE connection state is checking
+2024-11-01 00:58:05,799 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 63266) -> ('172.31.5.226', 53954)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 00:58:05,828 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 63267) -> ('172.31.5.226', 53954)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 00:58:05,858 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 63268) -> ('172.31.5.226', 53954)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 00:58:05,889 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 63269) -> ('172.31.5.226', 53954)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 00:58:05,919 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 63270) -> ('172.31.5.226', 53954)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 00:58:05,950 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 63266) -> ('3.27.123.138', 53954)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 00:58:05,981 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 63267) -> ('3.27.123.138', 53954)) State.FROZEN -> State.IN_PROGRESS
+2024-11-01 00:58:06,012 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 63268) -> ('3.27.123.138', 53954)) State.FROZEN -> State.IN_PROGRESS
+2024-11-01 00:58:06,042 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 63269) -> ('3.27.123.138', 53954)) State.FROZEN -> State.IN_PROGRESS
+2024-11-01 00:58:06,073 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 63270) -> ('3.27.123.138', 53954)) State.FROZEN -> State.IN_PROGRESS
+2024-11-01 00:58:15,271 [INFO] client.dns_resolver: Forwarded DNS request for checkappexec.microsoft.com to external DNS server
+2024-11-01 00:58:17,330 [INFO] client.dns_resolver: Forwarded DNS request for dual-s-ring.msedge.net to external DNS server
+2024-11-01 00:58:17,476 [INFO] client.dns_resolver: Forwarded DNS request for arm-ring.msedge.net to external DNS server
+2024-11-01 00:58:17,854 [INFO] client.dns_resolver: Forwarded DNS request for 6955a990c64a68509a0244155cffc324.azr.footprintdns.com to external DNS server
+2024-11-01 00:58:23,175 [INFO] client.dns_resolver: Forwarded DNS request for activity.windows.com to external DNS server
+2024-11-01 00:58:32,230 [INFO] client.dns_resolver: Forwarded DNS request for 1.0.0.127.in-addr.arpa to external DNS server
+2024-11-01 00:58:32,234 [INFO] client.dns_resolver: Resolved protected.example.com to 100.64.0.1 (CGNAT)
+2024-11-01 00:58:32,235 [INFO] client.dns_resolver: Resolved protected.example.com to 100.64.0.1 (CGNAT)
+2024-11-01 00:58:39,143 [INFO] client.dns_resolver: Forwarded DNS request for www.gstatic.com to external DNS server
+2024-11-01 00:58:39,214 [INFO] client.dns_resolver: Forwarded DNS request for www.gstatic.com to external DNS server
+2024-11-01 00:58:39,280 [INFO] client.dns_resolver: Forwarded DNS request for www.gstatic.com to external DNS server
+2024-11-01 00:58:57,589 [INFO] client.dns_resolver: Forwarded DNS request for yt3.ggpht.com to external DNS server
+2024-11-01 00:58:57,655 [INFO] client.dns_resolver: Forwarded DNS request for photos-ugc.l.googleusercontent.com to external DNS server
+2024-11-01 00:58:57,722 [INFO] client.dns_resolver: Forwarded DNS request for photos-ugc.l.googleusercontent.com to external DNS server
+2024-11-01 00:58:58,765 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com to external DNS server
+2024-11-01 00:58:58,829 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com to external DNS server
+2024-11-01 00:58:58,900 [INFO] client.dns_resolver: Resolved protected.example.com to 100.64.0.1 (CGNAT)
+2024-11-01 00:58:58,902 [INFO] client.dns_resolver: Resolved protected.example.com to 100.64.0.1 (CGNAT)
+2024-11-01 00:58:58,904 [INFO] client.dns_resolver: Resolved protected.example.com to 100.64.0.1 (CGNAT)
+2024-11-01 00:59:03,066 [INFO] client.dns_resolver: Resolved protected.example.com to 100.64.0.1 (CGNAT)
+2024-11-01 00:59:09,361 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 63267) -> ('172.31.5.226', 53954)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 00:59:09,362 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 63266) -> ('172.31.5.226', 53954)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 00:59:09,471 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 63268) -> ('172.31.5.226', 53954)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 00:59:09,472 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 63269) -> ('172.31.5.226', 53954)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 00:59:09,516 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 63266) -> ('3.27.123.138', 53954)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 00:59:09,517 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 63270) -> ('172.31.5.226', 53954)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 00:59:09,578 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 63268) -> ('3.27.123.138', 53954)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 00:59:09,579 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 63267) -> ('3.27.123.138', 53954)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 00:59:09,641 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 63270) -> ('3.27.123.138', 53954)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 00:59:09,643 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 63269) -> ('3.27.123.138', 53954)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 00:59:09,643 [INFO] aioice.ice: Connection(0) ICE failed
+2024-11-01 00:59:09,652 [INFO] __main__: ICE connection state is failed
+2024-11-01 00:59:09,653 [INFO] __main__: ICE connection state is closed
+2024-11-01 00:59:09,654 [ERROR] asyncio: Exception in callback AsyncIOEventEmitter._emit_run.<locals>.callback(<Task finishe...SystemExit(1)>) at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\asyncio.py:69
+handle: <Handle AsyncIOEventEmitter._emit_run.<locals>.callback(<Task finishe...SystemExit(1)>) at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\asyncio.py:69>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 637, in run_until_complete
+    self.run_forever()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 604, in run_forever
+    self._run_once()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1909, in _run_once
+    handle._run()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client.py", line 65, in on_iceconnectionstatechange
+    sys.exit(1)
+SystemExit: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\asyncio.py", line 77, in callback
+    self.emit("error", exc)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\base.py", line 215, in emit
+    self._emit_handle_potential_error(event, args[0] if args else None)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\base.py", line 175, in _emit_handle_potential_error
+    raise PyeeError(f"Uncaught, unspecified 'error' event: {error}")
+pyee.base.PyeeError: Uncaught, unspecified 'error' event: 1
+2024-11-01 01:05:27,060 [INFO] __main__: Local DNS server started.
+2024-11-01 01:05:27,062 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-11-01 01:05:27,082 [INFO] __main__: CGNAT route added.
+2024-11-01 01:05:27,678 [INFO] __main__: Connected to signaling server.
+2024-11-01 01:05:27,688 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.64.16 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 01:05:27,689 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.250.162 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 01:05:27,690 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.8.53 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 01:05:27,690 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.56.202 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 01:05:27,691 [INFO] aioice.ice: Connection(0) Could not bind to 10.0.85.2 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 01:05:27,692 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.84.115 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 01:05:27,693 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.63.97 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 01:05:27,760 [INFO] client.dns_resolver: Forwarded DNS request for stun.l.google.com to external DNS server
+2024-11-01 01:05:32,708 [INFO] __main__: Sent offer to connector.
+2024-11-01 01:05:32,912 [INFO] __main__: Received answer from connector.
+2024-11-01 01:05:32,913 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 62500) -> ('172.31.5.226', 35108)) State.FROZEN -> State.WAITING
+2024-11-01 01:05:32,914 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 62501) -> ('172.31.5.226', 35108)) State.FROZEN -> State.WAITING
+2024-11-01 01:05:32,915 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 62502) -> ('172.31.5.226', 35108)) State.FROZEN -> State.WAITING
+2024-11-01 01:05:32,915 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 62503) -> ('172.31.5.226', 35108)) State.FROZEN -> State.WAITING
+2024-11-01 01:05:32,916 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 62504) -> ('172.31.5.226', 35108)) State.FROZEN -> State.WAITING
+2024-11-01 01:05:32,916 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 62500) -> ('3.27.123.138', 35108)) State.FROZEN -> State.WAITING
+2024-11-01 01:05:32,917 [INFO] __main__: ICE connection state is checking
+2024-11-01 01:05:32,917 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 62500) -> ('172.31.5.226', 35108)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 01:05:32,940 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 62501) -> ('172.31.5.226', 35108)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 01:05:32,971 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 62502) -> ('172.31.5.226', 35108)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 01:05:33,001 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 62503) -> ('172.31.5.226', 35108)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 01:05:33,032 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 62504) -> ('172.31.5.226', 35108)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 01:05:33,063 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 62500) -> ('3.27.123.138', 35108)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 01:05:33,094 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 62501) -> ('3.27.123.138', 35108)) State.FROZEN -> State.IN_PROGRESS
+2024-11-01 01:05:33,124 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 62502) -> ('3.27.123.138', 35108)) State.FROZEN -> State.IN_PROGRESS
+2024-11-01 01:05:33,154 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 62503) -> ('3.27.123.138', 35108)) State.FROZEN -> State.IN_PROGRESS
+2024-11-01 01:05:33,186 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 62504) -> ('3.27.123.138', 35108)) State.FROZEN -> State.IN_PROGRESS
+2024-11-01 01:05:41,977 [INFO] client.dns_resolver: Forwarded DNS request for login.live.com to external DNS server
+2024-11-01 01:06:03,253 [INFO] client.dns_resolver: Forwarded DNS request for rr3---sn-42u-nbols.googlevideo.com to external DNS server
+2024-11-01 01:06:03,272 [INFO] client.dns_resolver: Forwarded DNS request for i.ytimg.com to external DNS server
+2024-11-01 01:06:03,321 [INFO] client.dns_resolver: Forwarded DNS request for rr3.sn-42u-nbols.googlevideo.com to external DNS server
+2024-11-01 01:06:03,336 [INFO] client.dns_resolver: Forwarded DNS request for i.ytimg.com to external DNS server
+2024-11-01 01:06:03,386 [INFO] client.dns_resolver: Forwarded DNS request for rr3.sn-42u-nbols.googlevideo.com to external DNS server
+2024-11-01 01:06:03,402 [INFO] client.dns_resolver: Forwarded DNS request for i.ytimg.com to external DNS server
+2024-11-01 01:06:07,896 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com to external DNS server
+2024-11-01 01:06:07,963 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com to external DNS server
+2024-11-01 01:06:08,108 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com.vn to external DNS server
+2024-11-01 01:06:08,174 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com.vn to external DNS server
+2024-11-01 01:06:08,237 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com.vn to external DNS server
+2024-11-01 01:06:20,972 [INFO] client.dns_resolver: Forwarded DNS request for yt3.ggpht.com to external DNS server
+2024-11-01 01:06:21,036 [INFO] client.dns_resolver: Forwarded DNS request for photos-ugc.l.googleusercontent.com to external DNS server
+2024-11-01 01:06:23,616 [INFO] client.dns_resolver: Forwarded DNS request for tile-service.weather.microsoft.com to external DNS server
+2024-11-01 01:06:23,622 [INFO] client.dns_resolver: Forwarded DNS request for spclient.wg.spotify.com to external DNS server
+2024-11-01 01:06:23,793 [INFO] client.dns_resolver: Forwarded DNS request for api.msn.com to external DNS server
+2024-11-01 01:06:25,768 [INFO] client.dns_resolver: Forwarded DNS request for v10.events.data.microsoft.com to external DNS server
+2024-11-01 01:06:27,811 [INFO] client.dns_resolver: Forwarded DNS request for v20.events.data.microsoft.com to external DNS server
+2024-11-01 01:06:36,465 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 62501) -> ('172.31.5.226', 35108)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 01:06:36,466 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 62500) -> ('172.31.5.226', 35108)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 01:06:36,558 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 62502) -> ('172.31.5.226', 35108)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 01:06:36,604 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 62503) -> ('172.31.5.226', 35108)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 01:06:36,605 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 62504) -> ('172.31.5.226', 35108)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 01:06:36,666 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 62501) -> ('3.27.123.138', 35108)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 01:06:36,667 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 62500) -> ('3.27.123.138', 35108)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 01:06:36,727 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 62503) -> ('3.27.123.138', 35108)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 01:06:36,728 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 62502) -> ('3.27.123.138', 35108)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 01:06:36,790 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 62504) -> ('3.27.123.138', 35108)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 01:06:36,791 [INFO] aioice.ice: Connection(0) ICE failed
+2024-11-01 01:06:36,792 [INFO] __main__: ICE connection state is failed
+2024-11-01 01:06:36,792 [INFO] __main__: ICE connection state is closed
+2024-11-01 01:06:36,794 [ERROR] asyncio: Exception in callback AsyncIOEventEmitter._emit_run.<locals>.callback(<Task finishe...SystemExit(1)>) at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\asyncio.py:69
+handle: <Handle AsyncIOEventEmitter._emit_run.<locals>.callback(<Task finishe...SystemExit(1)>) at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\asyncio.py:69>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 637, in run_until_complete
+    self.run_forever()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 604, in run_forever
+    self._run_once()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1909, in _run_once
+    handle._run()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client.py", line 69, in on_iceconnectionstatechange
+    sys.exit(1)
+SystemExit: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\asyncio.py", line 77, in callback
+    self.emit("error", exc)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\base.py", line 215, in emit
+    self._emit_handle_potential_error(event, args[0] if args else None)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\base.py", line 175, in _emit_handle_potential_error
+    raise PyeeError(f"Uncaught, unspecified 'error' event: {error}")
+pyee.base.PyeeError: Uncaught, unspecified 'error' event: 1
+2024-11-01 01:11:39,272 [INFO] __main__: Local DNS server started.
+2024-11-01 01:11:39,273 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-11-01 01:11:39,296 [INFO] __main__: CGNAT route added.
+2024-11-01 01:11:39,868 [INFO] __main__: Connected to signaling server.
+2024-11-01 01:11:39,875 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.64.16 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 01:11:39,877 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.250.162 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 01:11:39,877 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.8.53 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 01:11:39,878 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.56.202 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 01:11:39,880 [INFO] aioice.ice: Connection(0) Could not bind to 10.0.85.2 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 01:11:39,881 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.84.115 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 01:11:39,881 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.63.97 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 01:11:39,946 [INFO] client.dns_resolver: Forwarded DNS request for stun.l.google.com to external DNS server
+2024-11-01 01:11:43,229 [INFO] client.dns_resolver: Forwarded DNS request for contile.services.mozilla.com to external DNS server
+2024-11-01 01:11:43,292 [INFO] client.dns_resolver: Forwarded DNS request for contile.services.mozilla.com to external DNS server
+2024-11-01 01:11:43,357 [INFO] client.dns_resolver: Forwarded DNS request for contile.services.mozilla.com to external DNS server
+2024-11-01 01:11:44,878 [INFO] __main__: Sent offer to connector.
+2024-11-01 01:11:45,073 [INFO] __main__: Received answer from connector.
+2024-11-01 01:11:45,074 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 61789) -> ('172.31.5.226', 56871)) State.FROZEN -> State.WAITING
+2024-11-01 01:11:45,075 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 61790) -> ('172.31.5.226', 56871)) State.FROZEN -> State.WAITING
+2024-11-01 01:11:45,076 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 61791) -> ('172.31.5.226', 56871)) State.FROZEN -> State.WAITING
+2024-11-01 01:11:45,076 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 61792) -> ('172.31.5.226', 56871)) State.FROZEN -> State.WAITING
+2024-11-01 01:11:45,077 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 61793) -> ('172.31.5.226', 56871)) State.FROZEN -> State.WAITING
+2024-11-01 01:11:45,077 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 61789) -> ('3.27.123.138', 56871)) State.FROZEN -> State.WAITING
+2024-11-01 01:11:45,078 [INFO] __main__: ICE connection state is checking
+2024-11-01 01:11:45,078 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 61789) -> ('172.31.5.226', 56871)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 01:11:45,110 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 61790) -> ('172.31.5.226', 56871)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 01:11:45,141 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 61791) -> ('172.31.5.226', 56871)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 01:11:45,172 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 61792) -> ('172.31.5.226', 56871)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 01:11:45,203 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 61793) -> ('172.31.5.226', 56871)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 01:11:45,233 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 61789) -> ('3.27.123.138', 56871)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 01:11:45,264 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 61790) -> ('3.27.123.138', 56871)) State.FROZEN -> State.IN_PROGRESS
+2024-11-01 01:11:45,295 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 61791) -> ('3.27.123.138', 56871)) State.FROZEN -> State.IN_PROGRESS
+2024-11-01 01:11:45,325 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 61792) -> ('3.27.123.138', 56871)) State.FROZEN -> State.IN_PROGRESS
+2024-11-01 01:11:45,355 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 61793) -> ('3.27.123.138', 56871)) State.FROZEN -> State.IN_PROGRESS
+2024-11-01 01:12:23,548 [INFO] client.dns_resolver: Forwarded DNS request for ap-southeast-2.console.aws.amazon.com to external DNS server
+2024-11-01 01:12:23,548 [INFO] client.dns_resolver: Forwarded DNS request for safebrowsing.googleapis.com to external DNS server
+2024-11-01 01:12:23,614 [INFO] client.dns_resolver: Forwarded DNS request for a9faf713df4858b6a.awsglobalaccelerator.com to external DNS server
+2024-11-01 01:12:24,046 [INFO] client.dns_resolver: Forwarded DNS request for logs.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 01:12:24,113 [INFO] client.dns_resolver: Forwarded DNS request for logs.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 01:12:24,178 [INFO] client.dns_resolver: Forwarded DNS request for logs.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 01:12:32,132 [INFO] client.dns_resolver: Forwarded DNS request for prod.client.wosc.services.microsoft.com to external DNS server
+2024-11-01 01:12:35,559 [INFO] client.dns_resolver: Forwarded DNS request for login.microsoftonline.com to external DNS server
+2024-11-01 01:12:36,905 [INFO] client.dns_resolver: Forwarded DNS request for activity.windows.com to external DNS server
+2024-11-01 01:12:41,235 [INFO] client.dns_resolver: Forwarded DNS request for login.live.com to external DNS server
+2024-11-01 01:12:41,942 [INFO] client.dns_resolver: Forwarded DNS request for settings-win.data.microsoft.com to external DNS server
+2024-11-01 01:12:48,649 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 61789) -> ('172.31.5.226', 56871)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 01:12:48,726 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 61791) -> ('172.31.5.226', 56871)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 01:12:48,727 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 61790) -> ('172.31.5.226', 56871)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 01:12:48,771 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 61793) -> ('172.31.5.226', 56871)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 01:12:48,772 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 61792) -> ('172.31.5.226', 56871)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 01:12:48,831 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 61789) -> ('3.27.123.138', 56871)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 01:12:48,832 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 61790) -> ('3.27.123.138', 56871)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 01:12:48,879 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 61792) -> ('3.27.123.138', 56871)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 01:12:48,880 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 61791) -> ('3.27.123.138', 56871)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 01:12:48,941 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 61793) -> ('3.27.123.138', 56871)) State.IN_PROGRESS -> State.FAILED
+2024-11-01 01:12:48,942 [INFO] aioice.ice: Connection(0) ICE failed
+2024-11-01 01:12:48,943 [INFO] __main__: ICE connection state is failed
+2024-11-01 01:12:48,944 [ERROR] __main__: ICE connection state is failed, attempting to restart ICE
+2024-11-01 01:12:48,944 [ERROR] __main__: Failed to restart ICE: 'RTCPeerConnection' object has no attribute 'restartIce'
+2024-11-01 01:12:51,782 [INFO] client.dns_resolver: Forwarded DNS request for westus-0.in.applicationinsights.azure.com to external DNS server
+2024-11-01 01:14:20,276 [INFO] client.dns_resolver: Forwarded DNS request for rr8---sn-42u-nbosk.googlevideo.com to external DNS server
+2024-11-01 01:14:20,295 [INFO] client.dns_resolver: Forwarded DNS request for yt3.ggpht.com to external DNS server
+2024-11-01 01:14:20,301 [INFO] client.dns_resolver: Forwarded DNS request for i.ytimg.com to external DNS server
+2024-11-01 01:14:20,341 [INFO] client.dns_resolver: Forwarded DNS request for rr8.sn-42u-nbosk.googlevideo.com to external DNS server
+2024-11-01 01:14:20,364 [INFO] client.dns_resolver: Forwarded DNS request for photos-ugc.l.googleusercontent.com to external DNS server
+2024-11-01 01:14:20,369 [INFO] client.dns_resolver: Forwarded DNS request for i.ytimg.com to external DNS server
+2024-11-01 01:14:20,405 [INFO] client.dns_resolver: Forwarded DNS request for rr8.sn-42u-nbosk.googlevideo.com to external DNS server
+2024-11-01 01:14:21,659 [INFO] client.dns_resolver: Forwarded DNS request for googleads.g.doubleclick.net to external DNS server
+2024-11-01 01:14:21,724 [INFO] client.dns_resolver: Forwarded DNS request for googleads.g.doubleclick.net to external DNS server
+2024-11-01 01:14:21,788 [INFO] client.dns_resolver: Forwarded DNS request for googleads.g.doubleclick.net to external DNS server
+2024-11-01 01:14:24,602 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com to external DNS server
+2024-11-01 01:14:24,666 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com to external DNS server
+2024-11-01 01:14:24,732 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com to external DNS server
+2024-11-01 01:14:24,812 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com.vn to external DNS server
+2024-11-01 01:14:24,879 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com.vn to external DNS server
+2024-11-01 01:14:40,842 [INFO] __main__: Local DNS server started.
+2024-11-01 01:14:40,843 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-11-01 01:14:40,863 [INFO] __main__: CGNAT route added.
+2024-11-01 01:14:41,448 [INFO] __main__: Connected to signaling server.
+2024-11-01 01:14:41,457 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.64.16 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 01:14:41,457 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.250.162 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 01:14:41,459 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.8.53 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 01:14:41,460 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.56.202 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 01:14:41,461 [INFO] aioice.ice: Connection(0) Could not bind to 10.0.85.2 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 01:14:41,462 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.84.115 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 01:14:41,463 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.63.97 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 01:14:46,468 [INFO] __main__: Sent offer to connector.
+2024-11-01 01:15:03,122 [INFO] client.dns_resolver: Forwarded DNS request for activity.windows.com to external DNS server
+2024-11-01 01:16:32,999 [INFO] client.dns_resolver: Forwarded DNS request for activity.windows.com to external DNS server
+2024-11-01 01:16:38,325 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 01:17:09,115 [INFO] client.dns_resolver: Forwarded DNS request for chatgpt.com to external DNS server
+2024-11-01 01:17:09,186 [INFO] client.dns_resolver: Forwarded DNS request for chatgpt.com to external DNS server
+2024-11-01 01:17:09,263 [INFO] client.dns_resolver: Forwarded DNS request for chatgpt.com to external DNS server
+2024-11-01 01:17:14,111 [INFO] client.dns_resolver: Forwarded DNS request for copilot-proxy.githubusercontent.com to external DNS server
+2024-11-01 01:17:14,767 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 01:17:25,822 [INFO] client.dns_resolver: Forwarded DNS request for ap-southeast-2.console.aws.amazon.com to external DNS server
+2024-11-01 01:17:25,885 [INFO] client.dns_resolver: Forwarded DNS request for a9faf713df4858b6a.awsglobalaccelerator.com to external DNS server
+2024-11-01 01:17:25,906 [INFO] client.dns_resolver: Forwarded DNS request for ap-southeast-2.console.aws.amazon.com to external DNS server
+2024-11-01 01:17:25,951 [INFO] client.dns_resolver: Forwarded DNS request for a9faf713df4858b6a.awsglobalaccelerator.com to external DNS server
+2024-11-01 01:17:26,395 [INFO] client.dns_resolver: Forwarded DNS request for logs.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 01:17:26,466 [INFO] client.dns_resolver: Forwarded DNS request for logs.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 01:17:26,534 [INFO] client.dns_resolver: Forwarded DNS request for logs.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 01:17:29,012 [INFO] client.dns_resolver: Forwarded DNS request for copilot-telemetry-service.githubusercontent.com to external DNS server
+2024-11-01 01:17:34,925 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 01:17:50,522 [INFO] client.dns_resolver: Forwarded DNS request for westus-0.in.applicationinsights.azure.com to external DNS server
+2024-11-01 01:17:51,323 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 01:17:59,196 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 01:18:01,004 [INFO] client.dns_resolver: Forwarded DNS request for activity.windows.com to external DNS server
+2024-11-01 01:18:54,056 [INFO] client.dns_resolver: Forwarded DNS request for i.ytimg.com to external DNS server
+2024-11-01 01:18:54,125 [INFO] client.dns_resolver: Forwarded DNS request for i.ytimg.com to external DNS server
+2024-11-01 01:18:54,191 [INFO] client.dns_resolver: Forwarded DNS request for i.ytimg.com to external DNS server
+2024-11-01 01:19:04,512 [INFO] client.dns_resolver: Forwarded DNS request for settings-win.data.microsoft.com to external DNS server
+2024-11-01 01:19:46,116 [INFO] client.dns_resolver: Forwarded DNS request for array607.prod.do.dsp.mp.microsoft.com to external DNS server
+2024-11-01 01:20:04,939 [INFO] client.dns_resolver: Forwarded DNS request for rr1---sn-42u-nboz7.googlevideo.com to external DNS server
+2024-11-01 01:20:04,979 [INFO] client.dns_resolver: Forwarded DNS request for i.ytimg.com to external DNS server
+2024-11-01 01:20:05,013 [INFO] client.dns_resolver: Forwarded DNS request for rr1.sn-42u-nboz7.googlevideo.com to external DNS server
+2024-11-01 01:20:05,083 [INFO] client.dns_resolver: Forwarded DNS request for rr1.sn-42u-nboz7.googlevideo.com to external DNS server
+2024-11-01 01:20:09,199 [INFO] client.dns_resolver: Forwarded DNS request for r2---sn-42u-jmge.googlevideo.com to external DNS server
+2024-11-01 01:20:09,268 [INFO] client.dns_resolver: Forwarded DNS request for r2.sn-42u-jmge.googlevideo.com to external DNS server
+2024-11-01 01:20:09,313 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com to external DNS server
+2024-11-01 01:20:09,329 [INFO] client.dns_resolver: Forwarded DNS request for r2.sn-42u-jmge.googlevideo.com to external DNS server
+2024-11-01 01:20:09,381 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com to external DNS server
+2024-11-01 01:20:09,444 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com to external DNS server
+2024-11-01 01:20:09,527 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com.vn to external DNS server
+2024-11-01 01:20:09,593 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com.vn to external DNS server
+2024-11-01 01:20:09,657 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com.vn to external DNS server
+2024-11-01 01:20:12,591 [INFO] client.dns_resolver: Forwarded DNS request for accounts.youtube.com to external DNS server
+2024-11-01 01:20:12,655 [INFO] client.dns_resolver: Forwarded DNS request for www3.l.google.com to external DNS server
+2024-11-01 01:20:12,722 [INFO] client.dns_resolver: Forwarded DNS request for www3.l.google.com to external DNS server
+2024-11-01 01:20:58,291 [INFO] client.dns_resolver: Forwarded DNS request for ap-southeast-2.prod.pr.analytics.console.aws.a2z.com to external DNS server
+2024-11-01 01:20:58,355 [INFO] client.dns_resolver: Forwarded DNS request for ap-southeast-2.prod.pr.analytics.console.aws.a2z.com to external DNS server
+2024-11-01 01:20:58,425 [INFO] client.dns_resolver: Forwarded DNS request for ap-southeast-2.prod.pr.analytics.console.aws.a2z.com to external DNS server
+2024-11-01 01:21:00,355 [INFO] client.dns_resolver: Forwarded DNS request for ap-southeast-2.console.aws.amazon.com to external DNS server
+2024-11-01 01:21:00,420 [INFO] client.dns_resolver: Forwarded DNS request for a9faf713df4858b6a.awsglobalaccelerator.com to external DNS server
+2024-11-01 01:21:05,253 [INFO] client.dns_resolver: Forwarded DNS request for www.youtube.com to external DNS server
+2024-11-01 01:21:05,320 [INFO] client.dns_resolver: Forwarded DNS request for youtube-ui.l.google.com to external DNS server
+2024-11-01 01:21:05,384 [INFO] client.dns_resolver: Forwarded DNS request for youtube-ui.l.google.com to external DNS server
+2024-11-01 01:21:05,874 [INFO] client.dns_resolver: Forwarded DNS request for activity.windows.com to external DNS server
+2024-11-01 01:21:07,616 [INFO] client.dns_resolver: Forwarded DNS request for enterprise.activity.windows.com to external DNS server
+2024-11-01 01:21:13,410 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server

@@ -63,5 +63,5 @@ if __name__ == '__main__':
     ssl_context.verify_mode = ssl.CERT_REQUIRED
 
     web.run_app(app, host=SIGNALING_SERVER_HOST, port=SIGNALING_SERVER_PORT, ssl_context=ssl_context)
-    web.run_app(app, host=SIGNALING_SERVER_HOST, port=SIGNALING_SERVER_PORT)
+    # web.run_app(app, host=SIGNALING_SERVER_HOST, port=SIGNALING_SERVER_PORT)
 
