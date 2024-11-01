@@ -307,3 +307,8 @@ task: <Task pending name='Task-30' coro=<Connector.reset_connection.<locals>.on_
 2024-11-01 13:09:58,454 [INFO] __main__: ICE connection state changed to checking
 2024-11-01 13:09:58,493 [INFO] __main__: ICE connection state changed to completed
 2024-11-01 13:09:58,505 [INFO] __main__: Data channel established.
+2024-11-01 13:11:50,644 [INFO] __main__: Closed aiohttp session
+2024-11-01 13:11:50,646 [INFO] __main__: ICE connection state changed to closed
+2024-11-01 13:11:50,647 [WARNING] __main__: ICE connection failed or closed, resetting connection.
+2024-11-01 13:11:50,651 [ERROR] asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-39' coro=<TurnClientMixin.delete() running at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py:175>>

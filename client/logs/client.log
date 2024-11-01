@@ -436,3 +436,5 @@ client_session: <aiohttp.client.ClientSession object at 0x00000205CB3D8150>
 2024-11-01 13:09:58,492 [INFO] __main__: ICE connection state: completed
 2024-11-01 13:09:58,505 [INFO] __main__: DataChannel is open
 2024-11-01 13:09:58,506 [INFO] __main__: Interacting with Connector
+2024-11-01 13:11:50,644 [INFO] __main__: Closed aiohttp session
+2024-11-01 13:11:50,646 [INFO] __main__: ICE connection state: closed
