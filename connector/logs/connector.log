@@ -312,3 +312,43 @@ task: <Task pending name='Task-30' coro=<Connector.reset_connection.<locals>.on_
 2024-11-01 13:11:50,647 [WARNING] __main__: ICE connection failed or closed, resetting connection.
 2024-11-01 13:11:50,651 [ERROR] asyncio: Task was destroyed but it is pending!
 task: <Task pending name='Task-39' coro=<TurnClientMixin.delete() running at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py:175>>
+2024-11-01 19:03:53,694 [ERROR] __main__: Error connecting to signaling server: Cannot connect to host 127.0.0.1:8080 ssl:<ssl.SSLContext object at 0x000001F51F884EF0> [The remote computer refused the network connection]
+2024-11-01 19:03:58,701 [INFO] __main__: ICE connection state: new
+2024-11-01 19:03:58,702 [INFO] __main__: Connection state: new
+2024-11-01 19:04:00,739 [ERROR] __main__: Error connecting to signaling server: Cannot connect to host 127.0.0.1:8080 ssl:<ssl.SSLContext object at 0x000001F51F885370> [The remote computer refused the network connection]
+2024-11-01 19:04:02,581 [INFO] __main__: Connector stopped by user
+2024-11-01 19:04:02,583 [INFO] __main__: ICE connection state: closed
+2024-11-01 19:04:02,583 [INFO] __main__: Connection state: closed
+2024-11-01 19:04:02,606 [ERROR] asyncio: Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001F51F8E2250>
+2024-11-01 19:04:56,406 [INFO] __main__: Connected to signaling server
+2024-11-01 19:05:39,338 [INFO] __main__: Received offer from client
+2024-11-01 19:05:39,346 [INFO] __main__: ICE gathering state: gathering
+2024-11-01 19:05:44,456 [INFO] __main__: ICE gathering state: complete
+2024-11-01 19:05:44,457 [INFO] __main__: Sent answer to client
+2024-11-01 19:05:44,458 [INFO] __main__: ICE connection state: checking
+2024-11-01 19:05:44,459 [INFO] __main__: Connection state: connecting
+2024-11-01 19:05:44,493 [INFO] __main__: ICE connection state: completed
+2024-11-01 19:05:44,498 [INFO] __main__: Connection state: connected
+2024-11-01 19:05:44,500 [INFO] __main__: DataChannel received
+2024-11-01 19:06:17,992 [INFO] __main__: ICE connection state: closed
+2024-11-01 19:06:17,992 [INFO] __main__: Connection state: closed
+2024-11-01 19:09:12,496 [INFO] __main__: Connected to signaling server
+2024-11-01 19:09:23,720 [INFO] __main__: Received offer from client
+2024-11-01 19:09:23,727 [INFO] __main__: ICE gathering state: gathering
+2024-11-01 19:09:28,849 [INFO] __main__: ICE gathering state: complete
+2024-11-01 19:09:28,851 [INFO] __main__: Sent answer to client
+2024-11-01 19:09:28,852 [INFO] __main__: ICE connection state: checking
+2024-11-01 19:09:28,852 [INFO] __main__: Connection state: connecting
+2024-11-01 19:09:28,886 [INFO] __main__: ICE connection state: completed
+2024-11-01 19:09:28,890 [INFO] __main__: Connection state: connected
+2024-11-01 19:09:28,893 [INFO] __main__: DataChannel received
+2024-11-01 19:10:02,891 [INFO] __main__: ICE connection state: closed
+2024-11-01 19:10:02,891 [INFO] __main__: Connection state: closed
+2024-11-01 19:11:36,988 [ERROR] __main__: Error connecting to signaling server: Cannot handle offer in signaling state "closed"
+2024-11-01 19:11:42,001 [ERROR] asyncio: Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000013A73CA1FD0>
+2024-11-01 19:11:42,002 [INFO] __main__: Connected to signaling server
+2024-11-01 19:46:39,908 [INFO] __main__: Connector stopped by user
+2024-11-01 19:46:39,908 [INFO] __main__: ICE connection state: closed
+2024-11-01 19:46:39,909 [INFO] __main__: Connection state: closed

@@ -2,7 +2,7 @@ import threading
 import logging
 from concurrent.futures import ThreadPoolExecutor
 from dnslib import RR, QTYPE, A, DNSRecord
-from dnslib.server import DNSServer, BaseResolver, DNSLogger
+from dnslib.server import DNSServer, BaseResolver, DNSLogger,NoopDNSLogger
 
 logger = logging.getLogger(__name__)
 
@@ -83,7 +83,7 @@ class LocalDNSResolver(BaseResolver):
             if forward_reply:
                 for rr in forward_reply.rr:
                     reply.add_answer(rr)
-                logger.info(f"Forwarded DNS request for {domain} to external DNS server")
+                # logger.info(f"Forwarded DNS request for {domain} to external DNS server")
             else:
                 logger.warning(f"Could not resolve {domain} via external DNS server.")
             return reply
@@ -99,7 +99,7 @@ class DNSResolverThread(threading.Thread):
         self.resolver = resolver
 
     def run(self):
-        logger_dns = DNSLogger(prefix=False)
+        logger_dns = NoopDNSLogger()
         dns_server = DNSServer(self.resolver, port=53, address='127.0.0.1', logger=logger_dns)
         dns_server.start_thread()
         logger.info("Local DNS server started on 127.0.0.1:53")

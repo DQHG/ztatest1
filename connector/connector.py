@@ -1,19 +1,17 @@
-# connector.py
-
 import asyncio
 import json
 import logging
 import ssl
-import socket
-from aiohttp import ClientSession
+import sys
+from aiohttp import ClientSession, WSCloseCode, WSMsgType
 from aiortc import (
     RTCPeerConnection,
     RTCSessionDescription,
     RTCConfiguration,
     RTCIceServer,
-    RTCIceCandidate
+    RTCIceCandidate,
+    RTCDataChannel
 )
-
 from .config import (
     SIGNALING_SERVER_URL,
     SSL_CERT_FILE,
@@ -25,7 +23,7 @@ from .utils.logging_config import setup_logging
 from .utils.data_models import Resource
 from .resource_manager import ResourceManager
 
-# Cấu hình logging
+# Configure logging
 setup_logging(LOG_FILE)
 logger = logging.getLogger(__name__)
 logging.getLogger("aioice").setLevel(logging.WARNING)
@@ -33,12 +31,14 @@ logging.getLogger("aioice").setLevel(logging.WARNING)
 
 class Connector:
     def __init__(self):
-        self.pc = None  # RTCPeerConnection object, initialized to None and set later
-        self.channel = None  # Data channel for WebRTC communication, initialized to None and set later
-        self.resource_manager = ResourceManager()  # Manages resources and handles resource-related actions
-        self.data_queues = {}  # Dictionary to store data queues for different sessions
-        self.signaling = None  # WebSocket connection to the signaling server, initialized to None and set later
-        self.session = None  # aiohttp ClientSession object, initialized to None and set later
+        self.pc = None  # RTCPeerConnection
+        self.channel = None  # RTCDataChannel
+        self.resource_manager = ResourceManager()
+        self.data_queues = {}
+        self.signaling = None
+        self.session = None
+        self.loop = asyncio.get_event_loop()
+
 
     async def run(self):
         await self.reset_connection()
@@ -47,39 +47,44 @@ class Connector:
         if self.pc:
             await self.pc.close()
 
-        # Cấu hình STUN Server
-        # ice_servers = [
-        #     RTCIceServer(urls=["stun:stun.l.google.com:19302"]),
-            
-        #     RTCIceServer(urls=["stun:stun2.l.google.com:19302"]),
-        #     RTCIceServer(urls=["stun:stun3.l.google.com:19302"]),
-        #     RTCIceServer(urls=["stun:stun4.l.google.com:19302"]),
-        # ]
+        # ICE server configuration
         ice_servers = [
-    RTCIceServer(urls=["stun:stun.relay.metered.ca:80"]),
-    RTCIceServer(urls=["turn:global.relay.metered.ca:80"], username="1a711f473eae217627b45e19", credential="6eiugfMmKE1NW+Ex"),
-    RTCIceServer(urls=["turn:global.relay.metered.ca:80?transport=tcp"], username="1a711f473eae217627b45e19", credential="6eiugfMmKE1NW+Ex"),
-    RTCIceServer(urls=["turn:global.relay.metered.ca:443"], username="1a711f473eae217627b45e19", credential="6eiugfMmKE1NW+Ex"),
-    RTCIceServer(urls=["turns:global.relay.metered.ca:443?transport=tcp"], username="1a711f473eae217627b45e19", credential="6eiugfMmKE1NW+Ex")
-        ]
+            RTCIceServer(urls=["stun:stun.relay.metered.ca:80"]),
+            RTCIceServer(urls=["turn:global.relay.metered.ca:80"], username="1a711f473eae217627b45e19", credential="6eiugfMmKE1NW+Ex"),
+            RTCIceServer(urls=["turn:global.relay.metered.ca:80?transport=tcp"], username="1a711f473eae217627b45e19", credential="6eiugfMmKE1NW+Ex"),
+            RTCIceServer(urls=["turn:global.relay.metered.ca:443"], username="1a711f473eae217627b45e19", credential="6eiugfMmKE1NW+Ex"),
+            RTCIceServer(urls=["turns:global.relay.metered.ca:443?transport=tcp"], username="1a711f473eae217627b45e19", credential="6eiugfMmKE1NW+Ex")
+            ]
         configuration = RTCConfiguration(iceServers=ice_servers)
         self.pc = RTCPeerConnection(configuration)
 
-        # Đăng ký các callback
+        # Register event handlers
         @self.pc.on("iceconnectionstatechange")
         async def on_iceconnectionstatechange():
-            logger.info(f"ICE connection state changed to {self.pc.iceConnectionState}")
-            if self.pc.iceConnectionState in ["failed", "closed"]:
-                logger.warning("ICE connection failed or closed, resetting connection.")
+            logger.info(f"ICE connection state: {self.pc.iceConnectionState}")
+            if self.pc.iceConnectionState in ["failed", "disconnected"]:
+                logger.error("ICE connection failed or disconnected, attempting reset")
+                await self.reset_connection()
+
+        @self.pc.on("icegatheringstatechange")
+        async def on_icegatheringstatechange():
+            logger.info(f"ICE gathering state: {self.pc.iceGatheringState}")
+
+        @self.pc.on("connectionstatechange")
+        async def on_connectionstatechange():
+            logger.info(f"Connection state: {self.pc.connectionState}")
+            if self.pc.connectionState in ["failed", "disconnected"]:
+                logger.error("Connection failed or disconnected, attempting reset")
                 await self.reset_connection()
 
         @self.pc.on("datachannel")
-        def on_datachannel(channel):
+        def on_datachannel(channel: RTCDataChannel):
             self.channel = channel
-            logger.info("Data channel established.")
+            logger.info("DataChannel received")
+            self.channel.on("open", self.on_datachannel_open)
             self.channel.on("message", self.on_message)
 
-        # Kết nối đến Signaling Server
+        # Connect to the signaling server
         await self.connect_to_signaling()
 
     async def connect_to_signaling(self):
@@ -87,116 +92,112 @@ class Connector:
         ssl_context.load_cert_chain(SSL_CERT_FILE, SSL_KEY_FILE)
         ssl_context.check_hostname = False
 
-        self.session = ClientSession()  # Tạo session để kết nối signaling
+        self.session = ClientSession()
         try:
-            self.signaling = await self.session.ws_connect(f"{SIGNALING_SERVER_URL}?peer_id=connector", ssl=ssl_context)
-            logger.info("Connected to signaling server.")
+            self.signaling = await self.session.ws_connect(
+                f"{SIGNALING_SERVER_URL}?peer_id=connector",
+                ssl=ssl_context
+            )
+            logger.info("Connected to signaling server")
 
-            # Nhận offer từ Client và thiết lập kết nối P2P
+            # Receive offer and send answer
             await self.receive_signaling()
+        except Exception as e:
+            logger.error(f"Error connecting to signaling server: {e}")
+            await asyncio.sleep(5)
+            await self.reset_connection()
         finally:
-            await self.cleanup()  # Đảm bảo dọn dẹp session sau khi kết nối hoàn tất
+            await self.session.close()
 
     async def receive_signaling(self):
         async for msg in self.signaling:
-            data = json.loads(msg.data)
-            if data.get('sdp') and data.get('type') == 'offer':
-                offer = RTCSessionDescription(sdp=data['sdp'], type=data['type'])
-                await self.pc.setRemoteDescription(offer)
-                logger.info("Received offer from client.")
+            if msg.type == WSMsgType.TEXT:
+                data = json.loads(msg.data)
+                if data.get('sdp') and data.get('type') == 'offer':
+                    offer = RTCSessionDescription(sdp=data['sdp'], type=data['type'])
+                    await self.pc.setRemoteDescription(offer)
+                    logger.info("Received offer from client")
 
-                # Tạo answer và gửi lại cho Client
-                answer = await self.pc.createAnswer()
-                await self.pc.setLocalDescription(answer)
-
-                await self.signaling.send_json({
-                    'sdp': self.pc.localDescription.sdp,
-                    'type': self.pc.localDescription.type,
-                    'target_id': 'client'
-                })
-                logger.info("Sent answer to client.")
-            elif data.get('candidate'):
-                candidate = RTCIceCandidate(
-                    sdpMid=data['candidate']['sdpMid'],
-                    sdpMLineIndex=data['candidate']['sdpMLineIndex'],
-                    candidate=data['candidate']['candidate']
-                )
-                await self.pc.addIceCandidate(candidate)
-                logger.info("Added ICE candidate from client")
-            elif data.get('peer_info'):
-                peer_info = data['peer_info']
-                logger.debug(f"Received peer_info: {peer_info}")
-                if 'ip' in peer_info and 'port' in peer_info:
-                    await self.punch_hole(peer_info)
+                    # Create and send answer
+                    answer = await self.pc.createAnswer()
+                    await self.pc.setLocalDescription(answer)
+                    await self.signaling.send_json({
+                        'sdp': self.pc.localDescription.sdp,
+                        'type': self.pc.localDescription.type,
+                        'target_id': 'client'
+                    })
+                    logger.info("Sent answer to client")
+                elif data.get('candidate'):
+                    candidate = RTCIceCandidate(
+                        sdpMid=data['candidate']['sdpMid'],
+                        sdpMLineIndex=data['candidate']['sdpMLineIndex'],
+                        candidate=data['candidate']['candidate']
+                    )
+                    await self.pc.addIceCandidate(candidate)
+                    logger.info("Added ICE candidate from client")
                 else:
-                    logger.error("peer_info is missing 'ip' or 'port'")
-            else:
-                logger.warning("Unknown message from signaling server: %s", data)
+                    logger.warning(f"Unknown message from signaling server: {data}")
+            elif msg.type == WSMsgType.ERROR:
+                logger.error(f"Signaling error: {msg.data}")
+                break
+            elif msg.type == WSMsgType.CLOSED:
+                logger.warning("Signaling connection closed")
+                break
 
-        # Giữ kết nối
-        await self.pc.waitClosed()
-
-
-    async def punch_hole(self, peer_info):
-        # Thực hiện UDP hole punching
-        peer_ip = peer_info.get('ip')
-        peer_port = peer_info.get('port')
-        logger.info(f"Punching hole to {peer_ip}:{peer_port}")
-
-        transport, protocol = await asyncio.get_event_loop().create_datagram_endpoint(
-            lambda: asyncio.DatagramProtocol(),
-            remote_addr=(peer_ip, peer_port)
-        )
-        transport.sendto(b'0', (peer_ip, peer_port))
-        await asyncio.sleep(1)
-        transport.close()
+    def on_datachannel_open(self):
+        logger.info("DataChannel is open")
 
     async def on_message(self, message):
-        response = json.loads(message)
-        action = response.get('action')
+        request = json.loads(message)
+        action = request.get('action')
         if action == 'data':
-            session_id = response.get('session_id')
-            data_hex = response.get('data')
+            session_id = request.get('session_id')
+            data_hex = request.get('data')
             data = bytes.fromhex(data_hex)
             if session_id not in self.data_queues:
                 self.data_queues[session_id] = asyncio.Queue()
-            asyncio.ensure_future(self.data_queues[session_id].put(data))
+            await self.data_queues[session_id].put(data)
         elif action == 'close':
-            session_id = response.get('session_id')
+            session_id = request.get('session_id')
             if session_id in self.data_queues:
-                asyncio.ensure_future(self.data_queues[session_id].put(None))
-        else:
-            await self.handle_request(response)
-
-    async def handle_request(self, request):
-        action = request.get('action')
-        if action == 'list_resources':
+                await self.data_queues[session_id].put(None)
+        elif action == 'list_resources':
             resources = self.resource_manager.list_resources()
             response = {'action': 'list_resources', 'resources': [res.dict() for res in resources]}
             self.channel.send(json.dumps(response))
-        elif action == 'proxy_connect':
-            session_id = request.get('session_id')
-            resource_ip = request.get('resource_ip')
-            resource = self.resource_manager.get_resource_by_ip(resource_ip)
-            if resource:
-                await self.handle_proxy_connect(session_id, resource)
-            else:
-                response = {'action': 'error', 'message': 'Resource not found'}
-                self.channel.send(json.dumps(response))
         elif action == 'add_resource':
             resource_data = request.get('resource')
             success, message = self.resource_manager.add_resource_from_dict(resource_data)
             response = {'action': 'add_resource', 'success': success, 'message': message}
             self.channel.send(json.dumps(response))
+            # Thông báo cho Client cập nhật danh sách tài nguyên
+            await self.notify_resource_update()
         elif action == 'delete_resource':
             resource_id = request.get('resource_id')
             success, message = self.resource_manager.delete_resource_by_id(resource_id)
             response = {'action': 'delete_resource', 'success': success, 'message': message}
             self.channel.send(json.dumps(response))
+            # Thông báo cho Client cập nhật danh sách tài nguyên
+            await self.notify_resource_update()
+        elif action == 'proxy_connect':
+            session_id = request.get('session_id')
+            resource_domain = request.get('resource_domain')
+            resource = self.resource_manager.get_resource_by_domain(resource_domain)
+            if resource:
+                asyncio.create_task(self.handle_proxy_connect(session_id, resource))
+            else:
+                response = {'action': 'error', 'message': 'Resource not found'}
+                self.channel.send(json.dumps(response))
         else:
             response = {'action': 'error', 'message': 'Unknown action'}
             self.channel.send(json.dumps(response))
 
+    async def notify_resource_update(self):
+        # Gửi thông báo cập nhật danh sách tài nguyên cho Client
+        resources = self.resource_manager.list_resources()
+        response = {'action': 'list_resources', 'resources': [res.dict() for res in resources]}
+        self.channel.send(json.dumps(response))
+    
     async def handle_proxy_connect(self, session_id, resource):
         try:
             # Connect to the actual resource
@@ -232,7 +233,7 @@ class Connector:
             while True:
                 data = await reader.read(4096)
                 if not data:
-                    logger.info(f"TCP connection closed by remote host in session {session_id}")
+                    logger.info(f"TCP connection closed by resource in session {session_id}")
                     message = {'action': 'close', 'session_id': session_id}
                     self.channel.send(json.dumps(message))
                     break
@@ -252,12 +253,18 @@ class Connector:
         data = await queue.get()
         return data
 
-    async def cleanup(self):
-        # Đảm bảo đóng session khi không cần sử dụng nữa
+    def stop(self):
+        if self.pc:
+            self.loop.run_until_complete(self.pc.close())
         if self.session:
-            await self.session.close()
-            logger.info("Closed aiohttp session")
+            self.loop.run_until_complete(self.session.close())
+
 
 if __name__ == "__main__":
-    connector = Connector()
-    asyncio.run(connector.run())
+        connector = Connector()
+        try:
+            asyncio.run(connector.run())
+        except KeyboardInterrupt:
+            logger.info("Connector stopped by user")
+            connector.stop()
+            sys.exit(0)

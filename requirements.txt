@@ -1,6 +1,9 @@
 aiohttp
 aiortc
-cryptography
-pydantic
-sqlalchemy
 dnslib
+sqlalchemy
+pydantic
+pytest
+flake8
+black
+python-dotenv

@@ -2659,3 +2659,102 @@ asyncio.exceptions.InvalidStateError: invalid state
 task: <Task pending name='Task-545' coro=<RTCPeerConnection.close() running at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiortc\rtcpeerconnection.py:500> wait_for=<Future pending cb=[Task.task_wakeup()]>>
 2024-11-01 16:17:06,413 [ERROR] asyncio: Task was destroyed but it is pending!
 task: <Task pending name='Task-549' coro=<TurnClientMixin.delete() running at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py:188> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2024-11-01 19:01:56,095 [INFO] __main__: Local DNS server started.
+2024-11-01 19:01:56,096 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-11-01 19:01:56,117 [INFO] __main__: DataChannel created
+2024-11-01 19:02:01,247 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 19:02:01,249 [INFO] __main__: ICE connection state: new
+2024-11-01 19:02:04,356 [INFO] __main__: Client stopped by user
+2024-11-01 19:02:04,357 [INFO] __main__: ICE connection state: closed
+2024-11-01 19:02:04,376 [ERROR] asyncio: Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000187A51EB990>
+2024-11-01 19:05:11,877 [INFO] __main__: Local DNS server started.
+2024-11-01 19:05:11,877 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-11-01 19:05:11,883 [INFO] __main__: DataChannel created
+2024-11-01 19:05:16,944 [INFO] __main__: ICE connection state: new
+2024-11-01 19:05:21,159 [INFO] __main__: Client stopped by user
+2024-11-01 19:05:21,160 [INFO] __main__: ICE connection state: closed
+2024-11-01 19:05:21,177 [ERROR] asyncio: Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000014C19BF4C10>
+2024-11-01 19:05:34,125 [INFO] __main__: Local DNS server started.
+2024-11-01 19:05:34,126 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-11-01 19:05:34,132 [INFO] __main__: DataChannel created
+2024-11-01 19:05:34,140 [INFO] __main__: Connected to signaling server
+2024-11-01 19:05:34,253 [INFO] client.dns_resolver: Forwarded DNS request for stun.relay.metered.ca to external DNS server
+2024-11-01 19:05:39,227 [INFO] client.dns_resolver: Forwarded DNS request for global.relay.metered.ca to external DNS server
+2024-11-01 19:05:39,336 [INFO] __main__: Offer sent to connector
+2024-11-01 19:05:39,338 [INFO] __main__: TCP Proxy Server started on port 8888
+2024-11-01 19:05:44,460 [INFO] __main__: Received answer from connector
+2024-11-01 19:05:44,460 [INFO] __main__: ICE connection state: checking
+2024-11-01 19:05:44,493 [INFO] __main__: ICE connection state: completed
+2024-11-01 19:05:44,500 [INFO] __main__: DataChannel is open
+2024-11-01 19:06:22,550 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com to external DNS server
+2024-11-01 19:06:22,631 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com to external DNS server
+2024-11-01 19:06:22,725 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com to external DNS server
+2024-11-01 19:06:22,938 [INFO] client.dns_resolver: Forwarded DNS request for o.pki.goog to external DNS server
+2024-11-01 19:06:23,003 [INFO] client.dns_resolver: Forwarded DNS request for pki-goog.l.google.com to external DNS server
+2024-11-01 19:06:23,083 [INFO] client.dns_resolver: Forwarded DNS request for pki-goog.l.google.com to external DNS server
+2024-11-01 19:06:24,058 [ERROR] client.dns_resolver: Failed to resolve o.pki.goog via external DNS: timed out
+2024-11-01 19:06:24,058 [WARNING] client.dns_resolver: Could not resolve o.pki.goog via external DNS server.
+2024-11-01 19:06:44,067 [INFO] client.dns_resolver: Forwarded DNS request for vscode-sync.trafficmanager.net to external DNS server
+2024-11-01 19:06:44,068 [INFO] client.dns_resolver: Forwarded DNS request for vscode-sync.trafficmanager.net to external DNS server
+2024-11-01 19:06:45,663 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 19:06:45,663 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 19:07:27,170 [INFO] __main__: ICE connection state: closed
+2024-11-01 19:07:27,172 [INFO] __main__: Client stopped by user
+2024-11-01 19:07:27,222 [ERROR] asyncio: Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000023C8BF7CC10>
+2024-11-01 19:07:27,226 [ERROR] asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-48' coro=<RTCPeerConnection.close() running at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiortc\rtcpeerconnection.py:500> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2024-11-01 19:09:18,497 [INFO] __main__: Local DNS server started.
+2024-11-01 19:09:18,497 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-11-01 19:09:18,503 [INFO] __main__: DataChannel created
+2024-11-01 19:09:18,513 [INFO] __main__: Connected to signaling server
+2024-11-01 19:09:18,613 [INFO] client.dns_resolver: Forwarded DNS request for stun.relay.metered.ca to external DNS server
+2024-11-01 19:09:23,613 [INFO] client.dns_resolver: Forwarded DNS request for global.relay.metered.ca to external DNS server
+2024-11-01 19:09:23,719 [INFO] __main__: Offer sent to connector
+2024-11-01 19:09:23,720 [INFO] __main__: TCP Proxy Server started on port 8888
+2024-11-01 19:09:28,853 [INFO] __main__: Received answer from connector
+2024-11-01 19:09:28,854 [INFO] __main__: ICE connection state: checking
+2024-11-01 19:09:28,886 [INFO] __main__: ICE connection state: completed
+2024-11-01 19:09:28,894 [INFO] __main__: DataChannel is open
+2024-11-01 19:09:48,037 [INFO] client.dns_resolver: Forwarded DNS request for business.bing.com to external DNS server
+2024-11-01 19:09:48,202 [INFO] client.dns_resolver: Forwarded DNS request for substrate.office.com to external DNS server
+2024-11-01 19:09:48,305 [INFO] client.dns_resolver: Forwarded DNS request for login.microsoftonline.com to external DNS server
+2024-11-01 19:09:51,098 [INFO] client.dns_resolver: Forwarded DNS request for download.sqlitebrowser.org to external DNS server
+2024-11-01 19:09:52,232 [INFO] client.dns_resolver: Forwarded DNS request for l-ring.msedge.net to external DNS server
+2024-11-01 19:09:52,412 [INFO] client.dns_resolver: Forwarded DNS request for t-ring-fallback-s2.msedge.net to external DNS server
+2024-11-01 19:09:52,703 [INFO] client.dns_resolver: Forwarded DNS request for 52deedd48b267be38d7244a741e62d9e.azr.footprintdns.com to external DNS server
+2024-11-01 19:11:26,951 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 19:11:29,393 [INFO] __main__: ICE connection state: closed
+2024-11-01 19:11:29,395 [INFO] __main__: Client stopped by user
+2024-11-01 19:11:29,467 [ERROR] asyncio: Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000025BACA7CC10>
+2024-11-01 19:11:29,477 [ERROR] asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-35' coro=<RTCPeerConnection.close() running at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiortc\rtcpeerconnection.py:500> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2024-11-01 19:11:31,770 [INFO] __main__: Local DNS server started.
+2024-11-01 19:11:31,771 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-11-01 19:11:31,778 [INFO] __main__: DataChannel created
+2024-11-01 19:11:31,787 [INFO] __main__: Connected to signaling server
+2024-11-01 19:11:36,987 [INFO] __main__: Offer sent to connector
+2024-11-01 19:11:36,988 [INFO] __main__: TCP Proxy Server started on port 8888
+2024-11-01 19:46:38,120 [INFO] __main__: Client stopped by user
+2024-11-01 19:46:38,122 [INFO] __main__: ICE connection state: closed
+2024-11-01 19:46:38,181 [ERROR] asyncio: Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000181FC24CC10>
+2024-11-01 19:46:38,185 [ERROR] asyncio: Task exception was never retrieved
+future: <Task finished name='Task-12' coro=<TurnClientMixin.refresh() done, defined at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py:196> exception=TransactionTimeout()>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 207, in refresh
+    response, _ = await self.request_with_retry(request)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 243, in request_with_retry
+    response, addr = await self.request(request)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 230, in request
+    return await transaction.run()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\stun.py", line 302, in run
+    return await self.__future
+           ^^^^^^^^^^^^^^^^^^^
+aioice.stun.TransactionTimeout: STUN transaction timed out
