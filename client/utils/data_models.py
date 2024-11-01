@@ -1,6 +1,7 @@
 # data_models.py
 
 from pydantic import BaseModel
+from typing import Optional
 
 class Resource(BaseModel):
     resource_id: str
@@ -9,4 +10,4 @@ class Resource(BaseModel):
     description: str = None
     ip: str
     port: int
-    username: str = None  # Dành cho SSH
+    username: Optional[str] = None  # Dành cho SSH

@@ -2,7 +2,7 @@ import asyncio
 import json
 import logging
 import ssl
-from aiohttp import web, WSCloseCode, WSMsgType
+from aiohttp import web, WSMsgType
 from .config import (
     SIGNALING_SERVER_HOST,
     SIGNALING_SERVER_PORT,
@@ -25,7 +25,7 @@ async def websocket_handler(request):
 
     peer_id = request.query.get('peer_id')
     if not peer_id:
-        await ws.close(code=WSCloseCode.PROTOCOL_ERROR, message='Missing peer_id')
+        await ws.close(code=web.WSCloseCode.PROTOCOL_ERROR, message='Missing peer_id')
         return ws
 
     # Store the WebSocket connection

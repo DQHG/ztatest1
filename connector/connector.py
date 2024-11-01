@@ -3,7 +3,7 @@ import json
 import logging
 import ssl
 import sys
-from aiohttp import ClientSession, WSCloseCode, WSMsgType
+from aiohttp import ClientSession, WSMsgType, WSServerHandshakeError
 from aiortc import (
     RTCPeerConnection,
     RTCSessionDescription,
@@ -20,7 +20,6 @@ from .config import (
     LOG_FILE
 )
 from .utils.logging_config import setup_logging
-from .utils.data_models import Resource
 from .resource_manager import ResourceManager
 
 # Configure logging
@@ -30,68 +29,72 @@ logging.getLogger("aioice").setLevel(logging.WARNING)
 
 
 class Connector:
-    def __init__(self):
+    def __init__(self, resource_manager):
         self.pc = None  # RTCPeerConnection
         self.channel = None  # RTCDataChannel
-        self.resource_manager = ResourceManager()
-        self.data_queues = {}
+        self.resource_manager = resource_manager
         self.signaling = None
         self.session = None
-        self.loop = asyncio.get_event_loop()
-
+        self.data_queues = {}
 
     async def run(self):
         await self.reset_connection()
 
     async def reset_connection(self):
-        if self.pc:
-            await self.pc.close()
+        retry_count = 0
+        max_retries = 5
+        while retry_count < max_retries:
+            try:
+                # Clean up any previous peer connection
+                if self.pc:
+                    await self.pc.close()
 
-        # ICE server configuration
-        ice_servers = [
-            RTCIceServer(urls=["stun:stun.relay.metered.ca:80"]),
-            RTCIceServer(urls=["turn:global.relay.metered.ca:80"], username="1a711f473eae217627b45e19", credential="6eiugfMmKE1NW+Ex"),
-            RTCIceServer(urls=["turn:global.relay.metered.ca:80?transport=tcp"], username="1a711f473eae217627b45e19", credential="6eiugfMmKE1NW+Ex"),
-            RTCIceServer(urls=["turn:global.relay.metered.ca:443"], username="1a711f473eae217627b45e19", credential="6eiugfMmKE1NW+Ex"),
-            RTCIceServer(urls=["turns:global.relay.metered.ca:443?transport=tcp"], username="1a711f473eae217627b45e19", credential="6eiugfMmKE1NW+Ex")
-            ]
-        configuration = RTCConfiguration(iceServers=ice_servers)
-        self.pc = RTCPeerConnection(configuration)
+                # ICE server configuration
+                ice_servers = [
+                    RTCIceServer(urls=["stun:stun.l.google.com:19302"]),
+                ]
+                configuration = RTCConfiguration(iceServers=ice_servers)
+                self.pc = RTCPeerConnection(configuration)
 
-        # Register event handlers
-        @self.pc.on("iceconnectionstatechange")
-        async def on_iceconnectionstatechange():
-            logger.info(f"ICE connection state: {self.pc.iceConnectionState}")
-            if self.pc.iceConnectionState in ["failed", "disconnected"]:
-                logger.error("ICE connection failed or disconnected, attempting reset")
-                await self.reset_connection()
+                # Register event handlers
+                self.pc.on("iceconnectionstatechange", self.on_iceconnectionstatechange)
+                self.pc.on("datachannel", self.on_datachannel)
+                self.pc.on("icecandidate", self.on_icecandidate)
 
-        @self.pc.on("icegatheringstatechange")
-        async def on_icegatheringstatechange():
-            logger.info(f"ICE gathering state: {self.pc.iceGatheringState}")
+                # Connect to the signaling server
+                await self.connect_to_signaling()
+                return  # Successful connection
 
-        @self.pc.on("connectionstatechange")
-        async def on_connectionstatechange():
-            logger.info(f"Connection state: {self.pc.connectionState}")
-            if self.pc.connectionState in ["failed", "disconnected"]:
-                logger.error("Connection failed or disconnected, attempting reset")
-                await self.reset_connection()
+            except Exception as e:
+                retry_count += 1
+                logger.error(f"Connection attempt {retry_count}/{max_retries} failed: {e}")
+                await asyncio.sleep(2 ** retry_count)
 
-        @self.pc.on("datachannel")
-        def on_datachannel(channel: RTCDataChannel):
-            self.channel = channel
-            logger.info("DataChannel received")
-            self.channel.on("open", self.on_datachannel_open)
-            self.channel.on("message", self.on_message)
+        logger.critical("Unable to connect after multiple attempts. Exiting.")
+        sys.exit(1)
 
-        # Connect to the signaling server
-        await self.connect_to_signaling()
+    async def on_iceconnectionstatechange(self):
+        logger.info(f"ICE connection state: {self.pc.iceConnectionState}")
+        if self.pc.iceConnectionState == "closed":
+            logger.error("ICE connection closed, resetting connection")
+            await self.reset_connection()
+
+    def on_datachannel(self, channel: RTCDataChannel):
+        self.channel = channel
+        logger.info("DataChannel received")
+        self.channel.on("message", self.on_datachannel_message)
+
+    def on_icecandidate(self, candidate):
+        # Send ICE candidates via the signaling server if needed
+        pass
 
     async def connect_to_signaling(self):
+        # Set up SSL context
         ssl_context = ssl.create_default_context(ssl.Purpose.SERVER_AUTH, cafile=CA_CERT_FILE)
         ssl_context.load_cert_chain(SSL_CERT_FILE, SSL_KEY_FILE)
         ssl_context.check_hostname = False
 
+        # Set up ClientSession for signaling
         self.session = ClientSession()
         try:
             self.signaling = await self.session.ws_connect(
@@ -100,85 +103,75 @@ class Connector:
             )
             logger.info("Connected to signaling server")
 
-            # Receive offer and send answer
+            # Start receiving signaling messages
             await self.receive_signaling()
+
+        except WSServerHandshakeError as e:
+            logger.error(f"WebSocket handshake error: {e}")
+        except ssl.SSLError as e:
+            logger.error(f"SSL error during WebSocket connection: {e}")
         except Exception as e:
             logger.error(f"Error connecting to signaling server: {e}")
-            await asyncio.sleep(5)
-            await self.reset_connection()
         finally:
-            await self.session.close()
+            if self.session:
+                await self.session.close()
 
     async def receive_signaling(self):
-        async for msg in self.signaling:
-            if msg.type == WSMsgType.TEXT:
-                data = json.loads(msg.data)
-                if data.get('sdp') and data.get('type') == 'offer':
-                    offer = RTCSessionDescription(sdp=data['sdp'], type=data['type'])
-                    await self.pc.setRemoteDescription(offer)
-                    logger.info("Received offer from client")
+        try:
+            async for msg in self.signaling:
+                if msg.type == WSMsgType.TEXT:
+                    data = json.loads(msg.data)
+                    if data.get('sdp') and data.get('type') == 'offer':
+                        if self.pc.signalingState == 'closed':
+                            logger.error("Cannot handle offer in closed signaling state")
+                            break
+                        offer = RTCSessionDescription(sdp=data['sdp'], type=data['type'])
+                        await self.pc.setRemoteDescription(offer)
+                        logger.info("Received offer from client")
 
-                    # Create and send answer
-                    answer = await self.pc.createAnswer()
-                    await self.pc.setLocalDescription(answer)
-                    await self.signaling.send_json({
-                        'sdp': self.pc.localDescription.sdp,
-                        'type': self.pc.localDescription.type,
-                        'target_id': 'client'
-                    })
-                    logger.info("Sent answer to client")
-                elif data.get('candidate'):
-                    candidate = RTCIceCandidate(
-                        sdpMid=data['candidate']['sdpMid'],
-                        sdpMLineIndex=data['candidate']['sdpMLineIndex'],
-                        candidate=data['candidate']['candidate']
-                    )
-                    await self.pc.addIceCandidate(candidate)
-                    logger.info("Added ICE candidate from client")
-                else:
-                    logger.warning(f"Unknown message from signaling server: {data}")
-            elif msg.type == WSMsgType.ERROR:
-                logger.error(f"Signaling error: {msg.data}")
-                break
-            elif msg.type == WSMsgType.CLOSED:
-                logger.warning("Signaling connection closed")
-                break
+                        # Create and send answer
+                        answer = await self.pc.createAnswer()
+                        await self.pc.setLocalDescription(answer)
+                        await self.signaling.send_json({
+                            'sdp': self.pc.localDescription.sdp,
+                            'type': self.pc.localDescription.type,
+                            'target_id': 'client'
+                        })
+                        logger.info("Sent answer to client")
+                    elif data.get('candidate'):
+                        candidate = RTCIceCandidate(
+                            sdpMid=data['candidate']['sdpMid'],
+                            sdpMLineIndex=data['candidate']['sdpMLineIndex'],
+                            candidate=data['candidate']['candidate']
+                        )
+                        await self.pc.addIceCandidate(candidate)
+                        logger.info("Added ICE candidate from client")
+                    else:
+                        logger.warning(f"Unknown message from signaling server: {data}")
+                elif msg.type == WSMsgType.ERROR:
+                    logger.error(f"Signaling error: {msg.data}")
+                    break
+                elif msg.type == WSMsgType.CLOSED:
+                    logger.warning("Signaling connection closed")
+                    break
+        except Exception as e:
+            logger.error(f"Error during signaling message reception: {e}")
+        finally:
+            # Ensure session and WebSocket are closed
+            if self.session:
+                await self.session.close()
 
-    def on_datachannel_open(self):
-        logger.info("DataChannel is open")
-
-    async def on_message(self, message):
+    def on_datachannel_message(self, message):
         request = json.loads(message)
         action = request.get('action')
-        if action == 'data':
-            session_id = request.get('session_id')
-            data_hex = request.get('data')
-            data = bytes.fromhex(data_hex)
-            if session_id not in self.data_queues:
-                self.data_queues[session_id] = asyncio.Queue()
-            await self.data_queues[session_id].put(data)
-        elif action == 'close':
-            session_id = request.get('session_id')
-            if session_id in self.data_queues:
-                await self.data_queues[session_id].put(None)
-        elif action == 'list_resources':
+        if action == 'request_resources':
+            # Send the list of protected resources to the client
             resources = self.resource_manager.list_resources()
-            response = {'action': 'list_resources', 'resources': [res.dict() for res in resources]}
+            response = {
+                'action': 'resource_list',
+                'resources': [res.dict() for res in resources]
+            }
             self.channel.send(json.dumps(response))
-        elif action == 'add_resource':
-            resource_data = request.get('resource')
-            success, message = self.resource_manager.add_resource_from_dict(resource_data)
-            response = {'action': 'add_resource', 'success': success, 'message': message}
-            self.channel.send(json.dumps(response))
-            # Thông báo cho Client cập nhật danh sách tài nguyên
-            await self.notify_resource_update()
-        elif action == 'delete_resource':
-            resource_id = request.get('resource_id')
-            success, message = self.resource_manager.delete_resource_by_id(resource_id)
-            response = {'action': 'delete_resource', 'success': success, 'message': message}
-            self.channel.send(json.dumps(response))
-            # Thông báo cho Client cập nhật danh sách tài nguyên
-            await self.notify_resource_update()
         elif action == 'proxy_connect':
             session_id = request.get('session_id')
             resource_domain = request.get('resource_domain')
@@ -188,16 +181,20 @@ class Connector:
             else:
                 response = {'action': 'error', 'message': 'Resource not found'}
                 self.channel.send(json.dumps(response))
+        elif action == 'data':
+            session_id = request.get('session_id')
+            data_hex = request.get('data')
+            data = bytes.fromhex(data_hex)
+            if session_id not in self.data_queues:
+                self.data_queues[session_id] = asyncio.Queue()
+            asyncio.create_task(self.data_queues[session_id].put(data))
+        elif action == 'close':
+            session_id = request.get('session_id')
+            if session_id in self.data_queues:
+                asyncio.create_task(self.data_queues[session_id].put(None))
         else:
-            response = {'action': 'error', 'message': 'Unknown action'}
-            self.channel.send(json.dumps(response))
+            logger.warning(f"Unknown action received: {action}")
 
-    async def notify_resource_update(self):
-        # Gửi thông báo cập nhật danh sách tài nguyên cho Client
-        resources = self.resource_manager.list_resources()
-        response = {'action': 'list_resources', 'resources': [res.dict() for res in resources]}
-        self.channel.send(json.dumps(response))
-    
     async def handle_proxy_connect(self, session_id, resource):
         try:
             # Connect to the actual resource
@@ -255,16 +252,17 @@ class Connector:
 
     def stop(self):
         if self.pc:
-            self.loop.run_until_complete(self.pc.close())
+            asyncio.run(self.pc.close())
         if self.session:
-            self.loop.run_until_complete(self.session.close())
+            asyncio.run(self.session.close())
 
 
 if __name__ == "__main__":
-        connector = Connector()
-        try:
-            asyncio.run(connector.run())
-        except KeyboardInterrupt:
-            logger.info("Connector stopped by user")
-            connector.stop()
-            sys.exit(0)
+    resource_manager = ResourceManager()
+    connector = Connector(resource_manager)
+    try:
+        asyncio.run(connector.run())
+    except KeyboardInterrupt:
+        logger.info("Connector stopped by user")
+        connector.stop()
+        sys.exit(0)

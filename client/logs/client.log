@@ -2758,3 +2758,108 @@ Traceback (most recent call last):
     return await self.__future
            ^^^^^^^^^^^^^^^^^^^
 aioice.stun.TransactionTimeout: STUN transaction timed out
+2024-11-02 01:21:22,120 [INFO] __main__: Local DNS server started.
+2024-11-02 01:21:22,121 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-11-02 01:21:22,128 [INFO] __main__: DataChannel created
+2024-11-02 01:21:22,135 [INFO] __main__: Connected to signaling server
+2024-11-02 01:21:27,328 [INFO] __main__: Offer sent to connector
+2024-11-02 01:21:27,330 [INFO] __main__: TCP Proxy Server started on port 8888
+2024-11-02 01:21:32,615 [INFO] __main__: Received answer from connector
+2024-11-02 01:21:32,616 [INFO] __main__: ICE connection state: checking
+2024-11-02 01:21:32,647 [INFO] __main__: ICE connection state: completed
+2024-11-02 01:21:32,655 [INFO] __main__: DataChannel is open
+2024-11-02 01:22:07,474 [INFO] __main__: ICE connection state: closed
+2024-11-02 01:22:07,476 [INFO] __main__: Client stopped by user
+2024-11-02 01:22:07,552 [ERROR] asyncio: Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000025F7653B910>
+2024-11-02 01:22:07,555 [ERROR] asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-38' coro=<RTCPeerConnection.close() running at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiortc\rtcpeerconnection.py:500> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2024-11-02 02:32:54,225 [INFO] __main__: Local DNS server started.
+2024-11-02 02:32:54,225 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-11-02 02:32:54,232 [INFO] __main__: DataChannel created
+2024-11-02 02:32:54,240 [INFO] __main__: Connected to signaling server
+2024-11-02 02:32:59,547 [INFO] __main__: Offer sent to connector
+2024-11-02 02:32:59,548 [INFO] __main__: TCP Proxy Server started on port 8888
+2024-11-02 02:33:04,696 [INFO] __main__: Received answer from connector
+2024-11-02 02:33:04,697 [INFO] __main__: ICE connection state: checking
+2024-11-02 02:33:04,727 [INFO] __main__: ICE connection state: completed
+2024-11-02 02:33:04,733 [INFO] __main__: DataChannel is open
+2024-11-02 02:33:04,746 [WARNING] aiortc.rtcdtlstransport: RTCDtlsTransport(server) Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiortc\rtcdtlstransport.py", line 517, in __run
+    await self._recv_next()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiortc\rtcdtlstransport.py", line 607, in _recv_next
+    await self._data_receiver._handle_data(data)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiortc\rtcsctptransport.py", line 849, in _handle_data
+    await self._receive_chunk(chunk)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiortc\rtcsctptransport.py", line 928, in _receive_chunk
+    await self._receive_data_chunk(chunk)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiortc\rtcsctptransport.py", line 1088, in _receive_data_chunk
+    await self._receive(*message)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiortc\rtcsctptransport.py", line 918, in _receive
+    await self._data_channel_receive(stream_id, pp_id, data)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiortc\rtcsctptransport.py", line 1785, in _data_channel_receive
+    self._data_channels[stream_id].emit("message", data.decode("utf8"))
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\base.py", line 212, in emit
+    handled = self._call_handlers(event, args, kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\base.py", line 188, in _call_handlers
+    self._emit_run(f, args, kwargs)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\asyncio.py", line 53, in _emit_run
+    self.emit("error", exc)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\base.py", line 215, in emit
+    self._emit_handle_potential_error(event, args[0] if args else None)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\base.py", line 173, in _emit_handle_potential_error
+    raise error
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\asyncio.py", line 51, in _emit_run
+    coro: Any = f(*args, **kwargs)
+                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client.py", line 175, in on_datachannel_message
+    self.update_protected_resources(resources)
+  File "C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client.py", line 192, in update_protected_resources
+    self.protected_resources = [Resource(**res) for res in resources]
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client.py", line 192, in <listcomp>
+    self.protected_resources = [Resource(**res) for res in resources]
+                                ^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pydantic\main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for Resource
+username
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_type
+
+2024-11-02 02:33:04,752 [INFO] __main__: ICE connection state: closed
+2024-11-02 02:33:28,570 [INFO] __main__: Client stopped by user
+2024-11-02 02:35:15,506 [INFO] __main__: Local DNS server started.
+2024-11-02 02:35:15,506 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-11-02 02:35:15,512 [INFO] __main__: DataChannel created
+2024-11-02 02:35:15,521 [INFO] __main__: Connected to signaling server
+2024-11-02 02:35:20,732 [INFO] __main__: Offer sent to connector
+2024-11-02 02:35:20,733 [INFO] __main__: TCP Proxy Server started on port 8888
+2024-11-02 02:36:23,067 [INFO] __main__: Client stopped by user
+2024-11-02 02:36:23,068 [INFO] __main__: ICE connection state: closed
+2024-11-02 02:36:23,124 [ERROR] asyncio: Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000202DCA4B810>
+2024-11-02 02:45:24,207 [INFO] __main__: Local DNS server started.
+2024-11-02 02:45:24,207 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-11-02 02:45:24,214 [INFO] __main__: DataChannel created
+2024-11-02 02:45:24,223 [INFO] __main__: Connected to signaling server
+2024-11-02 02:45:29,410 [INFO] __main__: Offer sent to connector
+2024-11-02 02:45:29,411 [INFO] __main__: TCP Proxy Server started on port 8888
+2024-11-02 02:45:34,428 [INFO] __main__: Received answer from connector
+2024-11-02 02:45:34,429 [INFO] __main__: ICE connection state: checking
+2024-11-02 02:45:34,459 [INFO] __main__: ICE connection state: completed
+2024-11-02 02:45:34,462 [INFO] __main__: DataChannel is open
+2024-11-02 02:45:34,469 [INFO] __main__: Resource IP Map: {'abc.com': '100.64.0.1'}
+2024-11-02 02:45:34,469 [INFO] __main__: Received resource list from connector
+2024-11-02 02:46:17,947 [INFO] client.dns_resolver: Resolved abc.com to 100.64.0.1 (CGNAT)
+2024-11-02 02:47:12,785 [INFO] __main__: ICE connection state: closed
+2024-11-02 02:47:12,785 [ERROR] __main__: ICE connection closed, resetting connection
+2024-11-02 02:47:12,788 [INFO] __main__: Client stopped by user
+2024-11-02 02:47:12,837 [ERROR] asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-34' coro=<RTCPeerConnection.close() running at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiortc\rtcpeerconnection.py:500> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2024-11-02 02:47:12,838 [ERROR] asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-35' coro=<Client.on_iceconnectionstatechange() running at C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client.py:104> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[AsyncIOEventEmitter._emit_run.<locals>.callback() at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\asyncio.py:69]>
+2024-11-02 02:47:12,839 [ERROR] asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-38' coro=<TurnClientMixin.delete() running at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py:188> wait_for=<Future pending cb=[Task.task_wakeup()]>>

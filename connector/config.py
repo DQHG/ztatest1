@@ -13,5 +13,10 @@ CA_CERT_FILE = os.path.join(BASE_DIR, 'certificates', 'ca.crt')
 # Cấu hình logging
 LOG_FILE = os.path.join(BASE_DIR, 'logs', 'connector.log')
 
-# Cấu hình cơ sở dữ liệu
+# Database configuration
 DATABASE_URL = 'sqlite:///resources.db'
+
+# Admin API configuration
+ADMIN_API_HOST = '0.0.0.0'
+ADMIN_API_PORT = 8000
+ADMIN_API_KEY = '7C53ED1E212B4257B7B4C4B75BC75' #32 bytes test key

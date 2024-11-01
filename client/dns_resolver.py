@@ -2,30 +2,41 @@ import threading
 import logging
 from concurrent.futures import ThreadPoolExecutor
 from dnslib import RR, QTYPE, A, DNSRecord
-from dnslib.server import DNSServer, BaseResolver, DNSLogger,NoopDNSLogger
+from dnslib.server import DNSServer, BaseResolver, NoopDNSLogger
 
 logger = logging.getLogger(__name__)
 
 class LocalDNSResolver(BaseResolver):
     def __init__(self, protected_resources):
         """
-        Resolver cục bộ cho phép phân giải các tài nguyên được bảo vệ và chuyển tiếp
-        các yêu cầu khác đến DNS server ngoài (DNS forwarding).
+        Local resolver that handles resolution of protected resources and forwards other requests.
 
-        :param protected_resources: danh sách các tài nguyên được bảo vệ (dạng tên miền).
+        :param protected_resources: List of protected resources (domain names).
         """
         self.protected_resources = protected_resources
-        # Use a consistent way to assign CGNAT IPs
         self.resource_ip_map = {}
-        self.ip_counter = 1
         self.current_ip_index = 1
         self.cgnat_base_ip = '100.64.0.0'
-        self.forwarding_dns_server = '8.8.8.8'  # DNS server ngoài để chuyển tiếp yêu cầu
-        self.executor = ThreadPoolExecutor(max_workers=10)  # Tạo executor cho DNS forwarding
+        self.forwarding_dns_server = '8.8.8.8'  # External DNS server
+        self.executor = ThreadPoolExecutor(max_workers=10)  # For DNS forwarding
+        self.allocate_cgnat_ips()
+
+    def allocate_cgnat_ips(self):
+        """
+        Allocate CGNAT IPs for each protected resource.
+        """
+        for resource in self.protected_resources:
+            domain = resource.name
+            if domain not in self.resource_ip_map:
+                self.resource_ip_map[domain] = self.get_cgnat_ip()
+
+    def update_resources(self, protected_resources):
+        self.protected_resources = protected_resources
+        self.allocate_cgnat_ips()
 
     def get_cgnat_ip(self):
         """
-        Sinh một địa chỉ IP từ dải CGNAT cho tài nguyên được bảo vệ.
+        Generate a CGNAT IP address for a protected resource.
         """
         base_parts = [int(part) for part in self.cgnat_base_ip.split('.')]
         ip_int = (base_parts[0] << 24) + (base_parts[1] << 16) + (base_parts[2] << 8) + base_parts[3]
@@ -41,10 +52,10 @@ class LocalDNSResolver(BaseResolver):
 
     def forward_dns_request(self, domain):
         """
-        Chuyển tiếp yêu cầu DNS đến DNS server bên ngoài trong một executor.
+        Forward DNS request to external DNS server.
 
-        :param domain: tên miền cần phân giải.
-        :return: phản hồi từ DNS server bên ngoài hoặc None nếu không phân giải được.
+        :param domain: Domain name to resolve.
+        :return: DNS response or None if resolution fails.
         """
         try:
             forward_request = DNSRecord.question(domain)
@@ -57,33 +68,31 @@ class LocalDNSResolver(BaseResolver):
 
     def resolve(self, request, handler):
         """
-        Xử lý yêu cầu DNS từ client.
-        Nếu tên miền nằm trong danh sách tài nguyên được bảo vệ, trả về địa chỉ IP CGNAT.
-        Nếu không, chuyển tiếp yêu cầu đến DNS server ngoài trong một executor.
+        Handle DNS requests from the client.
+
+        :param request: DNS request.
+        :param handler: Request handler.
+        :return: DNS response.
         """
         reply = request.reply()
         qname = request.q.qname
         qtype = QTYPE[request.q.qtype]
         domain = str(qname).rstrip('.')
 
-        if domain in self.protected_resources:
-            if domain not in self.resource_ip_map:
-                self.resource_ip_map[domain] = self.get_cgnat_ip()
+        if domain in self.resource_ip_map:
             cgnat_ip = self.resource_ip_map[domain]
-            # Nếu domain là tài nguyên được bảo vệ, trả về địa chỉ IP CGNAT
+            # Respond with the CGNAT IP for protected resources
             reply.add_answer(RR(qname, QTYPE.A, rdata=A(cgnat_ip), ttl=60))
             logger.info(f"Resolved {domain} to {cgnat_ip} (CGNAT)")
             return reply
         else:
-            # Nếu không phải là tài nguyên được bảo vệ, thực hiện DNS forwarding qua executor
+            # Forward other DNS requests
             future = self.executor.submit(self.forward_dns_request, domain)
-            forward_reply = future.result(timeout=1)  # Đợi kết quả tối đa trong 1 giây
+            forward_reply = future.result(timeout=1)
 
-            # Nếu có phản hồi từ DNS server ngoài, trả về kết quả đó
             if forward_reply:
                 for rr in forward_reply.rr:
                     reply.add_answer(rr)
-                # logger.info(f"Forwarded DNS request for {domain} to external DNS server")
             else:
                 logger.warning(f"Could not resolve {domain} via external DNS server.")
             return reply
@@ -91,9 +100,9 @@ class LocalDNSResolver(BaseResolver):
 class DNSResolverThread(threading.Thread):
     def __init__(self, resolver):
         """
-        Luồng khởi động DNS server cục bộ.
-        
-        :param resolver: resolver cục bộ sử dụng để xử lý các yêu cầu DNS.
+        Thread to start the local DNS server.
+
+        :param resolver: Local DNS resolver.
         """
         super().__init__()
         self.resolver = resolver

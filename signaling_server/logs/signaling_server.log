@@ -113,3 +113,64 @@
 2024-11-01 19:11:42,003 [INFO] aiohttp.access: 127.0.0.1 [01/Nov/2024:12:09:12 +0000] "GET /ws?peer_id=connector HTTP/1.1" 101 0 "-" "Python/3.11 aiohttp/3.8.4"
 2024-11-01 19:46:38,190 [INFO] __main__: Peer client disconnected.
 2024-11-01 19:46:38,190 [INFO] aiohttp.access: 127.0.0.1 [01/Nov/2024:12:11:31 +0000] "GET /ws?peer_id=client HTTP/1.1" 101 0 "-" "Python/3.11 aiohttp/3.8.4"
+2024-11-02 01:21:10,306 [INFO] __main__: Peer connector connected.
+2024-11-02 01:21:22,135 [INFO] __main__: Peer client connected.
+2024-11-02 01:21:27,329 [INFO] __main__: Forwarded message from client to connector
+2024-11-02 01:21:32,613 [INFO] __main__: Forwarded message from connector to client
+2024-11-02 01:22:07,556 [INFO] __main__: Peer client disconnected.
+2024-11-02 01:22:07,557 [INFO] aiohttp.access: 127.0.0.1 [01/Nov/2024:18:21:22 +0000] "GET /ws?peer_id=client HTTP/1.1" 101 0 "-" "Python/3.11 aiohttp/3.8.4"
+2024-11-02 02:30:51,193 [ERROR] asyncio: unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\web.py:289> exception=OSError(10048, "error while attempting to bind on address ('0.0.0.0', 8080): only one usage of each socket address (protocol/network address/port) is normally permitted")>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\web.py", line 516, in run_app
+    loop.run_until_complete(main_task)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 650, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\web.py", line 415, in _run_app
+    await site.start()
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1511, in create_server
+    raise OSError(err.errno, 'error while attempting '
+OSError: [Errno 10048] error while attempting to bind on address ('0.0.0.0', 8080): only one usage of each socket address (protocol/network address/port) is normally permitted
+2024-11-02 02:32:39,594 [INFO] __main__: Peer connector connected.
+2024-11-02 02:32:54,240 [INFO] __main__: Peer client connected.
+2024-11-02 02:32:59,548 [INFO] __main__: Forwarded message from client to connector
+2024-11-02 02:33:04,695 [INFO] __main__: Forwarded message from connector to client
+2024-11-02 02:33:28,606 [INFO] __main__: Peer client disconnected.
+2024-11-02 02:33:28,608 [INFO] aiohttp.access: 127.0.0.1 [01/Nov/2024:19:32:54 +0000] "GET /ws?peer_id=client HTTP/1.1" 101 0 "-" "Python/3.11 aiohttp/3.8.4"
+2024-11-02 02:35:15,521 [INFO] __main__: Peer client connected.
+2024-11-02 02:35:20,732 [INFO] __main__: Forwarded message from client to connector
+2024-11-02 02:35:25,750 [INFO] __main__: Peer connector connected.
+2024-11-02 02:35:25,751 [INFO] __main__: Peer connector disconnected.
+2024-11-02 02:35:25,752 [INFO] aiohttp.access: 127.0.0.1 [01/Nov/2024:19:32:39 +0000] "GET /ws?peer_id=connector HTTP/1.1" 101 0 "-" "Python/3.11 aiohttp/3.8.4"
+2024-11-02 02:36:23,125 [INFO] __main__: Peer client disconnected.
+2024-11-02 02:36:23,126 [INFO] aiohttp.access: 127.0.0.1 [01/Nov/2024:19:35:15 +0000] "GET /ws?peer_id=client HTTP/1.1" 101 0 "-" "Python/3.11 aiohttp/3.8.4"
+2024-11-02 02:42:21,518 [ERROR] aiohttp.server: Error handling request
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\web_protocol.py", line 433, in _handle_request
+    resp = await request_handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\web_app.py", line 504, in _handle
+    resp = await handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\signaling_server\signaling_server.py", line 53, in websocket_handler
+    del peers[peer_id]
+        ~~~~~^^^^^^^^^
+KeyError: 'connector'
+2024-11-02 02:42:35,580 [INFO] __main__: Peer connector connected.
+2024-11-02 02:42:35,582 [INFO] __main__: Peer connector disconnected.
+2024-11-02 02:42:35,582 [INFO] aiohttp.access: 127.0.0.1 [01/Nov/2024:19:42:35 +0000] "GET /ws?peer_id=connector HTTP/1.1" 101 0 "-" "Python/3.11 aiohttp/3.8.4"
+2024-11-02 02:42:46,027 [INFO] __main__: Peer connector connected.
+2024-11-02 02:42:46,028 [INFO] __main__: Peer connector disconnected.
+2024-11-02 02:42:46,029 [INFO] aiohttp.access: 127.0.0.1 [01/Nov/2024:19:42:46 +0000] "GET /ws?peer_id=connector HTTP/1.1" 101 0 "-" "Python/3.11 aiohttp/3.8.4"
+2024-11-02 02:45:20,021 [INFO] __main__: Peer connector connected.
+2024-11-02 02:45:24,223 [INFO] __main__: Peer client connected.
+2024-11-02 02:45:29,411 [INFO] __main__: Forwarded message from client to connector
+2024-11-02 02:45:34,427 [INFO] __main__: Forwarded message from connector to client
+2024-11-02 02:47:12,785 [INFO] __main__: Peer client disconnected.
+2024-11-02 02:47:12,785 [INFO] aiohttp.access: 127.0.0.1 [01/Nov/2024:19:45:24 +0000] "GET /ws?peer_id=client HTTP/1.1" 101 0 "-" "Python/3.11 aiohttp/3.8.4"
+2024-11-02 02:47:15,698 [INFO] __main__: Peer connector disconnected.
+2024-11-02 02:47:15,699 [INFO] aiohttp.access: 127.0.0.1 [01/Nov/2024:19:45:20 +0000] "GET /ws?peer_id=connector HTTP/1.1" 101 0 "-" "Python/3.11 aiohttp/3.8.4"
