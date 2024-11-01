@@ -438,3 +438,168 @@ client_session: <aiohttp.client.ClientSession object at 0x00000205CB3D8150>
 2024-11-01 13:09:58,506 [INFO] __main__: Interacting with Connector
 2024-11-01 13:11:50,644 [INFO] __main__: Closed aiohttp session
 2024-11-01 13:11:50,646 [INFO] __main__: ICE connection state: closed
+2024-11-01 13:23:45,525 [INFO] __main__: DataChannel created, state: connecting
+2024-11-01 13:23:46,193 [INFO] __main__: Connected to signaling server
+2024-11-01 13:23:51,516 [INFO] __main__: Offer sent to connector
+2024-11-01 13:23:51,927 [INFO] __main__: Received answer from connector
+2024-11-01 13:23:51,930 [INFO] __main__: ICE connection state: checking
+2024-11-01 13:23:52,127 [ERROR] asyncio: Task exception was never retrieved
+future: <Task finished name='Task-28' coro=<TurnClientMixin.send_data() done, defined at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py:271> exception=TransactionFailed(Message(message_method=Method.CHANNEL_BIND, message_class=Class.ERROR, transaction_id=b'.\x99+\xa6\xe8\xb9\x19\x16\x0cA\x9e\x86'))>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 290, in send_data
+    await self.channel_bind(channel, addr)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 111, in channel_bind
+    await self.request_with_retry(request)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 243, in request_with_retry
+    response, addr = await self.request(request)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 230, in request
+    return await transaction.run()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\stun.py", line 302, in run
+    return await self.__future
+           ^^^^^^^^^^^^^^^^^^^
+aioice.stun.TransactionFailed: STUN transaction failed (401 - )
+2024-11-01 13:23:52,856 [INFO] __main__: ICE connection state: completed
+2024-11-01 13:23:53,667 [INFO] __main__: DataChannel is open
+2024-11-01 13:23:53,669 [INFO] __main__: Interacting with Connector
+2024-11-01 13:24:04,970 [INFO] __main__: Closed aiohttp session
+2024-11-01 13:24:04,971 [ERROR] asyncio: Task exception was never retrieved
+future: <Task finished name='Task-55' coro=<Client.interact_with_connector() done, defined at C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client.py:262> exception=EOFError()>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client.py", line 269, in interact_with_connector
+    choice = await aioconsole.ainput("Select an action: ")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioconsole\stream.py", line 297, in ainput
+    raise EOFError
+EOFError
+2024-11-01 13:24:04,976 [INFO] __main__: ICE connection state: closed
+2024-11-01 13:24:04,979 [ERROR] asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-66' coro=<TurnClientMixin.delete() running at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py:175>>
+2024-11-01 13:24:05,076 [ERROR] asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-62' coro=<RTCPeerConnection.close() running at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiortc\rtcpeerconnection.py:500> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2024-11-01 13:27:19,423 [INFO] __main__: Local DNS server started.
+2024-11-01 13:27:19,425 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-11-01 13:27:19,434 [INFO] __main__: DataChannel created, state: connecting
+2024-11-01 13:27:20,006 [INFO] __main__: Connected to signaling server
+2024-11-01 13:27:25,153 [INFO] __main__: Offer sent to connector
+2024-11-01 13:27:25,544 [INFO] __main__: Received answer from connector
+2024-11-01 13:27:25,546 [INFO] __main__: ICE connection state: checking
+2024-11-01 13:27:25,774 [ERROR] asyncio: Task exception was never retrieved
+future: <Task finished name='Task-28' coro=<TurnClientMixin.send_data() done, defined at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py:271> exception=TransactionFailed(Message(message_method=Method.CHANNEL_BIND, message_class=Class.ERROR, transaction_id=b'@V\x9b\x99i\x01Q\xa4\xa9\x9bW#'))>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 290, in send_data
+    await self.channel_bind(channel, addr)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 111, in channel_bind
+    await self.request_with_retry(request)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 243, in request_with_retry
+    response, addr = await self.request(request)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 230, in request
+    return await transaction.run()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\stun.py", line 302, in run
+    return await self.__future
+           ^^^^^^^^^^^^^^^^^^^
+aioice.stun.TransactionFailed: STUN transaction failed (401 - )
+2024-11-01 13:27:26,208 [INFO] __main__: ICE connection state: completed
+2024-11-01 13:27:26,893 [INFO] __main__: DataChannel is open
+2024-11-01 13:27:26,896 [INFO] __main__: Interacting with Connector
+2024-11-01 13:28:28,850 [INFO] client.dns_resolver: Forwarded DNS request for dns.google to external DNS server
+2024-11-01 13:28:28,850 [INFO] client.dns_resolver: Forwarded DNS request for dns.google to external DNS server
+2024-11-01 13:28:28,851 [INFO] client.dns_resolver: Forwarded DNS request for dns.google to external DNS server
+2024-11-01 13:28:28,851 [INFO] client.dns_resolver: Forwarded DNS request for dns.google to external DNS server
+2024-11-01 13:28:28,851 [INFO] client.dns_resolver: Forwarded DNS request for dns.google to external DNS server
+2024-11-01 13:28:28,851 [INFO] client.dns_resolver: Forwarded DNS request for dns.google to external DNS server
+2024-11-01 13:28:29,145 [INFO] client.dns_resolver: Forwarded DNS request for dns.google to external DNS server
+2024-11-01 13:28:29,146 [INFO] client.dns_resolver: Forwarded DNS request for dns.google to external DNS server
+2024-11-01 13:28:30,894 [INFO] __main__: Closed aiohttp session
+2024-11-01 13:28:30,895 [ERROR] asyncio: Task exception was never retrieved
+future: <Task finished name='Task-54' coro=<Client.interact_with_connector() done, defined at C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client.py:263> exception=EOFError()>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client.py", line 270, in interact_with_connector
+    choice = await aioconsole.ainput("Select an action: ")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioconsole\stream.py", line 297, in ainput
+    raise EOFError
+EOFError
+2024-11-01 13:28:30,899 [INFO] __main__: ICE connection state: closed
+2024-11-01 13:28:30,965 [ERROR] asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-82' coro=<RTCPeerConnection.close() running at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiortc\rtcpeerconnection.py:500> wait_for=<Future finished result=True>>
+2024-11-01 13:28:33,553 [INFO] __main__: Local DNS server started.
+2024-11-01 13:28:33,554 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-11-01 13:28:33,565 [INFO] __main__: DataChannel created, state: connecting
+2024-11-01 13:28:34,243 [INFO] __main__: Connected to signaling server
+2024-11-01 13:28:34,752 [INFO] client.dns_resolver: Forwarded DNS request for stun.relay.metered.ca to external DNS server
+2024-11-01 13:28:39,159 [INFO] client.dns_resolver: Forwarded DNS request for 1.0.0.127.in-addr.arpa to external DNS server
+2024-11-01 13:28:39,163 [INFO] client.dns_resolver: Resolved protected.example.com to 100.64.0.1 (CGNAT)
+2024-11-01 13:28:39,166 [INFO] client.dns_resolver: Resolved protected.example.com to 100.64.0.1 (CGNAT)
+2024-11-01 13:28:39,302 [INFO] client.dns_resolver: Forwarded DNS request for global.relay.metered.ca to external DNS server
+2024-11-01 13:28:39,464 [INFO] __main__: Offer sent to connector
+2024-11-01 13:28:39,674 [INFO] __main__: Received answer from connector
+2024-11-01 13:28:39,675 [INFO] __main__: ICE connection state: checking
+2024-11-01 13:28:39,872 [ERROR] asyncio: Task exception was never retrieved
+future: <Task finished name='Task-28' coro=<TurnClientMixin.send_data() done, defined at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py:271> exception=TransactionFailed(Message(message_method=Method.CHANNEL_BIND, message_class=Class.ERROR, transaction_id=b'\xe4\xba\xe4j\xe2\x02\xb2\xdc!\xd6\xeb\xe9'))>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 290, in send_data
+    await self.channel_bind(channel, addr)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 111, in channel_bind
+    await self.request_with_retry(request)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 243, in request_with_retry
+    response, addr = await self.request(request)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 230, in request
+    return await transaction.run()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\stun.py", line 302, in run
+    return await self.__future
+           ^^^^^^^^^^^^^^^^^^^
+aioice.stun.TransactionFailed: STUN transaction failed (401 - )
+2024-11-01 13:29:28,499 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 13:29:30,562 [INFO] __main__: Closed aiohttp session
+2024-11-01 13:29:38,623 [INFO] __main__: Local DNS server started.
+2024-11-01 13:29:38,624 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-11-01 13:29:38,633 [INFO] __main__: DataChannel created, state: connecting
+2024-11-01 13:29:39,121 [INFO] __main__: Connected to signaling server
+2024-11-01 13:29:39,220 [INFO] client.dns_resolver: Forwarded DNS request for stun.relay.metered.ca to external DNS server
+2024-11-01 13:29:44,311 [INFO] client.dns_resolver: Forwarded DNS request for global.relay.metered.ca to external DNS server
+2024-11-01 13:29:44,390 [INFO] __main__: Offer sent to connector
+2024-11-01 13:29:45,001 [INFO] __main__: Received answer from connector
+2024-11-01 13:29:45,002 [INFO] __main__: ICE connection state: checking
+2024-11-01 13:29:45,282 [ERROR] asyncio: Task exception was never retrieved
+future: <Task finished name='Task-28' coro=<TurnClientMixin.send_data() done, defined at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py:271> exception=TransactionFailed(Message(message_method=Method.CHANNEL_BIND, message_class=Class.ERROR, transaction_id=b'\xbb\xe8\x91\xe5\xb5*\x98\xaf\x9a#\x02\xf0'))>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 290, in send_data
+    await self.channel_bind(channel, addr)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 111, in channel_bind
+    await self.request_with_retry(request)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 243, in request_with_retry
+    response, addr = await self.request(request)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 230, in request
+    return await transaction.run()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\stun.py", line 302, in run
+    return await self.__future
+           ^^^^^^^^^^^^^^^^^^^
+aioice.stun.TransactionFailed: STUN transaction failed (401 - )
+2024-11-01 13:29:45,617 [INFO] __main__: ICE connection state: completed
+2024-11-01 13:29:46,302 [INFO] client.dns_resolver: Forwarded DNS request for copilot-telemetry-service.githubusercontent.com to external DNS server
+2024-11-01 13:29:46,638 [INFO] __main__: DataChannel is open
+2024-11-01 13:29:46,639 [INFO] __main__: Interacting with Connector
+2024-11-01 13:29:47,051 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 13:29:54,339 [INFO] __main__: Closed aiohttp session
+2024-11-01 13:29:54,340 [ERROR] asyncio: Task exception was never retrieved
+future: <Task finished name='Task-54' coro=<Client.interact_with_connector() done, defined at C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client.py:263> exception=EOFError()>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client.py", line 270, in interact_with_connector
+    choice = await aioconsole.ainput("Select an action: ")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioconsole\stream.py", line 297, in ainput
+    raise EOFError
+EOFError
+2024-11-01 13:29:54,344 [INFO] __main__: ICE connection state: closed
+2024-11-01 13:29:54,407 [ERROR] asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-79' coro=<RTCPeerConnection.close() running at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiortc\rtcpeerconnection.py:500> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2024-11-01 13:29:54,408 [ERROR] asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-83' coro=<TurnClientMixin.delete() running at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py:188> wait_for=<Future pending cb=[Task.task_wakeup()]>>

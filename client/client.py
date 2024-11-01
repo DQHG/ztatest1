@@ -47,6 +47,7 @@ class Client:
         self.session = None
 
     async def run(self):
+        self.start_dns_server()
         await self.reset_connection()
 
     async def reset_connection(self):
@@ -291,6 +292,12 @@ class Client:
             print(f"Error: {response.get('message')}")
         else:
             print(f"Unknown response: {response}")
+    def start_dns_server(self):
+        resolver = LocalDNSResolver(self.protected_resources)
+        self.dns_resolver = resolver
+        dns_thread = DNSResolverThread(resolver)
+        dns_thread.start()
+        logger.info("Local DNS server started.")
 
 if __name__ == "__main__":
     client = Client()
