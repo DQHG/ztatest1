@@ -155,3 +155,106 @@
 2024-11-01 10:39:18,826 [INFO] aioice.ice: Connection(2) ICE completed
 2024-11-01 10:39:18,836 [INFO] __main__: ICE connection state changed to completed
 2024-11-01 10:39:18,841 [INFO] __main__: Data channel established.
+2024-11-01 10:46:57,744 [INFO] aioice.ice: Connection(2) Consent to send expired
+2024-11-01 10:46:57,744 [INFO] __main__: Signaling state changed to closed
+2024-11-01 10:46:57,745 [INFO] __main__: ICE connection state changed to closed
+2024-11-01 10:46:57,745 [WARNING] __main__: ICE connection failed or closed, resetting connection.
+2024-11-01 10:46:57,746 [INFO] __main__: RTCPeerConnection reset and ready for new connection.
+2024-11-01 11:12:39,031 [INFO] __main__: Connected to signaling server.
+2024-11-01 11:12:39,088 [ERROR] asyncio: Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000026345B6A950>
+2024-11-01 11:13:02,294 [INFO] __main__: Connected to signaling server.
+2024-11-01 11:13:02,352 [ERROR] asyncio: Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000002A6A6F3E550>
+2024-11-01 11:16:38,703 [INFO] __main__: Connected to signaling server.
+2024-11-01 11:16:38,706 [INFO] __main__: Closed aiohttp session
+2024-11-01 11:16:54,766 [INFO] __main__: Connected to signaling server.
+2024-11-01 11:16:54,768 [INFO] __main__: Closed aiohttp session
+2024-11-01 11:18:43,069 [INFO] __main__: Connected to signaling server.
+2024-11-01 11:19:36,808 [INFO] __main__: Received offer from client.
+2024-11-01 11:19:36,816 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.64.16 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 11:19:36,817 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.250.162 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 11:19:36,818 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.8.53 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 11:19:36,819 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.56.202 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 11:19:36,821 [INFO] aioice.ice: Connection(0) Could not bind to 10.0.85.2 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 11:19:36,822 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.84.115 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 11:19:36,823 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.63.97 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 11:19:41,819 [INFO] __main__: Sent answer to client.
+2024-11-01 11:19:41,820 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 57512) -> ('192.168.56.1', 57572)) State.FROZEN -> State.WAITING
+2024-11-01 11:19:41,821 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 57513) -> ('192.168.56.1', 57572)) State.FROZEN -> State.WAITING
+2024-11-01 11:19:41,821 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 57514) -> ('192.168.56.1', 57572)) State.FROZEN -> State.WAITING
+2024-11-01 11:19:41,822 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 57515) -> ('192.168.56.1', 57572)) State.FROZEN -> State.WAITING
+2024-11-01 11:19:41,822 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 57516) -> ('192.168.56.1', 57572)) State.FROZEN -> State.WAITING
+2024-11-01 11:19:41,823 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 57512) -> ('192.168.27.1', 57573)) State.FROZEN -> State.WAITING
+2024-11-01 11:19:41,823 [INFO] __main__: Closed aiohttp session
+2024-11-01 11:19:41,824 [INFO] __main__: ICE connection state changed to checking
+2024-11-01 11:19:41,824 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 57512) -> ('192.168.56.1', 57572)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 11:22:14,009 [INFO] __main__: Connected to signaling server.
+2024-11-01 11:22:48,207 [INFO] __main__: Received offer from client.
+2024-11-01 11:22:48,213 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.64.16 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 11:22:48,214 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.250.162 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 11:22:48,216 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.8.53 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 11:22:48,217 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.56.202 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 11:22:48,218 [INFO] aioice.ice: Connection(0) Could not bind to 10.0.85.2 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 11:22:48,219 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.84.115 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 11:22:48,220 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.63.97 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 11:22:53,225 [INFO] __main__: Sent answer to client.
+2024-11-01 11:22:53,226 [ERROR] __main__: peer_info is missing 'ip' or 'port'
+2024-11-01 11:22:53,228 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 63079) -> ('192.168.56.1', 62622)) State.FROZEN -> State.WAITING
+2024-11-01 11:22:53,229 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 63080) -> ('192.168.56.1', 62622)) State.FROZEN -> State.WAITING
+2024-11-01 11:22:53,229 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 63081) -> ('192.168.56.1', 62622)) State.FROZEN -> State.WAITING
+2024-11-01 11:22:53,230 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 63082) -> ('192.168.56.1', 62622)) State.FROZEN -> State.WAITING
+2024-11-01 11:22:53,230 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 63083) -> ('192.168.56.1', 62622)) State.FROZEN -> State.WAITING
+2024-11-01 11:22:53,231 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 63079) -> ('192.168.27.1', 62623)) State.FROZEN -> State.WAITING
+2024-11-01 11:22:53,231 [INFO] __main__: ICE connection state changed to checking
+2024-11-01 11:22:53,232 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 63079) -> ('192.168.56.1', 62622)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 11:22:53,233 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 63079) -> ('192.168.56.1', 62622)) State.IN_PROGRESS -> State.SUCCEEDED
+2024-11-01 11:22:53,234 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 63080) -> ('192.168.56.1', 62622)) State.WAITING -> State.FAILED
+2024-11-01 11:22:53,234 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 63081) -> ('192.168.56.1', 62622)) State.WAITING -> State.FAILED
+2024-11-01 11:22:53,235 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 63082) -> ('192.168.56.1', 62622)) State.WAITING -> State.FAILED
+2024-11-01 11:22:53,235 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 63083) -> ('192.168.56.1', 62622)) State.WAITING -> State.FAILED
+2024-11-01 11:22:53,236 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 63079) -> ('192.168.27.1', 62623)) State.WAITING -> State.FAILED
+2024-11-01 11:22:53,237 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 63080) -> ('192.168.27.1', 62623)) State.FROZEN -> State.FAILED
+2024-11-01 11:22:53,237 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 63081) -> ('192.168.27.1', 62623)) State.FROZEN -> State.FAILED
+2024-11-01 11:22:53,238 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 63082) -> ('192.168.27.1', 62623)) State.FROZEN -> State.FAILED
+2024-11-01 11:22:53,239 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 63083) -> ('192.168.27.1', 62623)) State.FROZEN -> State.FAILED
+2024-11-01 11:22:53,239 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 63079) -> ('192.168.17.1', 62624)) State.FROZEN -> State.FAILED
+2024-11-01 11:22:53,240 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 63080) -> ('192.168.17.1', 62624)) State.FROZEN -> State.FAILED
+2024-11-01 11:22:53,240 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 63081) -> ('192.168.17.1', 62624)) State.FROZEN -> State.FAILED
+2024-11-01 11:22:53,241 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 63082) -> ('192.168.17.1', 62624)) State.FROZEN -> State.FAILED
+2024-11-01 11:22:53,242 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 63083) -> ('192.168.17.1', 62624)) State.FROZEN -> State.FAILED
+2024-11-01 11:22:53,242 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 63079) -> ('192.168.222.1', 62625)) State.FROZEN -> State.FAILED
+2024-11-01 11:22:53,242 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 63080) -> ('192.168.222.1', 62625)) State.FROZEN -> State.FAILED
+2024-11-01 11:22:53,243 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 63081) -> ('192.168.222.1', 62625)) State.FROZEN -> State.FAILED
+2024-11-01 11:22:53,243 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 63082) -> ('192.168.222.1', 62625)) State.FROZEN -> State.FAILED
+2024-11-01 11:22:53,243 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 63083) -> ('192.168.222.1', 62625)) State.FROZEN -> State.FAILED
+2024-11-01 11:22:53,244 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 63079) -> ('192.168.50.108', 62626)) State.FROZEN -> State.FAILED
+2024-11-01 11:22:53,244 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 63080) -> ('192.168.50.108', 62626)) State.FROZEN -> State.FAILED
+2024-11-01 11:22:53,245 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 63081) -> ('192.168.50.108', 62626)) State.FROZEN -> State.FAILED
+2024-11-01 11:22:53,245 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 63082) -> ('192.168.50.108', 62626)) State.FROZEN -> State.FAILED
+2024-11-01 11:22:53,246 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 63083) -> ('192.168.50.108', 62626)) State.FROZEN -> State.FAILED
+2024-11-01 11:22:53,246 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 63079) -> ('118.70.195.125', 56588)) State.FROZEN -> State.FAILED
+2024-11-01 11:22:53,248 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 63080) -> ('118.70.195.125', 56588)) State.FROZEN -> State.FAILED
+2024-11-01 11:22:53,248 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 63081) -> ('118.70.195.125', 56588)) State.FROZEN -> State.FAILED
+2024-11-01 11:22:53,249 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 63082) -> ('118.70.195.125', 56588)) State.FROZEN -> State.FAILED
+2024-11-01 11:22:53,249 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 63083) -> ('118.70.195.125', 56588)) State.FROZEN -> State.FAILED
+2024-11-01 11:22:53,249 [INFO] aioice.ice: Connection(0) ICE completed
+2024-11-01 11:22:53,256 [INFO] __main__: ICE connection state changed to completed
+2024-11-01 11:22:53,262 [INFO] __main__: Data channel established.
+2024-11-01 11:23:34,054 [INFO] __main__: Closed aiohttp session
+2024-11-01 11:23:34,055 [INFO] __main__: ICE connection state changed to closed
+2024-11-01 11:23:34,056 [WARNING] __main__: ICE connection failed or closed, resetting connection.
+2024-11-01 11:23:34,128 [ERROR] asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-32' coro=<Connector.reset_connection.<locals>.on_iceconnectionstatechange() running at C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\connector\connector1.py:65> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[AsyncIOEventEmitter._emit_run.<locals>.callback() at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\asyncio.py:69]>
+2024-11-01 11:24:16,443 [INFO] __main__: Connected to signaling server.
+2024-11-01 11:24:24,963 [INFO] __main__: Received offer from client.
+2024-11-01 11:24:29,979 [INFO] __main__: Sent answer to client.
+2024-11-01 11:24:29,980 [ERROR] __main__: peer_info is missing 'ip' or 'port'
+2024-11-01 11:24:29,982 [INFO] __main__: ICE connection state changed to checking
+2024-11-01 11:24:30,010 [INFO] __main__: ICE connection state changed to completed
+2024-11-01 11:24:30,015 [INFO] __main__: Data channel established.
+2024-11-01 11:24:38,607 [INFO] __main__: Closed aiohttp session
+2024-11-01 11:24:38,608 [INFO] __main__: ICE connection state changed to closed
+2024-11-01 11:24:38,609 [WARNING] __main__: ICE connection failed or closed, resetting connection.
+2024-11-01 11:24:38,678 [ERROR] asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-32' coro=<Connector.reset_connection.<locals>.on_iceconnectionstatechange() running at C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\connector\connector1.py:67> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[AsyncIOEventEmitter._emit_run.<locals>.callback() at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\asyncio.py:69]>

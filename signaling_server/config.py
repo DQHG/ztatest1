@@ -1,6 +1,6 @@
 import os
 
-SIGNALING_SERVER_HOST = '127.0.0.1'
+SIGNALING_SERVER_HOST = '0.0.0.0'
 SIGNALING_SERVER_PORT = 8080
 
 # Đường dẫn đến chứng chỉ và khóa
