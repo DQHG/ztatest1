@@ -174,3 +174,37 @@ KeyError: 'connector'
 2024-11-02 02:47:12,785 [INFO] aiohttp.access: 127.0.0.1 [01/Nov/2024:19:45:24 +0000] "GET /ws?peer_id=client HTTP/1.1" 101 0 "-" "Python/3.11 aiohttp/3.8.4"
 2024-11-02 02:47:15,698 [INFO] __main__: Peer connector disconnected.
 2024-11-02 02:47:15,699 [INFO] aiohttp.access: 127.0.0.1 [01/Nov/2024:19:45:20 +0000] "GET /ws?peer_id=connector HTTP/1.1" 101 0 "-" "Python/3.11 aiohttp/3.8.4"
+2024-11-02 03:04:27,482 [INFO] __main__: Peer connector connected.
+2024-11-02 03:04:29,012 [INFO] __main__: Peer client connected.
+2024-11-02 03:04:34,239 [INFO] __main__: Forwarded message from client to connector
+2024-11-02 03:04:39,247 [INFO] __main__: Forwarded message from connector to client
+2024-11-02 03:10:00,975 [INFO] __main__: Peer connector disconnected.
+2024-11-02 03:10:00,976 [INFO] aiohttp.access: 127.0.0.1 [01/Nov/2024:20:04:27 +0000] "GET /ws?peer_id=connector HTTP/1.1" 101 0 "-" "Python/3.11 aiohttp/3.8.4"
+2024-11-02 03:10:32,120 [INFO] __main__: Peer client connected.
+2024-11-02 03:10:32,123 [INFO] __main__: Peer client disconnected.
+2024-11-02 03:10:32,123 [INFO] aiohttp.access: 127.0.0.1 [01/Nov/2024:20:10:32 +0000] "GET /ws?peer_id=client HTTP/1.1" 101 0 "-" "Python/3.11 aiohttp/3.8.4"
+2024-11-02 03:11:19,432 [ERROR] aiohttp.server: Error handling request
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\web_protocol.py", line 433, in _handle_request
+    resp = await request_handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\web_app.py", line 504, in _handle
+    resp = await handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\signaling_server\signaling_server.py", line 53, in websocket_handler
+    del peers[peer_id]
+        ~~~~~^^^^^^^^^
+KeyError: 'client'
+2024-11-02 03:11:33,768 [INFO] __main__: Peer connector connected.
+2024-11-02 03:11:35,790 [INFO] __main__: Peer client connected.
+2024-11-02 03:11:40,979 [INFO] __main__: Forwarded message from client to connector
+2024-11-02 03:11:45,463 [INFO] __main__: Peer connector disconnected.
+2024-11-02 03:11:45,464 [INFO] aiohttp.access: 127.0.0.1 [01/Nov/2024:20:11:33 +0000] "GET /ws?peer_id=connector HTTP/1.1" 101 0 "-" "Python/3.11 aiohttp/3.8.4"
+2024-11-02 03:24:42,067 [INFO] __main__: Peer client disconnected.
+2024-11-02 03:24:42,068 [INFO] aiohttp.access: 127.0.0.1 [01/Nov/2024:20:11:35 +0000] "GET /ws?peer_id=client HTTP/1.1" 101 0 "-" "Python/3.11 aiohttp/3.8.4"
+2024-11-02 03:26:05,783 [INFO] __main__: Peer connector connected.
+2024-11-02 03:26:07,343 [INFO] __main__: Peer client connected.
+2024-11-02 03:26:12,595 [INFO] __main__: Forwarded message from client to connector
+2024-11-02 03:26:17,621 [INFO] __main__: Forwarded message from connector to client
+2024-11-02 03:32:35,998 [INFO] __main__: Peer connector disconnected.
+2024-11-02 03:32:35,998 [INFO] aiohttp.access: 127.0.0.1 [01/Nov/2024:20:26:05 +0000] "GET /ws?peer_id=connector HTTP/1.1" 101 0 "-" "Python/3.11 aiohttp/3.8.4"

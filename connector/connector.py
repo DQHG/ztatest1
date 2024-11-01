@@ -1,9 +1,10 @@
+import threading
 import asyncio
 import json
 import logging
 import ssl
 import sys
-from aiohttp import ClientSession, WSMsgType, WSServerHandshakeError
+from aiohttp import ClientSession, WSMsgType, WSServerHandshakeError,web
 from aiortc import (
     RTCPeerConnection,
     RTCSessionDescription,
@@ -17,7 +18,10 @@ from .config import (
     SSL_CERT_FILE,
     SSL_KEY_FILE,
     CA_CERT_FILE,
-    LOG_FILE
+    LOG_FILE,
+    ADMIN_API_KEY,
+    ADMIN_API_PORT,
+    ADMIN_API_HOST
 )
 from .utils.logging_config import setup_logging
 from .resource_manager import ResourceManager
@@ -38,8 +42,54 @@ class Connector:
         self.data_queues = {}
 
     async def run(self):
+        threading.Thread(target=self.start_admin_api_server, daemon=True).start()
         await self.reset_connection()
 
+    def start_admin_api_server(self):
+        app = web.Application()
+        app.add_routes([
+            web.post('/resources', self.add_resource),
+            web.get('/resources', self.list_resources),
+            web.delete('/resources/{resource_id}', self.delete_resource_by_id)
+        ])
+        web.run_app(app, host=ADMIN_API_HOST, port=ADMIN_API_PORT)
+
+    async def add_resource(self, request):
+        """Add a new resource via POST request."""
+        api_key = request.headers.get('Authorization')
+        if api_key != f"Bearer {ADMIN_API_KEY}":
+            return web.Response(status=401, text="Unauthorized")
+
+        try:
+            resource_data = await request.json()
+            success, message = self.resource_manager.add_resource_from_dict(resource_data)
+            status = 200 if success else 400
+            return web.Response(status=status, text=message)
+        except Exception as e:
+            logger.error(f"Error adding resource: {e}")
+            return web.Response(status=500, text=str(e))
+
+    async def list_resources(self, request):
+        """List all resources via GET request."""
+        api_key = request.headers.get('Authorization')
+        if api_key != f"Bearer {ADMIN_API_KEY}":
+            return web.Response(status=401, text="Unauthorized")
+
+        resources = self.resource_manager.list_resources()
+        resources_data = [res.dict() for res in resources]
+        return web.json_response(resources_data)
+
+    async def delete_resource_by_id(self, request):
+        """Delete a resource by ID via DELETE request."""
+        api_key = request.headers.get('Authorization')
+        if api_key != f"Bearer {ADMIN_API_KEY}":
+            return web.Response(status=401, text="Unauthorized")
+
+        resource_id = request.match_info['resource_id']
+        success, message = self.resource_manager.delete_resource_by_id(resource_id)
+        status = 200 if success else 400
+        return web.Response(status=status, text=message)
+    
     async def reset_connection(self):
         retry_count = 0
         max_retries = 5

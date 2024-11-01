@@ -395,3 +395,34 @@ client_session: <aiohttp.client.ClientSession object at 0x000002CC6F16E490>
 2024-11-02 02:47:15,701 [INFO] __main__: Connector stopped by user
 2024-11-02 02:47:15,775 [ERROR] asyncio: Task was destroyed but it is pending!
 task: <Task pending name='Task-32' coro=<Connector.on_iceconnectionstatechange() running at C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\connector\connector.py:80> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[AsyncIOEventEmitter._emit_run.<locals>.callback() at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\asyncio.py:69]>
+2024-11-02 03:04:27,482 [INFO] __main__: Connected to signaling server
+2024-11-02 03:04:34,240 [INFO] __main__: Received offer from client
+2024-11-02 03:04:39,246 [INFO] __main__: Sent answer to client
+2024-11-02 03:04:39,247 [INFO] __main__: ICE connection state: checking
+2024-11-02 03:04:39,278 [INFO] __main__: ICE connection state: completed
+2024-11-02 03:04:39,282 [INFO] __main__: DataChannel received
+2024-11-02 03:10:00,975 [INFO] __main__: ICE connection state: closed
+2024-11-02 03:10:00,976 [ERROR] __main__: ICE connection closed, resetting connection
+2024-11-02 03:10:00,978 [INFO] __main__: Connector stopped by user
+2024-11-02 03:10:01,063 [ERROR] asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-32' coro=<Connector.on_iceconnectionstatechange() running at C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\connector\connector.py:80> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[AsyncIOEventEmitter._emit_run.<locals>.callback() at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\asyncio.py:69]>
+2024-11-02 03:11:33,768 [INFO] __main__: Connected to signaling server
+2024-11-02 03:11:40,980 [INFO] __main__: Received offer from client
+2024-11-02 03:11:45,465 [INFO] __main__: Connector stopped by user
+2024-11-02 03:11:45,465 [INFO] __main__: ICE connection state: closed
+2024-11-02 03:11:45,466 [ERROR] __main__: ICE connection closed, resetting connection
+2024-11-02 03:26:05,783 [INFO] __main__: Connected to signaling server
+2024-11-02 03:26:12,596 [INFO] __main__: Received offer from client
+2024-11-02 03:26:17,621 [INFO] __main__: Sent answer to client
+2024-11-02 03:26:17,622 [INFO] __main__: ICE connection state: checking
+2024-11-02 03:26:17,653 [INFO] __main__: ICE connection state: completed
+2024-11-02 03:26:17,658 [INFO] __main__: DataChannel received
+2024-11-02 03:27:47,989 [INFO] aiohttp.access: 127.0.0.1 [01/Nov/2024:20:27:47 +0000] "GET /resources HTTP/1.1" 401 174 "-" "curl/8.9.1"
+2024-11-02 03:28:27,963 [INFO] aiohttp.access: 127.0.0.1 [01/Nov/2024:20:28:27 +0000] "GET /resources HTTP/1.1" 200 308 "-" "curl/8.9.1"
+2024-11-02 03:29:22,120 [INFO] aiohttp.access: 127.0.0.1 [01/Nov/2024:20:29:22 +0000] "POST /resources HTTP/1.1" 200 180 "-" "curl/8.9.1"
+2024-11-02 03:29:24,129 [INFO] aiohttp.access: 127.0.0.1 [01/Nov/2024:20:29:24 +0000] "GET /resources HTTP/1.1" 200 464 "-" "curl/8.9.1"
+2024-11-02 03:30:09,711 [INFO] aiohttp.access: 127.0.0.1 [01/Nov/2024:20:30:09 +0000] "DELETE /resources/resource1 HTTP/1.1" 200 182 "-" "curl/8.9.1"
+2024-11-02 03:30:13,610 [INFO] aiohttp.access: 127.0.0.1 [01/Nov/2024:20:30:13 +0000] "GET /resources HTTP/1.1" 200 308 "-" "curl/8.9.1"
+2024-11-02 03:32:35,998 [INFO] __main__: ICE connection state: closed
+2024-11-02 03:32:35,998 [ERROR] __main__: ICE connection closed, resetting connection
+2024-11-02 03:32:36,000 [INFO] __main__: Connector stopped by user

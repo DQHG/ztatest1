@@ -20,3 +20,7 @@ DATABASE_URL = 'sqlite:///resources.db'
 ADMIN_API_HOST = '0.0.0.0'
 ADMIN_API_PORT = 8000
 ADMIN_API_KEY = '7C53ED1E212B4257B7B4C4B75BC75' #32 bytes test key
+
+# curl.exe -X GET http://127.0.0.1:8000/resources -H "Authorization: Bearer 7C53ED1E212B4257B7B4C4B75BC75"
+# curl.exe -X POST http://127.0.0.1:8000/resources -H "Authorization: Bearer 7C53ED1E212B4257B7B4C4B75BC75" -H "Content-Type: application/json" -d "{\"resource_id\": \"resource1\", \"name\": \"example.com\", \"protocol\": \"HTTP\", \"description\": \"Test resource\", \"ip\": \"192.168.1.1\", \"port\": 80}"
+# curl.exe -X DELETE http://127.0.0.1:8000/resources/resource1 -H "Authorization: Bearer 7C53ED1E212B4257B7B4C4B75BC75"

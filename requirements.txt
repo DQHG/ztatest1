@@ -7,3 +7,4 @@ pytest
 flake8
 black
 python-dotenv
+threading

@@ -2863,3 +2863,145 @@ task: <Task pending name='Task-34' coro=<RTCPeerConnection.close() running at C:
 task: <Task pending name='Task-35' coro=<Client.on_iceconnectionstatechange() running at C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client.py:104> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[AsyncIOEventEmitter._emit_run.<locals>.callback() at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\asyncio.py:69]>
 2024-11-02 02:47:12,839 [ERROR] asyncio: Task was destroyed but it is pending!
 task: <Task pending name='Task-38' coro=<TurnClientMixin.delete() running at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py:188> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2024-11-02 02:59:44,498 [INFO] __main__: Local DNS server started.
+2024-11-02 02:59:44,499 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-11-02 02:59:44,506 [INFO] __main__: DataChannel created
+2024-11-02 02:59:45,190 [INFO] __main__: Connected to signaling server
+2024-11-02 02:59:50,441 [INFO] __main__: Offer sent to connector
+2024-11-02 02:59:50,442 [INFO] __main__: TCP Proxy Server started on port 8888
+2024-11-02 02:59:50,672 [INFO] __main__: Received answer from connector
+2024-11-02 02:59:50,673 [INFO] __main__: ICE connection state: checking
+2024-11-02 02:59:50,940 [ERROR] asyncio: Task exception was never retrieved
+future: <Task finished name='Task-30' coro=<TurnClientMixin.send_data() done, defined at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py:271> exception=TransactionFailed(Message(message_method=Method.CHANNEL_BIND, message_class=Class.ERROR, transaction_id=b'\x17\x11Y\xb9\xbes\x94Q\x0b\xe2;\x0f'))>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 290, in send_data
+    await self.channel_bind(channel, addr)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 111, in channel_bind
+    await self.request_with_retry(request)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 243, in request_with_retry
+    response, addr = await self.request(request)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 230, in request
+    return await transaction.run()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\stun.py", line 302, in run
+    return await self.__future
+           ^^^^^^^^^^^^^^^^^^^
+aioice.stun.TransactionFailed: STUN transaction failed (401 - )
+2024-11-02 02:59:51,206 [INFO] __main__: ICE connection state: completed
+2024-11-02 02:59:52,071 [INFO] __main__: DataChannel is open
+2024-11-02 02:59:52,223 [INFO] __main__: Resource IP Map: {'abc.com': '100.64.0.1'}
+2024-11-02 02:59:52,223 [INFO] __main__: Received resource list from connector
+2024-11-02 03:00:15,560 [INFO] client.dns_resolver: Resolved abc.com to 100.64.0.1 (CGNAT)
+2024-11-02 03:01:02,299 [INFO] __main__: ICE connection state: closed
+2024-11-02 03:01:02,300 [ERROR] __main__: ICE connection closed, resetting connection
+2024-11-02 03:01:02,968 [INFO] __main__: Connected to signaling server
+2024-11-02 03:01:02,969 [ERROR] __main__: Error connecting to signaling server: Cannot create an offer with no media and no data channels
+2024-11-02 03:02:37,513 [INFO] __main__: Client stopped by user
+2024-11-02 03:02:39,936 [INFO] __main__: Local DNS server started.
+2024-11-02 03:02:39,936 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-11-02 03:02:39,943 [INFO] __main__: DataChannel created
+2024-11-02 03:02:40,542 [INFO] __main__: Connected to signaling server
+2024-11-02 03:02:45,741 [INFO] __main__: Offer sent to connector
+2024-11-02 03:02:45,743 [INFO] __main__: TCP Proxy Server started on port 8888
+2024-11-02 03:02:45,946 [INFO] __main__: Received answer from connector
+2024-11-02 03:02:45,948 [INFO] __main__: ICE connection state: checking
+2024-11-02 03:02:46,183 [ERROR] asyncio: Task exception was never retrieved
+future: <Task finished name='Task-30' coro=<TurnClientMixin.send_data() done, defined at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py:271> exception=TransactionFailed(Message(message_method=Method.CHANNEL_BIND, message_class=Class.ERROR, transaction_id=b'c\xa1\x0f\x1e\xb2F\xf6\xa5\xf0K\xb3\xa6'))>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 290, in send_data
+    await self.channel_bind(channel, addr)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 111, in channel_bind
+    await self.request_with_retry(request)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 243, in request_with_retry
+    response, addr = await self.request(request)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 230, in request
+    return await transaction.run()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\stun.py", line 302, in run
+    return await self.__future
+           ^^^^^^^^^^^^^^^^^^^
+aioice.stun.TransactionFailed: STUN transaction failed (401 - )
+2024-11-02 03:02:46,506 [INFO] __main__: ICE connection state: completed
+2024-11-02 03:02:47,372 [INFO] __main__: DataChannel is open
+2024-11-02 03:02:47,522 [INFO] __main__: Resource IP Map: {}
+2024-11-02 03:02:47,523 [INFO] __main__: Received resource list from connector
+2024-11-02 03:03:53,193 [INFO] __main__: ICE connection state: closed
+2024-11-02 03:03:53,194 [ERROR] __main__: ICE connection closed, resetting connection
+2024-11-02 03:03:53,875 [INFO] __main__: Connected to signaling server
+2024-11-02 03:03:53,876 [ERROR] __main__: Error connecting to signaling server: Cannot create an offer with no media and no data channels
+2024-11-02 03:03:56,145 [ERROR] asyncio: Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000023EB02F5090>
+2024-11-02 03:03:56,146 [INFO] __main__: Client stopped by user
+2024-11-02 03:04:28,996 [INFO] __main__: Local DNS server started.
+2024-11-02 03:04:28,996 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-11-02 03:04:29,003 [INFO] __main__: DataChannel created
+2024-11-02 03:04:29,012 [INFO] __main__: Connected to signaling server
+2024-11-02 03:04:34,239 [INFO] __main__: Offer sent to connector
+2024-11-02 03:04:34,239 [INFO] __main__: TCP Proxy Server started on port 8888
+2024-11-02 03:04:39,248 [INFO] __main__: Received answer from connector
+2024-11-02 03:04:39,249 [INFO] __main__: ICE connection state: checking
+2024-11-02 03:04:39,278 [INFO] __main__: ICE connection state: completed
+2024-11-02 03:04:39,283 [INFO] __main__: DataChannel is open
+2024-11-02 03:04:39,288 [INFO] __main__: Resource IP Map: {'abc.com': '100.64.0.1'}
+2024-11-02 03:04:39,289 [INFO] __main__: Received resource list from connector
+2024-11-02 03:10:32,043 [INFO] __main__: ICE connection state: closed
+2024-11-02 03:10:32,044 [ERROR] __main__: ICE connection closed, resetting connection
+2024-11-02 03:10:32,120 [INFO] __main__: Connected to signaling server
+2024-11-02 03:10:32,120 [ERROR] __main__: Error connecting to signaling server: Cannot create an offer with no media and no data channels
+2024-11-02 03:11:19,432 [ERROR] asyncio: Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000023BE7C0C1D0>
+2024-11-02 03:11:19,435 [INFO] __main__: Client stopped by user
+2024-11-02 03:11:35,776 [INFO] __main__: Local DNS server started.
+2024-11-02 03:11:35,776 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-11-02 03:11:35,782 [INFO] __main__: DataChannel created
+2024-11-02 03:11:35,790 [INFO] __main__: Connected to signaling server
+2024-11-02 03:11:40,979 [INFO] __main__: Offer sent to connector
+2024-11-02 03:11:40,980 [INFO] __main__: TCP Proxy Server started on port 8888
+2024-11-02 03:11:54,993 [ERROR] client.dns_resolver: Failed to resolve www3.l.google.com via external DNS: timed out
+2024-11-02 03:11:54,993 [WARNING] client.dns_resolver: Could not resolve www3.l.google.com via external DNS server.
+2024-11-02 03:24:42,068 [INFO] __main__: Client stopped by user
+2024-11-02 03:24:42,070 [INFO] __main__: ICE connection state: closed
+2024-11-02 03:24:42,070 [ERROR] __main__: ICE connection closed, resetting connection
+2024-11-02 03:24:42,119 [ERROR] asyncio: Task exception was never retrieved
+future: <Task finished name='Task-12' coro=<TurnClientMixin.refresh() done, defined at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py:196> exception=TransactionTimeout()>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 207, in refresh
+    response, _ = await self.request_with_retry(request)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 243, in request_with_retry
+    response, addr = await self.request(request)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 230, in request
+    return await transaction.run()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\stun.py", line 302, in run
+    return await self.__future
+           ^^^^^^^^^^^^^^^^^^^
+aioice.stun.TransactionTimeout: STUN transaction timed out
+2024-11-02 03:26:07,327 [INFO] __main__: Local DNS server started.
+2024-11-02 03:26:07,328 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-11-02 03:26:07,334 [INFO] __main__: DataChannel created
+2024-11-02 03:26:07,343 [INFO] __main__: Connected to signaling server
+2024-11-02 03:26:12,595 [INFO] __main__: Offer sent to connector
+2024-11-02 03:26:12,596 [INFO] __main__: TCP Proxy Server started on port 8888
+2024-11-02 03:26:17,622 [INFO] __main__: Received answer from connector
+2024-11-02 03:26:17,622 [INFO] __main__: ICE connection state: checking
+2024-11-02 03:26:17,653 [INFO] __main__: ICE connection state: completed
+2024-11-02 03:26:17,658 [INFO] __main__: DataChannel is open
+2024-11-02 03:26:17,663 [INFO] __main__: Resource IP Map: {'abc.com': '100.64.0.1'}
+2024-11-02 03:26:17,664 [INFO] __main__: Received resource list from connector
+2024-11-02 03:27:06,753 [ERROR] client.dns_resolver: Failed to resolve mobile.events.data.microsoft.com via external DNS: timed out
+2024-11-02 03:27:06,753 [WARNING] client.dns_resolver: Could not resolve mobile.events.data.microsoft.com via external DNS server.
+2024-11-02 03:29:39,572 [ERROR] client.dns_resolver: Failed to resolve github.com via external DNS: timed out
+2024-11-02 03:29:39,573 [WARNING] client.dns_resolver: Could not resolve github.com via external DNS server.
+2024-11-02 03:32:53,273 [INFO] __main__: ICE connection state: closed
+2024-11-02 03:32:53,274 [ERROR] __main__: ICE connection closed, resetting connection
+2024-11-02 03:32:53,278 [ERROR] asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-38' coro=<TurnClientMixin.delete() running at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py:175>>
+2024-11-02 03:32:53,285 [INFO] __main__: Client stopped by user
+2024-11-02 03:32:53,358 [ERROR] asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-34' coro=<RTCPeerConnection.close() running at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiortc\rtcpeerconnection.py:500> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2024-11-02 03:32:53,359 [ERROR] asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-35' coro=<Client.on_iceconnectionstatechange() running at C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client.py:104> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[AsyncIOEventEmitter._emit_run.<locals>.callback() at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\asyncio.py:69]>
