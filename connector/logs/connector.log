@@ -1,0 +1,157 @@
+2024-11-01 10:08:16,962 [INFO] __main__: Connected to signaling server.
+2024-11-01 10:25:37,578 [INFO] __main__: Connected to signaling server.
+2024-11-01 10:26:16,880 [INFO] __main__: Received offer from client.
+2024-11-01 10:26:16,882 [INFO] __main__: Signaling state changed to stable
+2024-11-01 10:26:16,882 [INFO] __main__: Signaling state changed to stable
+2024-11-01 10:26:16,890 [INFO] __main__: ICE gathering state changed to gathering
+2024-11-01 10:26:16,891 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.64.16 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 10:26:16,892 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.250.162 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 10:26:16,894 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.8.53 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 10:26:16,895 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.56.202 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 10:26:16,896 [INFO] aioice.ice: Connection(0) Could not bind to 10.0.85.2 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 10:26:16,898 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.84.115 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 10:26:16,899 [INFO] aioice.ice: Connection(0) Could not bind to 169.254.63.97 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 10:26:21,915 [INFO] __main__: ICE gathering state changed to complete
+2024-11-01 10:26:21,917 [INFO] __main__: Sent answer to client.
+2024-11-01 10:26:21,918 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 49245) -> ('192.168.56.1', 49240)) State.FROZEN -> State.WAITING
+2024-11-01 10:26:21,919 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 49246) -> ('192.168.56.1', 49240)) State.FROZEN -> State.WAITING
+2024-11-01 10:26:21,919 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 49247) -> ('192.168.56.1', 49240)) State.FROZEN -> State.WAITING
+2024-11-01 10:26:21,920 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 49248) -> ('192.168.56.1', 49240)) State.FROZEN -> State.WAITING
+2024-11-01 10:26:21,920 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 49249) -> ('192.168.56.1', 49240)) State.FROZEN -> State.WAITING
+2024-11-01 10:26:21,921 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 49245) -> ('192.168.27.1', 49241)) State.FROZEN -> State.WAITING
+2024-11-01 10:26:21,922 [INFO] __main__: ICE connection state changed to checking
+2024-11-01 10:26:21,922 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 49245) -> ('192.168.56.1', 49240)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 10:26:21,924 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 49245) -> ('192.168.56.1', 49240)) State.IN_PROGRESS -> State.SUCCEEDED
+2024-11-01 10:26:21,924 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 49246) -> ('192.168.56.1', 49240)) State.WAITING -> State.FAILED
+2024-11-01 10:26:21,925 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 49247) -> ('192.168.56.1', 49240)) State.WAITING -> State.FAILED
+2024-11-01 10:26:21,926 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 49248) -> ('192.168.56.1', 49240)) State.WAITING -> State.FAILED
+2024-11-01 10:26:21,926 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 49249) -> ('192.168.56.1', 49240)) State.WAITING -> State.FAILED
+2024-11-01 10:26:21,927 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 49245) -> ('192.168.27.1', 49241)) State.WAITING -> State.FAILED
+2024-11-01 10:26:21,928 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 49246) -> ('192.168.27.1', 49241)) State.FROZEN -> State.FAILED
+2024-11-01 10:26:21,928 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 49247) -> ('192.168.27.1', 49241)) State.FROZEN -> State.FAILED
+2024-11-01 10:26:21,929 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 49248) -> ('192.168.27.1', 49241)) State.FROZEN -> State.FAILED
+2024-11-01 10:26:21,929 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 49249) -> ('192.168.27.1', 49241)) State.FROZEN -> State.FAILED
+2024-11-01 10:26:21,930 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 49245) -> ('192.168.17.1', 49242)) State.FROZEN -> State.FAILED
+2024-11-01 10:26:21,931 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 49246) -> ('192.168.17.1', 49242)) State.FROZEN -> State.FAILED
+2024-11-01 10:26:21,931 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 49247) -> ('192.168.17.1', 49242)) State.FROZEN -> State.FAILED
+2024-11-01 10:26:21,932 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 49248) -> ('192.168.17.1', 49242)) State.FROZEN -> State.FAILED
+2024-11-01 10:26:21,932 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 49249) -> ('192.168.17.1', 49242)) State.FROZEN -> State.FAILED
+2024-11-01 10:26:21,933 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 49245) -> ('192.168.222.1', 49243)) State.FROZEN -> State.FAILED
+2024-11-01 10:26:21,934 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 49246) -> ('192.168.222.1', 49243)) State.FROZEN -> State.FAILED
+2024-11-01 10:26:21,935 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 49247) -> ('192.168.222.1', 49243)) State.FROZEN -> State.FAILED
+2024-11-01 10:26:21,935 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 49248) -> ('192.168.222.1', 49243)) State.FROZEN -> State.FAILED
+2024-11-01 10:26:21,935 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 49249) -> ('192.168.222.1', 49243)) State.FROZEN -> State.FAILED
+2024-11-01 10:26:21,936 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.56.1', 49245) -> ('192.168.50.108', 49244)) State.FROZEN -> State.FAILED
+2024-11-01 10:26:21,936 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.27.1', 49246) -> ('192.168.50.108', 49244)) State.FROZEN -> State.FAILED
+2024-11-01 10:26:21,937 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.17.1', 49247) -> ('192.168.50.108', 49244)) State.FROZEN -> State.FAILED
+2024-11-01 10:26:21,937 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.222.1', 49248) -> ('192.168.50.108', 49244)) State.FROZEN -> State.FAILED
+2024-11-01 10:26:21,938 [INFO] aioice.ice: Connection(0) Check CandidatePair(('192.168.50.108', 49249) -> ('192.168.50.108', 49244)) State.FROZEN -> State.FAILED
+2024-11-01 10:26:21,938 [INFO] aioice.ice: Connection(0) ICE completed
+2024-11-01 10:26:21,949 [INFO] __main__: ICE connection state changed to completed
+2024-11-01 10:26:21,962 [INFO] __main__: Data channel established.
+2024-11-01 10:26:37,784 [INFO] __main__: Signaling state changed to closed
+2024-11-01 10:26:37,785 [INFO] __main__: ICE connection state changed to closed
+2024-11-01 10:26:37,786 [WARNING] __main__: ICE connection failed or closed, resetting connection.
+2024-11-01 10:26:37,787 [INFO] __main__: RTCPeerConnection reset and ready for new connection.
+2024-11-01 10:27:29,600 [INFO] __main__: Received offer from client.
+2024-11-01 10:27:29,601 [INFO] __main__: Signaling state changed to stable
+2024-11-01 10:27:29,601 [INFO] __main__: Signaling state changed to stable
+2024-11-01 10:27:29,606 [INFO] __main__: ICE gathering state changed to gathering
+2024-11-01 10:27:29,606 [INFO] aioice.ice: Connection(1) Could not bind to 169.254.64.16 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 10:27:29,607 [INFO] aioice.ice: Connection(1) Could not bind to 169.254.250.162 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 10:27:29,609 [INFO] aioice.ice: Connection(1) Could not bind to 169.254.8.53 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 10:27:29,609 [INFO] aioice.ice: Connection(1) Could not bind to 169.254.56.202 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 10:27:29,610 [INFO] aioice.ice: Connection(1) Could not bind to 10.0.85.2 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 10:27:29,611 [INFO] aioice.ice: Connection(1) Could not bind to 169.254.84.115 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 10:27:29,612 [INFO] aioice.ice: Connection(1) Could not bind to 169.254.63.97 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 10:27:34,619 [INFO] __main__: ICE gathering state changed to complete
+2024-11-01 10:27:34,620 [INFO] __main__: Sent answer to client.
+2024-11-01 10:27:34,621 [INFO] aioice.ice: Connection(1) Check CandidatePair(('192.168.56.1', 50807) -> ('192.168.56.1', 50147)) State.FROZEN -> State.WAITING
+2024-11-01 10:27:34,622 [INFO] aioice.ice: Connection(1) Check CandidatePair(('192.168.27.1', 50808) -> ('192.168.56.1', 50147)) State.FROZEN -> State.WAITING
+2024-11-01 10:27:34,622 [INFO] aioice.ice: Connection(1) Check CandidatePair(('192.168.17.1', 50809) -> ('192.168.56.1', 50147)) State.FROZEN -> State.WAITING
+2024-11-01 10:27:34,623 [INFO] aioice.ice: Connection(1) Check CandidatePair(('192.168.222.1', 50810) -> ('192.168.56.1', 50147)) State.FROZEN -> State.WAITING
+2024-11-01 10:27:34,623 [INFO] aioice.ice: Connection(1) Check CandidatePair(('192.168.50.108', 50811) -> ('192.168.56.1', 50147)) State.FROZEN -> State.WAITING
+2024-11-01 10:27:34,624 [INFO] aioice.ice: Connection(1) Check CandidatePair(('192.168.56.1', 50807) -> ('192.168.27.1', 50148)) State.FROZEN -> State.WAITING
+2024-11-01 10:27:34,625 [INFO] __main__: ICE connection state changed to checking
+2024-11-01 10:27:34,625 [INFO] aioice.ice: Connection(1) Check CandidatePair(('192.168.56.1', 50807) -> ('192.168.56.1', 50147)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 10:27:34,627 [INFO] aioice.ice: Connection(1) Check CandidatePair(('192.168.56.1', 50807) -> ('192.168.56.1', 50147)) State.IN_PROGRESS -> State.SUCCEEDED
+2024-11-01 10:27:34,627 [INFO] aioice.ice: Connection(1) Check CandidatePair(('192.168.27.1', 50808) -> ('192.168.56.1', 50147)) State.WAITING -> State.FAILED
+2024-11-01 10:27:34,628 [INFO] aioice.ice: Connection(1) Check CandidatePair(('192.168.17.1', 50809) -> ('192.168.56.1', 50147)) State.WAITING -> State.FAILED
+2024-11-01 10:27:34,628 [INFO] aioice.ice: Connection(1) Check CandidatePair(('192.168.222.1', 50810) -> ('192.168.56.1', 50147)) State.WAITING -> State.FAILED
+2024-11-01 10:27:34,629 [INFO] aioice.ice: Connection(1) Check CandidatePair(('192.168.50.108', 50811) -> ('192.168.56.1', 50147)) State.WAITING -> State.FAILED
+2024-11-01 10:27:34,629 [INFO] aioice.ice: Connection(1) Check CandidatePair(('192.168.56.1', 50807) -> ('192.168.27.1', 50148)) State.WAITING -> State.FAILED
+2024-11-01 10:27:34,630 [INFO] aioice.ice: Connection(1) Check CandidatePair(('192.168.27.1', 50808) -> ('192.168.27.1', 50148)) State.FROZEN -> State.FAILED
+2024-11-01 10:27:34,630 [INFO] aioice.ice: Connection(1) Check CandidatePair(('192.168.17.1', 50809) -> ('192.168.27.1', 50148)) State.FROZEN -> State.FAILED
+2024-11-01 10:27:34,631 [INFO] aioice.ice: Connection(1) Check CandidatePair(('192.168.222.1', 50810) -> ('192.168.27.1', 50148)) State.FROZEN -> State.FAILED
+2024-11-01 10:27:34,631 [INFO] aioice.ice: Connection(1) Check CandidatePair(('192.168.50.108', 50811) -> ('192.168.27.1', 50148)) State.FROZEN -> State.FAILED
+2024-11-01 10:27:34,632 [INFO] aioice.ice: Connection(1) Check CandidatePair(('192.168.56.1', 50807) -> ('192.168.17.1', 50149)) State.FROZEN -> State.FAILED
+2024-11-01 10:27:34,633 [INFO] aioice.ice: Connection(1) Check CandidatePair(('192.168.27.1', 50808) -> ('192.168.17.1', 50149)) State.FROZEN -> State.FAILED
+2024-11-01 10:27:34,633 [INFO] aioice.ice: Connection(1) Check CandidatePair(('192.168.17.1', 50809) -> ('192.168.17.1', 50149)) State.FROZEN -> State.FAILED
+2024-11-01 10:27:34,635 [INFO] aioice.ice: Connection(1) Check CandidatePair(('192.168.222.1', 50810) -> ('192.168.17.1', 50149)) State.FROZEN -> State.FAILED
+2024-11-01 10:27:34,635 [INFO] aioice.ice: Connection(1) Check CandidatePair(('192.168.50.108', 50811) -> ('192.168.17.1', 50149)) State.FROZEN -> State.FAILED
+2024-11-01 10:27:34,635 [INFO] aioice.ice: Connection(1) Check CandidatePair(('192.168.56.1', 50807) -> ('192.168.222.1', 50150)) State.FROZEN -> State.FAILED
+2024-11-01 10:27:34,635 [INFO] aioice.ice: Connection(1) Check CandidatePair(('192.168.27.1', 50808) -> ('192.168.222.1', 50150)) State.FROZEN -> State.FAILED
+2024-11-01 10:27:34,636 [INFO] aioice.ice: Connection(1) Check CandidatePair(('192.168.17.1', 50809) -> ('192.168.222.1', 50150)) State.FROZEN -> State.FAILED
+2024-11-01 10:27:34,636 [INFO] aioice.ice: Connection(1) Check CandidatePair(('192.168.222.1', 50810) -> ('192.168.222.1', 50150)) State.FROZEN -> State.FAILED
+2024-11-01 10:27:34,636 [INFO] aioice.ice: Connection(1) Check CandidatePair(('192.168.50.108', 50811) -> ('192.168.222.1', 50150)) State.FROZEN -> State.FAILED
+2024-11-01 10:27:34,638 [INFO] aioice.ice: Connection(1) Check CandidatePair(('192.168.56.1', 50807) -> ('192.168.50.108', 50151)) State.FROZEN -> State.FAILED
+2024-11-01 10:27:34,638 [INFO] aioice.ice: Connection(1) Check CandidatePair(('192.168.27.1', 50808) -> ('192.168.50.108', 50151)) State.FROZEN -> State.FAILED
+2024-11-01 10:27:34,638 [INFO] aioice.ice: Connection(1) Check CandidatePair(('192.168.17.1', 50809) -> ('192.168.50.108', 50151)) State.FROZEN -> State.FAILED
+2024-11-01 10:27:34,639 [INFO] aioice.ice: Connection(1) Check CandidatePair(('192.168.222.1', 50810) -> ('192.168.50.108', 50151)) State.FROZEN -> State.FAILED
+2024-11-01 10:27:34,639 [INFO] aioice.ice: Connection(1) Check CandidatePair(('192.168.50.108', 50811) -> ('192.168.50.108', 50151)) State.FROZEN -> State.FAILED
+2024-11-01 10:27:34,639 [INFO] aioice.ice: Connection(1) ICE completed
+2024-11-01 10:27:34,651 [INFO] __main__: ICE connection state changed to completed
+2024-11-01 10:27:34,656 [INFO] __main__: Data channel established.
+2024-11-01 10:27:38,381 [INFO] __main__: Signaling state changed to closed
+2024-11-01 10:27:38,381 [INFO] __main__: ICE connection state changed to closed
+2024-11-01 10:27:38,382 [WARNING] __main__: ICE connection failed or closed, resetting connection.
+2024-11-01 10:27:38,383 [INFO] __main__: RTCPeerConnection reset and ready for new connection.
+2024-11-01 10:39:13,787 [INFO] __main__: Received offer from client.
+2024-11-01 10:39:13,787 [INFO] __main__: Signaling state changed to stable
+2024-11-01 10:39:13,788 [INFO] __main__: Signaling state changed to stable
+2024-11-01 10:39:13,792 [INFO] __main__: ICE gathering state changed to gathering
+2024-11-01 10:39:13,793 [INFO] aioice.ice: Connection(2) Could not bind to 169.254.64.16 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 10:39:13,793 [INFO] aioice.ice: Connection(2) Could not bind to 169.254.250.162 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 10:39:13,794 [INFO] aioice.ice: Connection(2) Could not bind to 169.254.8.53 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 10:39:13,794 [INFO] aioice.ice: Connection(2) Could not bind to 169.254.56.202 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 10:39:13,796 [INFO] aioice.ice: Connection(2) Could not bind to 10.0.85.2 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 10:39:13,797 [INFO] aioice.ice: Connection(2) Could not bind to 169.254.84.115 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 10:39:13,798 [INFO] aioice.ice: Connection(2) Could not bind to 169.254.63.97 - [WinError 10049] The requested address is not valid in its context
+2024-11-01 10:39:18,804 [INFO] __main__: ICE gathering state changed to complete
+2024-11-01 10:39:18,807 [INFO] __main__: Sent answer to client.
+2024-11-01 10:39:18,808 [INFO] aioice.ice: Connection(2) Check CandidatePair(('192.168.56.1', 59602) -> ('192.168.56.1', 56178)) State.FROZEN -> State.WAITING
+2024-11-01 10:39:18,809 [INFO] aioice.ice: Connection(2) Check CandidatePair(('192.168.27.1', 59603) -> ('192.168.56.1', 56178)) State.FROZEN -> State.WAITING
+2024-11-01 10:39:18,810 [INFO] aioice.ice: Connection(2) Check CandidatePair(('192.168.17.1', 59604) -> ('192.168.56.1', 56178)) State.FROZEN -> State.WAITING
+2024-11-01 10:39:18,810 [INFO] aioice.ice: Connection(2) Check CandidatePair(('192.168.222.1', 59605) -> ('192.168.56.1', 56178)) State.FROZEN -> State.WAITING
+2024-11-01 10:39:18,811 [INFO] aioice.ice: Connection(2) Check CandidatePair(('192.168.50.108', 59606) -> ('192.168.56.1', 56178)) State.FROZEN -> State.WAITING
+2024-11-01 10:39:18,811 [INFO] aioice.ice: Connection(2) Check CandidatePair(('192.168.56.1', 59602) -> ('192.168.27.1', 56179)) State.FROZEN -> State.WAITING
+2024-11-01 10:39:18,812 [INFO] __main__: ICE connection state changed to checking
+2024-11-01 10:39:18,813 [INFO] aioice.ice: Connection(2) Check CandidatePair(('192.168.56.1', 59602) -> ('192.168.56.1', 56178)) State.WAITING -> State.IN_PROGRESS
+2024-11-01 10:39:18,814 [INFO] aioice.ice: Connection(2) Check CandidatePair(('192.168.56.1', 59602) -> ('192.168.56.1', 56178)) State.IN_PROGRESS -> State.SUCCEEDED
+2024-11-01 10:39:18,814 [INFO] aioice.ice: Connection(2) Check CandidatePair(('192.168.27.1', 59603) -> ('192.168.56.1', 56178)) State.WAITING -> State.FAILED
+2024-11-01 10:39:18,815 [INFO] aioice.ice: Connection(2) Check CandidatePair(('192.168.17.1', 59604) -> ('192.168.56.1', 56178)) State.WAITING -> State.FAILED
+2024-11-01 10:39:18,815 [INFO] aioice.ice: Connection(2) Check CandidatePair(('192.168.222.1', 59605) -> ('192.168.56.1', 56178)) State.WAITING -> State.FAILED
+2024-11-01 10:39:18,816 [INFO] aioice.ice: Connection(2) Check CandidatePair(('192.168.50.108', 59606) -> ('192.168.56.1', 56178)) State.WAITING -> State.FAILED
+2024-11-01 10:39:18,816 [INFO] aioice.ice: Connection(2) Check CandidatePair(('192.168.56.1', 59602) -> ('192.168.27.1', 56179)) State.WAITING -> State.FAILED
+2024-11-01 10:39:18,817 [INFO] aioice.ice: Connection(2) Check CandidatePair(('192.168.27.1', 59603) -> ('192.168.27.1', 56179)) State.FROZEN -> State.FAILED
+2024-11-01 10:39:18,817 [INFO] aioice.ice: Connection(2) Check CandidatePair(('192.168.17.1', 59604) -> ('192.168.27.1', 56179)) State.FROZEN -> State.FAILED
+2024-11-01 10:39:18,818 [INFO] aioice.ice: Connection(2) Check CandidatePair(('192.168.222.1', 59605) -> ('192.168.27.1', 56179)) State.FROZEN -> State.FAILED
+2024-11-01 10:39:18,818 [INFO] aioice.ice: Connection(2) Check CandidatePair(('192.168.50.108', 59606) -> ('192.168.27.1', 56179)) State.FROZEN -> State.FAILED
+2024-11-01 10:39:18,819 [INFO] aioice.ice: Connection(2) Check CandidatePair(('192.168.56.1', 59602) -> ('192.168.17.1', 56180)) State.FROZEN -> State.FAILED
+2024-11-01 10:39:18,819 [INFO] aioice.ice: Connection(2) Check CandidatePair(('192.168.27.1', 59603) -> ('192.168.17.1', 56180)) State.FROZEN -> State.FAILED
+2024-11-01 10:39:18,819 [INFO] aioice.ice: Connection(2) Check CandidatePair(('192.168.17.1', 59604) -> ('192.168.17.1', 56180)) State.FROZEN -> State.FAILED
+2024-11-01 10:39:18,820 [INFO] aioice.ice: Connection(2) Check CandidatePair(('192.168.222.1', 59605) -> ('192.168.17.1', 56180)) State.FROZEN -> State.FAILED
+2024-11-01 10:39:18,820 [INFO] aioice.ice: Connection(2) Check CandidatePair(('192.168.50.108', 59606) -> ('192.168.17.1', 56180)) State.FROZEN -> State.FAILED
+2024-11-01 10:39:18,821 [INFO] aioice.ice: Connection(2) Check CandidatePair(('192.168.56.1', 59602) -> ('192.168.222.1', 56181)) State.FROZEN -> State.FAILED
+2024-11-01 10:39:18,822 [INFO] aioice.ice: Connection(2) Check CandidatePair(('192.168.27.1', 59603) -> ('192.168.222.1', 56181)) State.FROZEN -> State.FAILED
+2024-11-01 10:39:18,822 [INFO] aioice.ice: Connection(2) Check CandidatePair(('192.168.17.1', 59604) -> ('192.168.222.1', 56181)) State.FROZEN -> State.FAILED
+2024-11-01 10:39:18,823 [INFO] aioice.ice: Connection(2) Check CandidatePair(('192.168.222.1', 59605) -> ('192.168.222.1', 56181)) State.FROZEN -> State.FAILED
+2024-11-01 10:39:18,823 [INFO] aioice.ice: Connection(2) Check CandidatePair(('192.168.50.108', 59606) -> ('192.168.222.1', 56181)) State.FROZEN -> State.FAILED
+2024-11-01 10:39:18,824 [INFO] aioice.ice: Connection(2) Check CandidatePair(('192.168.56.1', 59602) -> ('192.168.50.108', 56182)) State.FROZEN -> State.FAILED
+2024-11-01 10:39:18,824 [INFO] aioice.ice: Connection(2) Check CandidatePair(('192.168.27.1', 59603) -> ('192.168.50.108', 56182)) State.FROZEN -> State.FAILED
+2024-11-01 10:39:18,825 [INFO] aioice.ice: Connection(2) Check CandidatePair(('192.168.17.1', 59604) -> ('192.168.50.108', 56182)) State.FROZEN -> State.FAILED
+2024-11-01 10:39:18,825 [INFO] aioice.ice: Connection(2) Check CandidatePair(('192.168.222.1', 59605) -> ('192.168.50.108', 56182)) State.FROZEN -> State.FAILED
+2024-11-01 10:39:18,826 [INFO] aioice.ice: Connection(2) Check CandidatePair(('192.168.50.108', 59606) -> ('192.168.50.108', 56182)) State.FROZEN -> State.FAILED
+2024-11-01 10:39:18,826 [INFO] aioice.ice: Connection(2) ICE completed
+2024-11-01 10:39:18,836 [INFO] __main__: ICE connection state changed to completed
+2024-11-01 10:39:18,841 [INFO] __main__: Data channel established.

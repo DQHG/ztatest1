@@ -1,7 +1,7 @@
 # resource_manager.py
 
-from .utils.database import SessionLocal, Base, engine
-from .utils.data_models import Resource as ResourceModel
+from .utils.database import SessionLocal, engine
+from .utils.data_models import Resource as ResourceModel ,Base
 from sqlalchemy.orm import Session
 import logging
 
