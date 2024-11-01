@@ -9,6 +9,7 @@ import os
 import sys
 import platform
 import uuid
+import socket
 from aiohttp import ClientSession
 from aiortc import (
     RTCPeerConnection,
@@ -56,10 +57,19 @@ class Client:
         self.data_queues = {}
         self.signaling = None
         self.session = None
+        self.protected_ips = set()
+        self.resource_domain_map = {}  # Map domain names to CGNAT IPs
 
     async def run(self):
         self.start_dns_server()
+        self.extract_protected_ips()
         await self.reset_connection()
+        await self.start_tcp_proxy_server()
+
+    def extract_protected_ips(self):
+        self.protected_ips = set(self.dns_resolver.resource_ip_map.values())
+        self.resource_domain_map = {ip: domain for domain, ip in self.dns_resolver.resource_ip_map.items()}
+        logger.info(f"Protected IPs: {self.protected_ips}")
 
     async def reset_connection(self):
         if self.pc:
@@ -197,26 +207,28 @@ class Client:
             asyncio.ensure_future(self.handle_response(response))
 
     async def start_tcp_proxy_server(self):
-        server = await asyncio.start_server(self.handle_tcp_connection, '0.0.0.0', 0)
-        addr = server.sockets[0].getsockname()
-        logger.info(f'TCP Proxy Server started on {addr}')
+        server = await asyncio.start_server(self.handle_tcp_connection, '127.0.0.1', 8888)
+        logger.info('TCP Proxy Server started on port 8888')
         async with server:
             await server.serve_forever()
 
     async def handle_tcp_connection(self, reader, writer):
-        local_addr = writer.get_extra_info('sockname')
-        dest_ip = local_addr[0]
-        dest_port = local_addr[1]
+        remote_addr = writer.get_extra_info('peername')
+        dest_ip = remote_addr[0]
 
-        # Tạo một session_id để theo dõi phiên làm việc
-        session_id = str(uuid.uuid4())
-
-        # Gửi yêu cầu đến Connector
-        request = {'action': 'proxy_connect', 'session_id': session_id}
-        self.channel.send(json.dumps(request))
-
-        # Chuyển tiếp dữ liệu giữa reader/writer và DataChannel
-        await self.proxy_data(reader, writer, session_id)
+        if dest_ip in self.protected_ips:
+            session_id = str(uuid.uuid4())
+            resource_domain = self.resource_domain_map[dest_ip]
+            request = {
+                'action': 'proxy_connect',
+                'session_id': session_id,
+                'resource_ip': dest_ip
+            }
+            self.channel.send(json.dumps(request))
+            await self.proxy_data(reader, writer, session_id)
+        else:
+            writer.close()
+            logger.warning(f"Connection to unprotected IP {dest_ip} is not allowed.")
 
     async def proxy_data(self, reader, writer, session_id):
         logger.info(f"Starting proxy_data session {session_id}")
@@ -276,7 +288,9 @@ class Client:
         while True:
             print("\nAvailable actions:")
             print("1. List resources")
-            print("2. Exit")
+            print("2. Add resource")
+            print("3. Delete resource")
+            print("4. Exit")
 
             choice = await aioconsole.ainput("Select an action: ")
 
@@ -285,6 +299,16 @@ class Client:
                 self.channel.send(json.dumps(request))
 
             elif choice == '2':
+                resource_data = await self.get_resource_input()
+                request = {'action': 'add_resource', 'resource': resource_data}
+                self.channel.send(json.dumps(request))
+
+            elif choice == '3':
+                resource_id = await aioconsole.ainput("Enter resource ID to delete: ")
+                request = {'action': 'delete_resource', 'resource_id': resource_id}
+                self.channel.send(json.dumps(request))
+
+            elif choice == '4':
                 print("Exiting...")
                 await self.pc.close()
                 sys.exit(0)
@@ -292,17 +316,33 @@ class Client:
             else:
                 print("Invalid choice. Please try again.")
 
+    async def get_resource_input(self):
+        resource_data = {}
+        resource_data['resource_id'] = await aioconsole.ainput("Resource ID: ")
+        resource_data['name'] = await aioconsole.ainput("Name: ")
+        resource_data['protocol'] = await aioconsole.ainput("Protocol (HTTP/HTTPS/SSH/RDP): ")
+        resource_data['description'] = await aioconsole.ainput("Description: ")
+        resource_data['ip'] = await aioconsole.ainput("IP Address: ")
+        resource_data['port'] = int(await aioconsole.ainput("Port: "))
+        resource_data['username'] = await aioconsole.ainput("Username (if applicable): ")
+        return resource_data
+
     async def handle_response(self, response):
         action = response.get('action')
         if action == 'list_resources':
             resources = response.get('resources', [])
             print("\nList of resources:")
             for res in resources:
-                print(f"- {res['resource_id']} ({res['protocol']})")
+                print(f"- {res['resource_id']} ({res['protocol']}) at {res['ip']}:{res['port']}")
+        elif action in ['add_resource', 'delete_resource']:
+            success = response.get('success')
+            message = response.get('message')
+            print(f"{'Success' if success else 'Failure'}: {message}")
         elif action == 'error':
             print(f"Error: {response.get('message')}")
         else:
             print(f"Unknown response: {response}")
+
     def start_dns_server(self):
         resolver = LocalDNSResolver(self.protected_resources)
         self.dns_resolver = resolver

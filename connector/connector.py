@@ -176,18 +176,32 @@ class Connector:
             self.channel.send(json.dumps(response))
         elif action == 'proxy_connect':
             session_id = request.get('session_id')
-            await self.handle_proxy_connect(session_id)
+            resource_ip = request.get('resource_ip')
+            resource = self.resource_manager.get_resource_by_ip(resource_ip)
+            if resource:
+                await self.handle_proxy_connect(session_id, resource)
+            else:
+                response = {'action': 'error', 'message': 'Resource not found'}
+                self.channel.send(json.dumps(response))
+        elif action == 'add_resource':
+            resource_data = request.get('resource')
+            success, message = self.resource_manager.add_resource_from_dict(resource_data)
+            response = {'action': 'add_resource', 'success': success, 'message': message}
+            self.channel.send(json.dumps(response))
+        elif action == 'delete_resource':
+            resource_id = request.get('resource_id')
+            success, message = self.resource_manager.delete_resource_by_id(resource_id)
+            response = {'action': 'delete_resource', 'success': success, 'message': message}
+            self.channel.send(json.dumps(response))
         else:
             response = {'action': 'error', 'message': 'Unknown action'}
             self.channel.send(json.dumps(response))
 
-    async def handle_proxy_connect(self, session_id):
+    async def handle_proxy_connect(self, session_id, resource):
         try:
-            # Kết nối đến tài nguyên (ví dụ: ứng dụng web nội bộ)
-            ip = '127.0.0.1'
-            port = 5000
-            reader, writer = await asyncio.open_connection(ip, port)
-            logger.info(f"Connected to resource at {ip}:{port}")
+            # Connect to the actual resource
+            reader, writer = await asyncio.open_connection(resource.ip, resource.port)
+            logger.info(f"Connected to resource {resource.name} at {resource.ip}:{resource.port}")
 
             tasks = [
                 asyncio.create_task(self.datachannel_to_tcp(writer, session_id)),
@@ -195,7 +209,6 @@ class Connector:
             ]
 
             await asyncio.wait(tasks)
-
             logger.info(f"Closing proxy_data session {session_id}")
             writer.close()
         except Exception as e:

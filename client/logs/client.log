@@ -2267,3 +2267,395 @@ AttributeError: 'RTCPeerConnection' object has no attribute 'waitClosed'
 task: <Task pending name='Task-1848' coro=<RTCPeerConnection.close() running at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiortc\rtcpeerconnection.py:500> wait_for=<Future pending cb=[Task.task_wakeup()]>>
 2024-11-01 15:37:18,149 [ERROR] asyncio: Task was destroyed but it is pending!
 task: <Task pending name='Task-1852' coro=<TurnClientMixin.delete() running at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py:188> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2024-11-01 15:53:57,615 [INFO] __main__: Local DNS server started.
+2024-11-01 15:53:57,616 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-11-01 15:53:57,623 [INFO] __main__: DataChannel created, state: connecting
+2024-11-01 15:53:59,096 [INFO] __main__: Connected to signaling server
+2024-11-01 15:53:59,197 [INFO] client.dns_resolver: Forwarded DNS request for stun.relay.metered.ca to external DNS server
+2024-11-01 15:54:04,181 [INFO] client.dns_resolver: Forwarded DNS request for global.relay.metered.ca to external DNS server
+2024-11-01 15:54:04,326 [INFO] __main__: Offer sent to connector
+2024-11-01 15:54:04,804 [INFO] __main__: Received answer from connector
+2024-11-01 15:54:04,805 [INFO] __main__: ICE connection state: checking
+2024-11-01 15:54:05,033 [ERROR] asyncio: Task exception was never retrieved
+future: <Task finished name='Task-28' coro=<TurnClientMixin.send_data() done, defined at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py:271> exception=TransactionFailed(Message(message_method=Method.CHANNEL_BIND, message_class=Class.ERROR, transaction_id=b'i\xc1Hx\xc7\x8a\xb6\xd8*\xdb\xc3\x08'))>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 290, in send_data
+    await self.channel_bind(channel, addr)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 111, in channel_bind
+    await self.request_with_retry(request)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 243, in request_with_retry
+    response, addr = await self.request(request)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 230, in request
+    return await transaction.run()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\stun.py", line 302, in run
+    return await self.__future
+           ^^^^^^^^^^^^^^^^^^^
+aioice.stun.TransactionFailed: STUN transaction failed (401 - )
+2024-11-01 15:54:05,259 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 15:54:06,059 [INFO] __main__: ICE connection state: completed
+2024-11-01 15:54:10,511 [INFO] __main__: DataChannel is open
+2024-11-01 15:54:10,512 [INFO] __main__: Interacting with Connector
+2024-11-01 15:54:40,282 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 15:54:47,937 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 15:54:58,289 [INFO] client.dns_resolver: Forwarded DNS request for array805.prod.do.dsp.mp.microsoft.com to external DNS server
+2024-11-01 15:55:03,914 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 15:55:05,324 [ERROR] client.dns_resolver: Failed to resolve activity.windows.com via external DNS: timed out
+2024-11-01 15:55:05,325 [WARNING] client.dns_resolver: Could not resolve activity.windows.com via external DNS server.
+2024-11-01 15:55:13,055 [INFO] client.dns_resolver: Resolved protected.example.com to 100.64.0.1 (CGNAT)
+2024-11-01 15:55:15,885 [INFO] client.dns_resolver: Forwarded DNS request for i.ytimg.com to external DNS server
+2024-11-01 15:55:16,019 [INFO] client.dns_resolver: Forwarded DNS request for rr2---sn-i3b7kn6s.googlevideo.com to external DNS server
+2024-11-01 15:55:16,096 [INFO] client.dns_resolver: Forwarded DNS request for rr2.sn-i3b7kn6s.googlevideo.com to external DNS server
+2024-11-01 15:55:16,419 [INFO] client.dns_resolver: Forwarded DNS request for rr2.sn-i3b7kn6s.googlevideo.com to external DNS server
+2024-11-01 15:55:16,723 [INFO] client.dns_resolver: Forwarded DNS request for rr3---sn-8pxuuxa-i5o6d.googlevideo.com to external DNS server
+2024-11-01 15:55:17,234 [ERROR] client.dns_resolver: Failed to resolve rr3.sn-8pxuuxa-i5o6d.googlevideo.com via external DNS: timed out
+2024-11-01 15:55:17,235 [WARNING] client.dns_resolver: Could not resolve rr3.sn-8pxuuxa-i5o6d.googlevideo.com via external DNS server.
+2024-11-01 15:55:17,338 [INFO] client.dns_resolver: Forwarded DNS request for rr3.sn-8pxuuxa-i5o6d.googlevideo.com to external DNS server
+2024-11-01 15:55:17,723 [INFO] client.dns_resolver: Forwarded DNS request for www.gstatic.com to external DNS server
+2024-11-01 15:55:17,727 [INFO] client.dns_resolver: Forwarded DNS request for yt3.ggpht.com to external DNS server
+2024-11-01 15:55:17,797 [INFO] client.dns_resolver: Forwarded DNS request for www.gstatic.com to external DNS server
+2024-11-01 15:55:17,962 [INFO] client.dns_resolver: Forwarded DNS request for photos-ugc.l.googleusercontent.com to external DNS server
+2024-11-01 15:55:17,963 [INFO] client.dns_resolver: Forwarded DNS request for www.gstatic.com to external DNS server
+2024-11-01 15:55:20,707 [INFO] client.dns_resolver: Forwarded DNS request for www.youtube.com to external DNS server
+2024-11-01 15:55:20,801 [INFO] client.dns_resolver: Forwarded DNS request for youtube-ui.l.google.com to external DNS server
+2024-11-01 15:55:20,897 [INFO] client.dns_resolver: Forwarded DNS request for youtube-ui.l.google.com to external DNS server
+2024-11-01 15:55:23,625 [INFO] client.dns_resolver: Forwarded DNS request for accounts.youtube.com to external DNS server
+2024-11-01 15:55:24,134 [ERROR] client.dns_resolver: Failed to resolve www3.l.google.com via external DNS: timed out
+2024-11-01 15:55:24,134 [WARNING] client.dns_resolver: Could not resolve www3.l.google.com via external DNS server.
+2024-11-01 15:55:24,441 [ERROR] client.dns_resolver: Failed to resolve www3.l.google.com via external DNS: timed out
+2024-11-01 15:55:24,441 [WARNING] client.dns_resolver: Could not resolve www3.l.google.com via external DNS server.
+2024-11-01 15:55:26,548 [INFO] __main__: Closed aiohttp session
+2024-11-01 15:55:26,549 [ERROR] asyncio: Task exception was never retrieved
+future: <Task finished name='Task-59' coro=<Client.interact_with_connector() done, defined at C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client.py:274> exception=EOFError()>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client.py", line 281, in interact_with_connector
+    choice = await aioconsole.ainput("Select an action: ")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioconsole\stream.py", line 297, in ainput
+    raise EOFError
+EOFError
+2024-11-01 15:55:26,560 [INFO] __main__: ICE connection state: closed
+2024-11-01 15:55:26,563 [ERROR] asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-96' coro=<TurnClientMixin.delete() running at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py:175>>
+2024-11-01 15:55:26,638 [ERROR] asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-92' coro=<RTCPeerConnection.close() running at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiortc\rtcpeerconnection.py:500> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2024-11-01 15:55:28,020 [INFO] __main__: Local DNS server started.
+2024-11-01 15:55:28,021 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-11-01 15:55:28,028 [INFO] __main__: DataChannel created, state: connecting
+2024-11-01 15:55:28,499 [INFO] __main__: Connected to signaling server
+2024-11-01 15:55:28,586 [INFO] client.dns_resolver: Forwarded DNS request for stun.relay.metered.ca to external DNS server
+2024-11-01 15:55:34,022 [ERROR] client.dns_resolver: Failed to resolve global.relay.metered.ca via external DNS: timed out
+2024-11-01 15:55:34,022 [WARNING] client.dns_resolver: Could not resolve global.relay.metered.ca via external DNS server.
+2024-11-01 15:55:34,024 [INFO] __main__: Closed aiohttp session
+2024-11-01 15:55:39,044 [INFO] __main__: Local DNS server started.
+2024-11-01 15:55:39,045 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-11-01 15:55:39,051 [INFO] __main__: DataChannel created, state: connecting
+2024-11-01 15:55:40,274 [INFO] __main__: Connected to signaling server
+2024-11-01 15:55:40,643 [INFO] client.dns_resolver: Forwarded DNS request for activity.windows.com to external DNS server
+2024-11-01 15:55:45,609 [INFO] client.dns_resolver: Forwarded DNS request for global.relay.metered.ca to external DNS server
+2024-11-01 15:55:45,697 [INFO] __main__: Offer sent to connector
+2024-11-01 15:55:45,838 [INFO] __main__: Received answer from connector
+2024-11-01 15:55:45,839 [INFO] __main__: ICE connection state: checking
+2024-11-01 15:55:46,238 [ERROR] asyncio: Task exception was never retrieved
+future: <Task finished name='Task-28' coro=<TurnClientMixin.send_data() done, defined at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py:271> exception=TransactionFailed(Message(message_method=Method.CHANNEL_BIND, message_class=Class.ERROR, transaction_id=b'\xde\xad\x01;\xad\xb6\xbd\xa2n\x93\xac\x01'))>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 290, in send_data
+    await self.channel_bind(channel, addr)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 111, in channel_bind
+    await self.request_with_retry(request)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 243, in request_with_retry
+    response, addr = await self.request(request)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 230, in request
+    return await transaction.run()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\stun.py", line 302, in run
+    return await self.__future
+           ^^^^^^^^^^^^^^^^^^^
+aioice.stun.TransactionFailed: STUN transaction failed (401 - )
+2024-11-01 15:56:07,944 [INFO] __main__: Closed aiohttp session
+2024-11-01 15:56:09,421 [INFO] __main__: Local DNS server started.
+2024-11-01 15:56:09,422 [INFO] client.dns_resolver: Local DNS server started on 127.0.0.1:53
+2024-11-01 15:56:09,428 [INFO] __main__: DataChannel created, state: connecting
+2024-11-01 15:56:10,005 [INFO] __main__: Connected to signaling server
+2024-11-01 15:56:15,296 [INFO] client.dns_resolver: Forwarded DNS request for global.relay.metered.ca to external DNS server
+2024-11-01 15:56:15,919 [INFO] __main__: Offer sent to connector
+2024-11-01 15:56:16,229 [INFO] __main__: Received answer from connector
+2024-11-01 15:56:16,231 [INFO] __main__: ICE connection state: checking
+2024-11-01 15:56:16,629 [ERROR] asyncio: Task exception was never retrieved
+future: <Task finished name='Task-28' coro=<TurnClientMixin.send_data() done, defined at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py:271> exception=TransactionFailed(Message(message_method=Method.CHANNEL_BIND, message_class=Class.ERROR, transaction_id=b'B\x96\xea\xb3\xc4h.\x16\\\xe3\xbfT'))>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 290, in send_data
+    await self.channel_bind(channel, addr)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 111, in channel_bind
+    await self.request_with_retry(request)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 243, in request_with_retry
+    response, addr = await self.request(request)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 230, in request
+    return await transaction.run()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\stun.py", line 302, in run
+    return await self.__future
+           ^^^^^^^^^^^^^^^^^^^
+aioice.stun.TransactionFailed: STUN transaction failed (401 - )
+2024-11-01 15:56:17,193 [INFO] __main__: ICE connection state: completed
+2024-11-01 15:56:18,624 [INFO] __main__: DataChannel is open
+2024-11-01 15:56:18,625 [INFO] __main__: Interacting with Connector
+2024-11-01 15:56:26,003 [INFO] client.dns_resolver: Resolved protected.example.com to 100.64.0.1 (CGNAT)
+2024-11-01 15:56:30,492 [INFO] client.dns_resolver: Forwarded DNS request for activity.windows.com to external DNS server
+2024-11-01 15:56:34,582 [INFO] client.dns_resolver: Forwarded DNS request for logs.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 15:56:34,637 [INFO] client.dns_resolver: Forwarded DNS request for logs.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 15:56:34,665 [INFO] client.dns_resolver: Forwarded DNS request for logs.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 15:56:40,348 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 15:56:47,896 [INFO] client.dns_resolver: Forwarded DNS request for contile.services.mozilla.com to external DNS server
+2024-11-01 15:56:47,917 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 15:56:48,256 [INFO] client.dns_resolver: Forwarded DNS request for contile.services.mozilla.com to external DNS server
+2024-11-01 15:56:48,278 [INFO] client.dns_resolver: Forwarded DNS request for contile.services.mozilla.com to external DNS server
+2024-11-01 15:56:53,545 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 15:56:58,955 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 15:57:14,734 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 15:57:30,313 [INFO] client.dns_resolver: Forwarded DNS request for alive.github.com to external DNS server
+2024-11-01 15:57:30,369 [INFO] client.dns_resolver: Forwarded DNS request for live.github.com to external DNS server
+2024-11-01 15:57:30,410 [INFO] client.dns_resolver: Forwarded DNS request for live.github.com to external DNS server
+2024-11-01 15:57:32,029 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 15:57:55,688 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 15:58:00,966 [INFO] client.dns_resolver: Forwarded DNS request for ap-southeast-2.prod.pr.analytics.console.aws.a2z.com to external DNS server
+2024-11-01 15:58:09,280 [INFO] client.dns_resolver: Forwarded DNS request for chatgpt.com to external DNS server
+2024-11-01 15:58:09,352 [INFO] client.dns_resolver: Forwarded DNS request for chatgpt.com to external DNS server
+2024-11-01 15:58:09,415 [INFO] client.dns_resolver: Forwarded DNS request for westus-0.in.applicationinsights.azure.com to external DNS server
+2024-11-01 15:58:09,417 [INFO] client.dns_resolver: Forwarded DNS request for chatgpt.com to external DNS server
+2024-11-01 15:58:21,181 [INFO] client.dns_resolver: Forwarded DNS request for translate.googleapis.com to external DNS server
+2024-11-01 15:58:25,504 [INFO] client.dns_resolver: Forwarded DNS request for vscode-sync.trafficmanager.net to external DNS server
+2024-11-01 15:58:25,820 [INFO] client.dns_resolver: Forwarded DNS request for activity.windows.com to external DNS server
+2024-11-01 15:58:42,903 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 15:59:22,945 [INFO] client.dns_resolver: Forwarded DNS request for v10.events.data.microsoft.com to external DNS server
+2024-11-01 15:59:22,957 [ERROR] client.dns_resolver: Failed to resolve mobile.events.data.microsoft.com via external DNS: timed out
+2024-11-01 15:59:22,958 [WARNING] client.dns_resolver: Could not resolve mobile.events.data.microsoft.com via external DNS server.
+2024-11-01 15:59:24,689 [INFO] client.dns_resolver: Forwarded DNS request for v20.events.data.microsoft.com to external DNS server
+2024-11-01 15:59:24,789 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 15:59:24,789 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 15:59:25,950 [INFO] client.dns_resolver: Forwarded DNS request for api.msn.com to external DNS server
+2024-11-01 15:59:25,951 [INFO] client.dns_resolver: Forwarded DNS request for www.bing.com to external DNS server
+2024-11-01 16:00:58,012 [INFO] client.dns_resolver: Forwarded DNS request for cdn.oaistatic.com to external DNS server
+2024-11-01 16:00:58,112 [INFO] client.dns_resolver: Forwarded DNS request for cdn.oaistatic.com to external DNS server
+2024-11-01 16:00:58,172 [INFO] client.dns_resolver: Forwarded DNS request for cdn.oaistatic.com to external DNS server
+2024-11-01 16:00:58,644 [INFO] client.dns_resolver: Forwarded DNS request for ab.chatgpt.com to external DNS server
+2024-11-01 16:00:58,931 [INFO] client.dns_resolver: Forwarded DNS request for ab.chatgpt.com to external DNS server
+2024-11-01 16:00:59,040 [INFO] client.dns_resolver: Forwarded DNS request for ab.chatgpt.com to external DNS server
+2024-11-01 16:00:59,335 [INFO] client.dns_resolver: Forwarded DNS request for s.gravatar.com to external DNS server
+2024-11-01 16:00:59,362 [INFO] client.dns_resolver: Forwarded DNS request for s.gravatar.com to external DNS server
+2024-11-01 16:00:59,442 [INFO] client.dns_resolver: Forwarded DNS request for s.gravatar.com to external DNS server
+2024-11-01 16:01:00,954 [INFO] client.dns_resolver: Forwarded DNS request for s.gravatar.com to external DNS server
+2024-11-01 16:01:01,044 [INFO] client.dns_resolver: Forwarded DNS request for i1.wp.com to external DNS server
+2024-11-01 16:01:36,825 [INFO] client.dns_resolver: Forwarded DNS request for ap-southeast-2.console.aws.amazon.com to external DNS server
+2024-11-01 16:01:36,887 [INFO] client.dns_resolver: Forwarded DNS request for ap-southeast-2.console.aws.amazon.com to external DNS server
+2024-11-01 16:01:36,887 [INFO] client.dns_resolver: Forwarded DNS request for a9faf713df4858b6a.awsglobalaccelerator.com to external DNS server
+2024-11-01 16:01:36,938 [INFO] client.dns_resolver: Forwarded DNS request for a9faf713df4858b6a.awsglobalaccelerator.com to external DNS server
+2024-11-01 16:01:37,753 [INFO] client.dns_resolver: Forwarded DNS request for logs.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 16:01:37,790 [INFO] client.dns_resolver: Forwarded DNS request for logs.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 16:01:37,910 [INFO] client.dns_resolver: Forwarded DNS request for logs.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 16:01:38,685 [INFO] client.dns_resolver: Forwarded DNS request for push.services.mozilla.com to external DNS server
+2024-11-01 16:01:38,760 [INFO] client.dns_resolver: Forwarded DNS request for push.services.mozilla.com to external DNS server
+2024-11-01 16:01:39,273 [ERROR] client.dns_resolver: Failed to resolve push.services.mozilla.com via external DNS: timed out
+2024-11-01 16:01:39,274 [WARNING] client.dns_resolver: Could not resolve push.services.mozilla.com via external DNS server.
+2024-11-01 16:01:39,803 [INFO] client.dns_resolver: Forwarded DNS request for firefox.settings.services.mozilla.com to external DNS server
+2024-11-01 16:01:39,887 [INFO] client.dns_resolver: Forwarded DNS request for prod.remote-settings.prod.webservices.mozgcp.net to external DNS server
+2024-11-01 16:01:40,962 [INFO] client.dns_resolver: Forwarded DNS request for updates.discord.com to external DNS server
+2024-11-01 16:01:41,076 [INFO] client.dns_resolver: Forwarded DNS request for content-signature-2.cdn.mozilla.net to external DNS server
+2024-11-01 16:01:41,116 [INFO] client.dns_resolver: Forwarded DNS request for prod.content-signature-chains.prod.webservices.mozgcp.net to external DNS server
+2024-11-01 16:01:58,745 [INFO] client.dns_resolver: Forwarded DNS request for ublockorigin.pages.dev to external DNS server
+2024-11-01 16:01:59,152 [INFO] client.dns_resolver: Forwarded DNS request for ublockorigin.pages.dev to external DNS server
+2024-11-01 16:01:59,369 [INFO] client.dns_resolver: Forwarded DNS request for ublockorigin.pages.dev to external DNS server
+2024-11-01 16:02:11,313 [INFO] client.dns_resolver: Forwarded DNS request for www.google.com to external DNS server
+2024-11-01 16:02:15,802 [INFO] client.dns_resolver: Forwarded DNS request for github.com to external DNS server
+2024-11-01 16:02:15,930 [INFO] client.dns_resolver: Forwarded DNS request for github.com to external DNS server
+2024-11-01 16:02:16,134 [INFO] client.dns_resolver: Forwarded DNS request for github.com to external DNS server
+2024-11-01 16:02:17,436 [INFO] client.dns_resolver: Forwarded DNS request for github.githubassets.com to external DNS server
+2024-11-01 16:02:17,470 [INFO] client.dns_resolver: Forwarded DNS request for github.githubassets.com to external DNS server
+2024-11-01 16:02:17,669 [INFO] client.dns_resolver: Forwarded DNS request for safebrowsing.googleapis.com to external DNS server
+2024-11-01 16:02:17,669 [INFO] client.dns_resolver: Forwarded DNS request for avatars.githubusercontent.com to external DNS server
+2024-11-01 16:02:17,763 [INFO] client.dns_resolver: Forwarded DNS request for avatars.githubusercontent.com to external DNS server
+2024-11-01 16:02:17,804 [INFO] client.dns_resolver: Forwarded DNS request for avatars.githubusercontent.com to external DNS server
+2024-11-01 16:02:20,575 [ERROR] client.dns_resolver: Failed to resolve api.githubcopilot.com via external DNS: timed out
+2024-11-01 16:02:20,575 [WARNING] client.dns_resolver: Could not resolve api.githubcopilot.com via external DNS server.
+2024-11-01 16:02:20,640 [INFO] client.dns_resolver: Forwarded DNS request for api.githubcopilot.com to external DNS server
+2024-11-01 16:02:20,725 [INFO] client.dns_resolver: Forwarded DNS request for glb-db52c2cf8be544.github.com to external DNS server
+2024-11-01 16:02:34,013 [ERROR] client.dns_resolver: Failed to resolve activity.windows.com via external DNS: timed out
+2024-11-01 16:02:34,014 [WARNING] client.dns_resolver: Could not resolve activity.windows.com via external DNS server.
+2024-11-01 16:02:34,590 [INFO] client.dns_resolver: Forwarded DNS request for login.live.com to external DNS server
+2024-11-01 16:02:38,630 [INFO] client.dns_resolver: Forwarded DNS request for login.microsoftonline.com to external DNS server
+2024-11-01 16:02:41,294 [INFO] client.dns_resolver: Forwarded DNS request for enterprise.activity.windows.com to external DNS server
+2024-11-01 16:02:41,951 [INFO] client.dns_resolver: Forwarded DNS request for activity.windows.com to external DNS server
+2024-11-01 16:02:57,777 [INFO] client.dns_resolver: Forwarded DNS request for default.exp-tas.com to external DNS server
+2024-11-01 16:03:03,495 [INFO] client.dns_resolver: Forwarded DNS request for westus-0.in.applicationinsights.azure.com to external DNS server
+2024-11-01 16:03:11,428 [INFO] client.dns_resolver: Forwarded DNS request for api.github.com to external DNS server
+2024-11-01 16:03:11,492 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:03:11,492 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:03:14,020 [INFO] client.dns_resolver: Forwarded DNS request for westus-0.in.applicationinsights.azure.com to external DNS server
+2024-11-01 16:03:16,771 [INFO] client.dns_resolver: Forwarded DNS request for api.github.com to external DNS server
+2024-11-01 16:03:16,772 [INFO] client.dns_resolver: Forwarded DNS request for api.github.com to external DNS server
+2024-11-01 16:03:20,034 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:03:22,913 [INFO] client.dns_resolver: Forwarded DNS request for az764295.vo.msecnd.net to external DNS server
+2024-11-01 16:03:22,914 [INFO] client.dns_resolver: Forwarded DNS request for az764295.vo.msecnd.net to external DNS server
+2024-11-01 16:03:26,042 [INFO] client.dns_resolver: Forwarded DNS request for vscode-sync.trafficmanager.net to external DNS server
+2024-11-01 16:03:26,042 [INFO] client.dns_resolver: Forwarded DNS request for vscode-sync.trafficmanager.net to external DNS server
+2024-11-01 16:03:26,853 [INFO] client.dns_resolver: Forwarded DNS request for copilot-telemetry-service.githubusercontent.com to external DNS server
+2024-11-01 16:04:03,327 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:04:18,222 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:04:18,222 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:04:18,225 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:05:10,522 [INFO] client.dns_resolver: Forwarded DNS request for translate.googleapis.com to external DNS server
+2024-11-01 16:05:13,709 [INFO] client.dns_resolver: Forwarded DNS request for activity.windows.com to external DNS server
+2024-11-01 16:05:14,852 [INFO] client.dns_resolver: Forwarded DNS request for vscode-sync.trafficmanager.net to external DNS server
+2024-11-01 16:05:14,923 [INFO] client.dns_resolver: Forwarded DNS request for vscode-sync.trafficmanager.net to external DNS server
+2024-11-01 16:05:15,294 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:05:15,342 [INFO] client.dns_resolver: Forwarded DNS request for settings-win.data.microsoft.com to external DNS server
+2024-11-01 16:05:22,765 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:05:23,183 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:05:23,184 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:05:24,344 [INFO] client.dns_resolver: Forwarded DNS request for www.youtube.com to external DNS server
+2024-11-01 16:05:24,414 [INFO] client.dns_resolver: Forwarded DNS request for youtube-ui.l.google.com to external DNS server
+2024-11-01 16:05:24,556 [INFO] client.dns_resolver: Forwarded DNS request for youtube-ui.l.google.com to external DNS server
+2024-11-01 16:05:25,019 [INFO] client.dns_resolver: Forwarded DNS request for accounts.youtube.com to external DNS server
+2024-11-01 16:05:25,089 [INFO] client.dns_resolver: Forwarded DNS request for www3.l.google.com to external DNS server
+2024-11-01 16:05:25,164 [INFO] client.dns_resolver: Forwarded DNS request for www3.l.google.com to external DNS server
+2024-11-01 16:06:09,754 [INFO] client.dns_resolver: Forwarded DNS request for www.googleapis.com to external DNS server
+2024-11-01 16:06:27,630 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:06:27,630 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:06:29,544 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:06:39,372 [INFO] client.dns_resolver: Forwarded DNS request for ap-southeast-2.console.aws.amazon.com to external DNS server
+2024-11-01 16:06:39,454 [INFO] client.dns_resolver: Forwarded DNS request for a9faf713df4858b6a.awsglobalaccelerator.com to external DNS server
+2024-11-01 16:06:39,937 [INFO] client.dns_resolver: Forwarded DNS request for logs.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 16:06:39,975 [INFO] client.dns_resolver: Forwarded DNS request for logs.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 16:06:40,020 [INFO] client.dns_resolver: Forwarded DNS request for logs.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 16:06:40,635 [INFO] client.dns_resolver: Forwarded DNS request for dc.services.visualstudio.com to external DNS server
+2024-11-01 16:06:42,542 [INFO] client.dns_resolver: Forwarded DNS request for copilot-telemetry-service.githubusercontent.com to external DNS server
+2024-11-01 16:07:37,006 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:07:37,006 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:07:50,775 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:08:05,435 [ERROR] asyncio: Exception in callback Transaction.__retry()
+handle: <TimerHandle when=13812.14 Transaction.__retry()>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\stun.py", line 309, in __retry
+    self.__future.set_exception(TransactionTimeout())
+asyncio.exceptions.InvalidStateError: invalid state
+2024-11-01 16:08:10,362 [ERROR] client.dns_resolver: Failed to resolve telemetry.cell-0.ap-southeast-2.prod.tangerinebox.console.aws.a2z.com via external DNS: timed out
+2024-11-01 16:08:10,364 [WARNING] client.dns_resolver: Could not resolve telemetry.cell-0.ap-southeast-2.prod.tangerinebox.console.aws.a2z.com via external DNS server.
+2024-11-01 16:08:10,378 [ERROR] client.dns_resolver: Failed to resolve ap-southeast-2.prod.pr.analytics.console.aws.a2z.com via external DNS: timed out
+2024-11-01 16:08:10,379 [WARNING] client.dns_resolver: Could not resolve ap-southeast-2.prod.pr.analytics.console.aws.a2z.com via external DNS server.
+2024-11-01 16:08:10,468 [INFO] client.dns_resolver: Forwarded DNS request for telemetry.cell-0.ap-southeast-2.prod.tangerinebox.console.aws.a2z.com to external DNS server
+2024-11-01 16:08:10,546 [INFO] client.dns_resolver: Forwarded DNS request for ap-southeast-2.prod.pr.analytics.console.aws.a2z.com to external DNS server
+2024-11-01 16:08:10,613 [INFO] client.dns_resolver: Forwarded DNS request for ap-southeast-2.prod.pr.analytics.console.aws.a2z.com to external DNS server
+2024-11-01 16:08:11,094 [INFO] client.dns_resolver: Forwarded DNS request for westus-0.in.applicationinsights.azure.com to external DNS server
+2024-11-01 16:08:21,842 [INFO] client.dns_resolver: Forwarded DNS request for data-ai.microsoft.com to external DNS server
+2024-11-01 16:08:30,626 [INFO] client.dns_resolver: Forwarded DNS request for spclient.wg.spotify.com to external DNS server
+2024-11-01 16:08:30,626 [INFO] client.dns_resolver: Forwarded DNS request for tile-service.weather.microsoft.com to external DNS server
+2024-11-01 16:08:30,793 [INFO] client.dns_resolver: Forwarded DNS request for api.msn.com to external DNS server
+2024-11-01 16:09:31,187 [INFO] client.dns_resolver: Forwarded DNS request for ctldl.windowsupdate.com to external DNS server
+2024-11-01 16:10:02,632 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:10:02,632 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:10:15,076 [INFO] client.dns_resolver: Forwarded DNS request for vscode-sync.trafficmanager.net to external DNS server
+2024-11-01 16:10:15,131 [INFO] client.dns_resolver: Forwarded DNS request for vscode-sync.trafficmanager.net to external DNS server
+2024-11-01 16:10:27,552 [INFO] client.dns_resolver: Forwarded DNS request for api.githubcopilot.com to external DNS server
+2024-11-01 16:10:27,552 [INFO] client.dns_resolver: Forwarded DNS request for api.githubcopilot.com to external DNS server
+2024-11-01 16:10:31,093 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:10:38,098 [INFO] client.dns_resolver: Forwarded DNS request for data-ai.microsoft.com to external DNS server
+2024-11-01 16:10:44,141 [INFO] client.dns_resolver: Forwarded DNS request for copilot-telemetry-service.githubusercontent.com to external DNS server
+2024-11-01 16:11:00,551 [INFO] client.dns_resolver: Forwarded DNS request for chatgpt.com to external DNS server
+2024-11-01 16:11:00,648 [INFO] client.dns_resolver: Forwarded DNS request for chatgpt.com to external DNS server
+2024-11-01 16:11:00,685 [INFO] client.dns_resolver: Forwarded DNS request for chatgpt.com to external DNS server
+2024-11-01 16:11:01,758 [INFO] client.dns_resolver: Forwarded DNS request for array805.prod.do.dsp.mp.microsoft.com to external DNS server
+2024-11-01 16:11:21,843 [INFO] client.dns_resolver: Forwarded DNS request for copilot-proxy.githubusercontent.com to external DNS server
+2024-11-01 16:11:21,843 [INFO] client.dns_resolver: Forwarded DNS request for copilot-proxy.githubusercontent.com to external DNS server
+2024-11-01 16:11:23,730 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:11:23,730 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:11:23,730 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:11:24,101 [INFO] client.dns_resolver: Forwarded DNS request for vscode-sync.trafficmanager.net to external DNS server
+2024-11-01 16:11:24,102 [INFO] client.dns_resolver: Forwarded DNS request for vscode-sync.trafficmanager.net to external DNS server
+2024-11-01 16:11:31,868 [INFO] client.dns_resolver: Forwarded DNS request for remotedesktop-pa.googleapis.com to external DNS server
+2024-11-01 16:11:35,567 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:11:36,673 [INFO] client.dns_resolver: Forwarded DNS request for copilot-telemetry-service.githubusercontent.com to external DNS server
+2024-11-01 16:11:41,587 [INFO] client.dns_resolver: Forwarded DNS request for ap-southeast-2.console.aws.amazon.com to external DNS server
+2024-11-01 16:11:41,614 [INFO] client.dns_resolver: Forwarded DNS request for a9faf713df4858b6a.awsglobalaccelerator.com to external DNS server
+2024-11-01 16:11:41,654 [INFO] client.dns_resolver: Forwarded DNS request for ap-southeast-2.console.aws.amazon.com to external DNS server
+2024-11-01 16:11:41,692 [INFO] client.dns_resolver: Forwarded DNS request for a9faf713df4858b6a.awsglobalaccelerator.com to external DNS server
+2024-11-01 16:11:42,172 [INFO] client.dns_resolver: Forwarded DNS request for logs.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 16:11:42,240 [INFO] client.dns_resolver: Forwarded DNS request for logs.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 16:11:42,311 [INFO] client.dns_resolver: Forwarded DNS request for logs.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 16:11:43,964 [INFO] client.dns_resolver: Forwarded DNS request for data-ai.microsoft.com to external DNS server
+2024-11-01 16:11:45,592 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:11:49,838 [INFO] client.dns_resolver: Forwarded DNS request for contile.services.mozilla.com to external DNS server
+2024-11-01 16:11:49,839 [INFO] client.dns_resolver: Forwarded DNS request for spocs.getpocket.com to external DNS server
+2024-11-01 16:11:50,165 [INFO] client.dns_resolver: Forwarded DNS request for prod.ads.prod.webservices.mozgcp.net to external DNS server
+2024-11-01 16:11:50,181 [INFO] client.dns_resolver: Forwarded DNS request for contile.services.mozilla.com to external DNS server
+2024-11-01 16:11:50,204 [INFO] client.dns_resolver: Forwarded DNS request for contile.services.mozilla.com to external DNS server
+2024-11-01 16:11:50,204 [INFO] client.dns_resolver: Forwarded DNS request for prod.ads.prod.webservices.mozgcp.net to external DNS server
+2024-11-01 16:12:37,863 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:12:37,866 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:12:53,356 [INFO] client.dns_resolver: Forwarded DNS request for api.githubcopilot.com to external DNS server
+2024-11-01 16:12:53,371 [INFO] client.dns_resolver: Forwarded DNS request for api.githubcopilot.com to external DNS server
+2024-11-01 16:13:08,314 [INFO] client.dns_resolver: Forwarded DNS request for copilot-telemetry-service.githubusercontent.com to external DNS server
+2024-11-01 16:13:09,405 [INFO] client.dns_resolver: Forwarded DNS request for westus-0.in.applicationinsights.azure.com to external DNS server
+2024-11-01 16:13:13,696 [INFO] client.dns_resolver: Forwarded DNS request for 1.0.0.127.in-addr.arpa to external DNS server
+2024-11-01 16:13:13,896 [INFO] client.dns_resolver: Forwarded DNS request for protected3.example.com to external DNS server
+2024-11-01 16:13:14,404 [ERROR] client.dns_resolver: Failed to resolve protected3.example.com via external DNS: timed out
+2024-11-01 16:13:14,405 [WARNING] client.dns_resolver: Could not resolve protected3.example.com via external DNS server.
+2024-11-01 16:13:14,607 [INFO] client.dns_resolver: Forwarded DNS request for protected3.example.com to external DNS server
+2024-11-01 16:13:14,673 [INFO] client.dns_resolver: Forwarded DNS request for protected3.example.com to external DNS server
+2024-11-01 16:13:16,620 [INFO] client.dns_resolver: Forwarded DNS request for 1.0.0.127.in-addr.arpa to external DNS server
+2024-11-01 16:13:16,624 [INFO] client.dns_resolver: Resolved protected1.example.com to 100.64.0.2 (CGNAT)
+2024-11-01 16:13:16,626 [INFO] client.dns_resolver: Resolved protected1.example.com to 100.64.0.2 (CGNAT)
+2024-11-01 16:13:26,400 [INFO] client.dns_resolver: Forwarded DNS request for vscode-sync.trafficmanager.net to external DNS server
+2024-11-01 16:13:26,856 [ERROR] client.dns_resolver: Failed to resolve vscode-sync.trafficmanager.net via external DNS: timed out
+2024-11-01 16:13:26,857 [WARNING] client.dns_resolver: Could not resolve vscode-sync.trafficmanager.net via external DNS server.
+2024-11-01 16:13:47,452 [INFO] client.dns_resolver: Forwarded DNS request for copilot-proxy.githubusercontent.com to external DNS server
+2024-11-01 16:13:47,543 [INFO] client.dns_resolver: Forwarded DNS request for copilot-proxy.githubusercontent.com to external DNS server
+2024-11-01 16:13:49,194 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:13:49,256 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:13:49,273 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:13:52,919 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:14:02,209 [INFO] client.dns_resolver: Forwarded DNS request for copilot-telemetry-service.githubusercontent.com to external DNS server
+2024-11-01 16:14:16,773 [ERROR] client.dns_resolver: Failed to resolve mobile.events.data.microsoft.com via external DNS: timed out
+2024-11-01 16:14:16,774 [WARNING] client.dns_resolver: Could not resolve mobile.events.data.microsoft.com via external DNS server.
+2024-11-01 16:14:22,946 [ERROR] client.dns_resolver: Failed to resolve mobile.events.data.microsoft.com via external DNS: timed out
+2024-11-01 16:14:22,947 [WARNING] client.dns_resolver: Could not resolve mobile.events.data.microsoft.com via external DNS server.
+2024-11-01 16:14:25,384 [INFO] client.dns_resolver: Forwarded DNS request for v10.events.data.microsoft.com to external DNS server
+2024-11-01 16:14:27,277 [INFO] client.dns_resolver: Forwarded DNS request for v20.events.data.microsoft.com to external DNS server
+2024-11-01 16:14:37,977 [INFO] client.dns_resolver: Forwarded DNS request for default.exp-tas.com to external DNS server
+2024-11-01 16:15:12,876 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:15:12,876 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:15:15,927 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:15:26,023 [INFO] client.dns_resolver: Forwarded DNS request for accounts.youtube.com to external DNS server
+2024-11-01 16:15:26,103 [INFO] client.dns_resolver: Forwarded DNS request for www3.l.google.com to external DNS server
+2024-11-01 16:15:26,157 [INFO] client.dns_resolver: Forwarded DNS request for www3.l.google.com to external DNS server
+2024-11-01 16:15:26,511 [INFO] client.dns_resolver: Forwarded DNS request for ocsp.entrust.net to external DNS server
+2024-11-01 16:15:26,614 [INFO] client.dns_resolver: Forwarded DNS request for c.pki.goog to external DNS server
+2024-11-01 16:15:26,761 [INFO] client.dns_resolver: Forwarded DNS request for x1.c.lencr.org to external DNS server
+2024-11-01 16:15:27,032 [INFO] client.dns_resolver: Forwarded DNS request for x2.c.lencr.org to external DNS server
+2024-11-01 16:15:27,094 [INFO] client.dns_resolver: Forwarded DNS request for www.youtube.com to external DNS server
+2024-11-01 16:15:27,192 [INFO] client.dns_resolver: Forwarded DNS request for ctldl.windowsupdate.com to external DNS server
+2024-11-01 16:15:27,228 [INFO] client.dns_resolver: Forwarded DNS request for youtube-ui.l.google.com to external DNS server
+2024-11-01 16:15:27,278 [INFO] client.dns_resolver: Forwarded DNS request for youtube-ui.l.google.com to external DNS server
+2024-11-01 16:15:46,531 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:16:15,927 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:16:16,345 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:16:16,345 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:16:21,264 [INFO] client.dns_resolver: Forwarded DNS request for activity.windows.com to external DNS server
+2024-11-01 16:16:23,784 [INFO] client.dns_resolver: Forwarded DNS request for enterprise.activity.windows.com to external DNS server
+2024-11-01 16:16:30,637 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:16:41,324 [INFO] client.dns_resolver: Forwarded DNS request for mobile.events.data.microsoft.com to external DNS server
+2024-11-01 16:16:43,791 [INFO] client.dns_resolver: Forwarded DNS request for ap-southeast-2.console.aws.amazon.com to external DNS server
+2024-11-01 16:16:43,877 [INFO] client.dns_resolver: Forwarded DNS request for a9faf713df4858b6a.awsglobalaccelerator.com to external DNS server
+2024-11-01 16:16:44,257 [INFO] client.dns_resolver: Forwarded DNS request for logs.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 16:16:44,303 [INFO] client.dns_resolver: Forwarded DNS request for logs.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 16:16:44,396 [INFO] client.dns_resolver: Forwarded DNS request for logs.ap-southeast-2.amazonaws.com to external DNS server
+2024-11-01 16:17:06,353 [INFO] __main__: Closed aiohttp session
+2024-11-01 16:17:06,355 [INFO] __main__: ICE connection state: closed
+2024-11-01 16:17:06,411 [ERROR] asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-545' coro=<RTCPeerConnection.close() running at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiortc\rtcpeerconnection.py:500> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2024-11-01 16:17:06,413 [ERROR] asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-549' coro=<TurnClientMixin.delete() running at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py:188> wait_for=<Future pending cb=[Task.task_wakeup()]>>

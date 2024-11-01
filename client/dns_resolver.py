@@ -15,7 +15,9 @@ class LocalDNSResolver(BaseResolver):
         :param protected_resources: danh sách các tài nguyên được bảo vệ (dạng tên miền).
         """
         self.protected_resources = protected_resources
+        # Use a consistent way to assign CGNAT IPs
         self.resource_ip_map = {}
+        self.ip_counter = 1
         self.current_ip_index = 1
         self.cgnat_base_ip = '100.64.0.0'
         self.forwarding_dns_server = '8.8.8.8'  # DNS server ngoài để chuyển tiếp yêu cầu
@@ -65,12 +67,10 @@ class LocalDNSResolver(BaseResolver):
         domain = str(qname).rstrip('.')
 
         if domain in self.protected_resources:
-            # Nếu domain là tài nguyên được bảo vệ, trả về địa chỉ IP CGNAT
             if domain not in self.resource_ip_map:
-                cgnat_ip = self.get_cgnat_ip()
-                self.resource_ip_map[domain] = cgnat_ip
-            else:
-                cgnat_ip = self.resource_ip_map[domain]
+                self.resource_ip_map[domain] = self.get_cgnat_ip()
+            cgnat_ip = self.resource_ip_map[domain]
+            # Nếu domain là tài nguyên được bảo vệ, trả về địa chỉ IP CGNAT
             reply.add_answer(RR(qname, QTYPE.A, rdata=A(cgnat_ip), ttl=60))
             logger.info(f"Resolved {domain} to {cgnat_ip} (CGNAT)")
             return reply
