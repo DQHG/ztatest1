@@ -98,3 +98,85 @@ Traceback (most recent call last):
     raise InvalidStateError
 aiortc.exceptions.InvalidStateError
 2024-11-01 11:25:12,762 [INFO] __main__: Closed aiohttp session
+2024-11-01 11:29:09,806 [INFO] __main__: DataChannel created, state: connecting
+2024-11-01 11:29:10,418 [INFO] __main__: Connected to signaling server
+2024-11-01 11:29:15,446 [INFO] __main__: Offer sent to connector
+2024-11-01 11:29:15,648 [ERROR] __main__: peer_info is missing 'ip' or 'port'
+2024-11-01 11:29:15,659 [INFO] __main__: Received answer from connector
+2024-11-01 11:29:15,660 [INFO] __main__: ICE connection state: checking
+2024-11-01 11:30:19,487 [INFO] __main__: ICE connection state: failed
+2024-11-01 11:30:19,488 [ERROR] __main__: ICE connection failed, attempting reset
+2024-11-01 11:30:19,489 [INFO] __main__: ICE connection state: closed
+2024-11-01 11:30:19,491 [INFO] __main__: DataChannel created, state: connecting
+2024-11-01 11:30:20,105 [INFO] __main__: Connected to signaling server
+2024-11-01 11:30:25,109 [INFO] __main__: Offer sent to connector
+2024-11-01 11:30:25,311 [ERROR] __main__: peer_info is missing 'ip' or 'port'
+2024-11-01 11:30:25,318 [INFO] __main__: Received answer from connector
+2024-11-01 11:30:25,318 [INFO] __main__: ICE connection state: checking
+2024-11-01 11:31:29,154 [INFO] __main__: ICE connection state: failed
+2024-11-01 11:31:29,155 [ERROR] __main__: ICE connection failed, attempting reset
+2024-11-01 11:31:29,156 [INFO] __main__: ICE connection state: closed
+2024-11-01 11:31:29,158 [INFO] __main__: DataChannel created, state: connecting
+2024-11-01 11:31:29,746 [INFO] __main__: Connected to signaling server
+2024-11-01 11:31:34,746 [INFO] __main__: Offer sent to connector
+2024-11-01 11:31:34,941 [ERROR] __main__: peer_info is missing 'ip' or 'port'
+2024-11-01 11:31:34,946 [INFO] __main__: Received answer from connector
+2024-11-01 11:31:34,947 [INFO] __main__: ICE connection state: checking
+2024-11-01 11:32:38,819 [INFO] __main__: ICE connection state: failed
+2024-11-01 11:32:38,820 [ERROR] __main__: ICE connection failed, attempting reset
+2024-11-01 11:32:38,821 [INFO] __main__: ICE connection state: closed
+2024-11-01 11:32:38,823 [INFO] __main__: DataChannel created, state: connecting
+2024-11-01 11:32:39,412 [INFO] __main__: Connected to signaling server
+2024-11-01 11:32:44,434 [INFO] __main__: Offer sent to connector
+2024-11-01 11:32:44,630 [ERROR] __main__: peer_info is missing 'ip' or 'port'
+2024-11-01 11:32:44,636 [INFO] __main__: Received answer from connector
+2024-11-01 11:32:44,637 [INFO] __main__: ICE connection state: checking
+2024-11-01 11:33:48,479 [INFO] __main__: ICE connection state: failed
+2024-11-01 11:33:48,480 [ERROR] __main__: ICE connection failed, attempting reset
+2024-11-01 11:33:48,481 [INFO] __main__: ICE connection state: closed
+2024-11-01 11:33:48,483 [INFO] __main__: DataChannel created, state: connecting
+2024-11-01 11:33:49,097 [INFO] __main__: Connected to signaling server
+2024-11-01 11:33:54,107 [INFO] __main__: Offer sent to connector
+2024-11-01 11:33:54,312 [ERROR] __main__: peer_info is missing 'ip' or 'port'
+2024-11-01 11:33:54,314 [INFO] __main__: Received answer from connector
+2024-11-01 11:33:54,315 [INFO] __main__: ICE connection state: checking
+2024-11-01 11:34:05,260 [INFO] __main__: Closed aiohttp session
+2024-11-01 11:34:05,261 [INFO] __main__: Closed aiohttp session
+2024-11-01 11:34:05,261 [INFO] __main__: Closed aiohttp session
+2024-11-01 11:34:05,263 [INFO] __main__: Closed aiohttp session
+2024-11-01 11:34:05,263 [INFO] __main__: Closed aiohttp session
+2024-11-01 11:34:05,264 [ERROR] asyncio: Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000204A6900590>
+2024-11-01 11:34:05,265 [ERROR] asyncio: Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000204A6900350>
+2024-11-01 11:34:05,266 [ERROR] asyncio: Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000204A6A45550>
+2024-11-01 11:34:05,320 [ERROR] asyncio: Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000204A6964190>
+2024-11-01 11:34:34,196 [INFO] __main__: DataChannel created, state: connecting
+2024-11-01 11:34:34,204 [INFO] __main__: Connected to signaling server
+2024-11-01 11:34:39,234 [INFO] __main__: Offer sent to connector
+2024-11-01 11:34:44,246 [INFO] __main__: Received answer from connector
+2024-11-01 11:34:44,247 [INFO] __main__: ICE connection state: checking
+2024-11-01 11:34:44,277 [INFO] __main__: ICE connection state: completed
+2024-11-01 11:34:44,282 [INFO] __main__: DataChannel is open
+2024-11-01 11:34:44,283 [INFO] __main__: Interacting with Connector
+2024-11-01 11:36:55,188 [INFO] __main__: Closed aiohttp session
+2024-11-01 11:36:55,188 [ERROR] asyncio: Task exception was never retrieved
+future: <Task finished name='Task-29' coro=<Client.interact_with_connector() done, defined at C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client1.py:262> exception=EOFError()>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client1.py", line 269, in interact_with_connector
+    choice = await aioconsole.ainput("Select an action: ")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioconsole\stream.py", line 297, in ainput
+    raise EOFError
+EOFError
+2024-11-01 11:36:55,202 [INFO] __main__: ICE connection state: closed
+2024-11-01 11:37:09,611 [INFO] __main__: DataChannel created, state: connecting
+2024-11-01 11:37:09,619 [INFO] __main__: Connected to signaling server
+2024-11-01 11:37:14,628 [INFO] __main__: Offer sent to connector
+2024-11-01 11:37:19,638 [INFO] __main__: Received answer from connector
+2024-11-01 11:37:19,640 [INFO] __main__: ICE connection state: checking
+2024-11-01 11:37:19,669 [INFO] __main__: ICE connection state: completed
+2024-11-01 11:37:19,674 [INFO] __main__: DataChannel is open
+2024-11-01 11:37:19,675 [INFO] __main__: Interacting with Connector

@@ -129,9 +129,8 @@ class Client:
                 )
                 await self.pc.addIceCandidate(candidate)
                 logger.info("Added ICE candidate from connector")
-            elif data.get('action') == 'ping':
-                # UDP Hole Punching
-                peer_info = data.get('peer_info')
+            elif data.get('peer_info'):
+                peer_info = data['peer_info']
                 logger.debug(f"Received peer_info: {peer_info}")
                 if 'ip' in peer_info and 'port' in peer_info:
                     await self.punch_hole(peer_info)
@@ -142,6 +141,7 @@ class Client:
 
         # Giữ kết nối
         await self.pc.waitClosed()
+
 
     async def punch_hole(self, peer_info):
         # Thực hiện UDP hole punching

@@ -258,3 +258,20 @@ task: <Task pending name='Task-32' coro=<Connector.reset_connection.<locals>.on_
 2024-11-01 11:24:38,609 [WARNING] __main__: ICE connection failed or closed, resetting connection.
 2024-11-01 11:24:38,678 [ERROR] asyncio: Task was destroyed but it is pending!
 task: <Task pending name='Task-32' coro=<Connector.reset_connection.<locals>.on_iceconnectionstatechange() running at C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\connector\connector1.py:67> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[AsyncIOEventEmitter._emit_run.<locals>.callback() at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\asyncio.py:69]>
+2024-11-01 11:34:29,546 [INFO] __main__: Connected to signaling server.
+2024-11-01 11:34:39,236 [INFO] __main__: Received offer from client.
+2024-11-01 11:34:44,244 [INFO] __main__: Sent answer to client.
+2024-11-01 11:34:44,245 [INFO] __main__: ICE connection state changed to checking
+2024-11-01 11:34:44,277 [INFO] __main__: ICE connection state changed to completed
+2024-11-01 11:34:44,282 [INFO] __main__: Data channel established.
+2024-11-01 11:36:58,756 [INFO] __main__: Closed aiohttp session
+2024-11-01 11:36:58,757 [INFO] __main__: ICE connection state changed to closed
+2024-11-01 11:36:58,758 [WARNING] __main__: ICE connection failed or closed, resetting connection.
+2024-11-01 11:36:58,837 [ERROR] asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-30' coro=<Connector.reset_connection.<locals>.on_iceconnectionstatechange() running at C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\connector\connector1.py:67> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[AsyncIOEventEmitter._emit_run.<locals>.callback() at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\asyncio.py:69]>
+2024-11-01 11:37:06,389 [INFO] __main__: Connected to signaling server.
+2024-11-01 11:37:14,629 [INFO] __main__: Received offer from client.
+2024-11-01 11:37:19,637 [INFO] __main__: Sent answer to client.
+2024-11-01 11:37:19,638 [INFO] __main__: ICE connection state changed to checking
+2024-11-01 11:37:19,669 [INFO] __main__: ICE connection state changed to completed
+2024-11-01 11:37:19,674 [INFO] __main__: Data channel established.

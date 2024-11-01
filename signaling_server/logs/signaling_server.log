@@ -59,3 +59,15 @@
 2024-11-01 11:24:38,608 [INFO] aiohttp.access: 127.0.0.1 [01/Nov/2024:04:24:16 +0000] "GET /ws?peer_id=connector HTTP/1.1" 101 0 "-" "Python/3.11 aiohttp/3.8.4"
 2024-11-01 11:25:12,762 [INFO] __main__: Peer client disconnected.
 2024-11-01 11:25:12,763 [INFO] aiohttp.access: 127.0.0.1 [01/Nov/2024:04:24:19 +0000] "GET /ws?peer_id=client HTTP/1.1" 101 0 "-" "Python/3.11 aiohttp/3.8.4"
+2024-11-01 11:34:29,546 [INFO] __main__: Peer connector connected with IP 127.0.0.1.
+2024-11-01 11:34:34,204 [INFO] __main__: Peer client connected with IP 127.0.0.1.
+2024-11-01 11:34:39,234 [INFO] __main__: Forwarded message from client to connector
+2024-11-01 11:34:44,245 [INFO] __main__: Forwarded message from connector to client
+2024-11-01 11:36:55,188 [INFO] __main__: Peer client disconnected.
+2024-11-01 11:36:55,188 [INFO] aiohttp.access: 127.0.0.1 [01/Nov/2024:04:34:34 +0000] "GET /ws?peer_id=client HTTP/1.1" 101 0 "-" "Python/3.11 aiohttp/3.8.4"
+2024-11-01 11:36:58,756 [INFO] __main__: Peer connector disconnected.
+2024-11-01 11:36:58,757 [INFO] aiohttp.access: 127.0.0.1 [01/Nov/2024:04:34:29 +0000] "GET /ws?peer_id=connector HTTP/1.1" 101 0 "-" "Python/3.11 aiohttp/3.8.4"
+2024-11-01 11:37:06,389 [INFO] __main__: Peer connector connected with IP 127.0.0.1.
+2024-11-01 11:37:09,619 [INFO] __main__: Peer client connected with IP 127.0.0.1.
+2024-11-01 11:37:14,628 [INFO] __main__: Forwarded message from client to connector
+2024-11-01 11:37:19,637 [INFO] __main__: Forwarded message from connector to client
