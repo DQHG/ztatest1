@@ -15,7 +15,7 @@ CA_CERT_FILE = os.path.join(BASE_DIR, 'certificates', 'ca.crt')
 LOG_FILE = os.path.join(BASE_DIR, 'logs', 'client.log')
 
 # Danh sách tài nguyên được bảo vệ (có thể được lấy từ Connector)
-PROTECTED_RESOURCES = ['protected.example.com']
+PROTECTED_RESOURCES = ['protected.example.com','protected1.example.com']
 
 # Dải địa chỉ CGNAT
 CGNAT_NETWORK = '100.64.0.0/10'

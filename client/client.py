@@ -38,6 +38,17 @@ logging.getLogger("aioice").setLevel(logging.WARNING)
 
 class Client:
     def __init__(self):
+        """
+
+        Attributes:
+            pc (RTCPeerConnection): The peer connection instance.
+            channel (RTCDataChannel): The data channel instance.
+            dns_resolver (LocalDNSResolver): The DNS resolver instance.
+            protected_resources (list): List of protected resources.
+            data_queues (dict): Dictionary to store data queues for sessions.
+            signaling (ClientWebSocketResponse): The signaling server connection.
+            session (ClientSession): The aiohttp session for signaling.
+        """
         self.pc = None
         self.channel = None
         self.dns_resolver = None

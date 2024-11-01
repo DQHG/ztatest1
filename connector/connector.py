@@ -33,12 +33,12 @@ logging.getLogger("aioice").setLevel(logging.WARNING)
 
 class Connector:
     def __init__(self):
-        self.pc = None
-        self.channel = None
-        self.resource_manager = ResourceManager()
-        self.data_queues = {}
-        self.signaling = None
-        self.session = None
+        self.pc = None  # RTCPeerConnection object, initialized to None and set later
+        self.channel = None  # Data channel for WebRTC communication, initialized to None and set later
+        self.resource_manager = ResourceManager()  # Manages resources and handles resource-related actions
+        self.data_queues = {}  # Dictionary to store data queues for different sessions
+        self.signaling = None  # WebSocket connection to the signaling server, initialized to None and set later
+        self.session = None  # aiohttp ClientSession object, initialized to None and set later
 
     async def run(self):
         await self.reset_connection()
