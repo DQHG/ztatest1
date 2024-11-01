@@ -71,3 +71,26 @@
 2024-11-01 11:37:09,619 [INFO] __main__: Peer client connected with IP 127.0.0.1.
 2024-11-01 11:37:14,628 [INFO] __main__: Forwarded message from client to connector
 2024-11-01 11:37:19,637 [INFO] __main__: Forwarded message from connector to client
+2024-11-01 11:40:11,829 [INFO] __main__: Peer client disconnected.
+2024-11-01 11:40:11,829 [INFO] aiohttp.access: 127.0.0.1 [01/Nov/2024:04:37:09 +0000] "GET /ws?peer_id=client HTTP/1.1" 101 0 "-" "Python/3.11 aiohttp/3.8.4"
+2024-11-01 11:40:43,993 [INFO] __main__: Peer connector connected with IP 127.0.0.1.
+2024-11-01 12:05:11,118 [INFO] __main__: Peer connector connected with IP 127.0.0.1.
+2024-11-01 12:05:16,418 [INFO] __main__: Peer client connected with IP 127.0.0.1.
+2024-11-01 12:06:24,571 [INFO] __main__: Peer connector disconnected.
+2024-11-01 12:06:24,571 [INFO] aiohttp.access: 127.0.0.1 [01/Nov/2024:05:05:11 +0000] "GET /ws?peer_id=connector HTTP/1.1" 101 0 "-" "Python/3.11 aiohttp/3.8.4"
+2024-11-01 12:06:24,985 [INFO] __main__: Peer client disconnected.
+2024-11-01 12:06:24,986 [INFO] aiohttp.access: 127.0.0.1 [01/Nov/2024:05:05:16 +0000] "GET /ws?peer_id=client HTTP/1.1" 101 0 "-" "Python/3.11 aiohttp/3.8.4"
+2024-11-01 12:06:34,559 [INFO] __main__: Peer connector connected with IP 127.0.0.1.
+2024-11-01 12:06:37,475 [INFO] __main__: Peer client connected with IP 127.0.0.1.
+2024-11-01 12:06:42,478 [INFO] __main__: Forwarded message from client to connector
+2024-11-01 12:06:47,489 [INFO] __main__: Forwarded message from connector to client
+2024-11-01 12:16:25,361 [INFO] __main__: Peer client disconnected.
+2024-11-01 12:16:25,361 [INFO] aiohttp.access: 127.0.0.1 [01/Nov/2024:05:06:37 +0000] "GET /ws?peer_id=client HTTP/1.1" 101 0 "-" "Python/3.11 aiohttp/3.8.4"
+2024-11-01 12:16:51,002 [INFO] __main__: Peer connector connected with IP 127.0.0.1.
+2024-11-01 12:16:56,506 [INFO] __main__: Peer client connected with IP 127.0.0.1.
+2024-11-01 12:17:01,696 [INFO] __main__: Forwarded message from client to connector
+2024-11-01 12:17:06,878 [INFO] __main__: Forwarded message from connector to client
+2024-11-01 13:09:38,994 [INFO] __main__: Peer connector connected with IP 127.0.0.1.
+2024-11-01 13:09:47,960 [INFO] __main__: Peer client connected with IP 127.0.0.1.
+2024-11-01 13:09:53,237 [INFO] __main__: Forwarded message from client to connector
+2024-11-01 13:09:58,452 [INFO] __main__: Forwarded message from connector to client

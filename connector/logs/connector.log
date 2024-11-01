@@ -275,3 +275,35 @@ task: <Task pending name='Task-30' coro=<Connector.reset_connection.<locals>.on_
 2024-11-01 11:37:19,638 [INFO] __main__: ICE connection state changed to checking
 2024-11-01 11:37:19,669 [INFO] __main__: ICE connection state changed to completed
 2024-11-01 11:37:19,674 [INFO] __main__: Data channel established.
+2024-11-01 11:40:43,984 [INFO] __main__: ICE connection state changed to closed
+2024-11-01 11:40:43,985 [WARNING] __main__: ICE connection failed or closed, resetting connection.
+2024-11-01 11:40:43,993 [INFO] __main__: Connected to signaling server.
+2024-11-01 12:04:55,255 [ERROR] asyncio: Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000233C2E9A5D0>
+2024-11-01 12:04:55,256 [INFO] __main__: Closed aiohttp session
+2024-11-01 12:04:55,257 [INFO] __main__: Closed aiohttp session
+2024-11-01 12:05:11,118 [INFO] __main__: Connected to signaling server.
+2024-11-01 12:06:24,570 [INFO] __main__: Closed aiohttp session
+2024-11-01 12:06:34,560 [INFO] __main__: Connected to signaling server.
+2024-11-01 12:06:42,479 [INFO] __main__: Received offer from client.
+2024-11-01 12:06:47,488 [INFO] __main__: Sent answer to client.
+2024-11-01 12:06:47,490 [INFO] __main__: ICE connection state changed to checking
+2024-11-01 12:06:47,519 [INFO] __main__: ICE connection state changed to completed
+2024-11-01 12:06:47,524 [INFO] __main__: Data channel established.
+2024-11-01 12:16:40,249 [INFO] __main__: Closed aiohttp session
+2024-11-01 12:16:40,250 [INFO] __main__: ICE connection state changed to closed
+2024-11-01 12:16:40,251 [WARNING] __main__: ICE connection failed or closed, resetting connection.
+2024-11-01 12:16:40,333 [ERROR] asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-30' coro=<Connector.reset_connection.<locals>.on_iceconnectionstatechange() running at C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\connector\connector1.py:67> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[AsyncIOEventEmitter._emit_run.<locals>.callback() at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyee\asyncio.py:69]>
+2024-11-01 12:16:51,002 [INFO] __main__: Connected to signaling server.
+2024-11-01 12:17:01,698 [INFO] __main__: Received offer from client.
+2024-11-01 12:17:06,876 [INFO] __main__: Sent answer to client.
+2024-11-01 12:17:06,879 [INFO] __main__: ICE connection state changed to checking
+2024-11-01 12:17:06,906 [INFO] __main__: ICE connection state changed to completed
+2024-11-01 12:17:06,911 [INFO] __main__: Data channel established.
+2024-11-01 13:09:38,995 [INFO] __main__: Connected to signaling server.
+2024-11-01 13:09:53,238 [INFO] __main__: Received offer from client.
+2024-11-01 13:09:58,451 [INFO] __main__: Sent answer to client.
+2024-11-01 13:09:58,454 [INFO] __main__: ICE connection state changed to checking
+2024-11-01 13:09:58,493 [INFO] __main__: ICE connection state changed to completed
+2024-11-01 13:09:58,505 [INFO] __main__: Data channel established.

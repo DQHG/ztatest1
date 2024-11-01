@@ -31,17 +31,30 @@ async def websocket_handler(request):
         await ws.close(code=WSCloseCode.PROTOCOL_ERROR, message='Missing peer_id')
         return ws
 
-    peers[peer_id] = ws
-    logger.info(f'Peer {peer_id} connected.')
+    # Lưu WebSocket của peer
+    peers[peer_id] = {'ws': ws, 'ip': request.remote}
+
+    logger.info(f'Peer {peer_id} connected with IP {request.remote}.')
 
     try:
         async for msg in ws:
             if msg.type == web.WSMsgType.TEXT:
                 data = json.loads(msg.data)
                 target_id = data.get('target_id')
+                
+                # Kiểm tra nếu peer target có tồn tại
                 if target_id and target_id in peers:
+                    # Gửi thông tin peer_info cho client hoặc connector
+                    if data.get('action') == 'ping':
+                        peer_info = {
+                            'ip': peers[target_id]['ip'],
+                            'port': data.get('port', 5000)  # Sử dụng port mặc định nếu không có
+                        }
+                        data['peer_info'] = peer_info
+                        logger.info(f"Sending peer_info to {peer_id}: {peer_info}")
+
                     # Forward message to target peer
-                    await peers[target_id].send_json(data)
+                    await peers[target_id]['ws'].send_json(data)
                     logger.info(f'Forwarded message from {peer_id} to {target_id}')
                 else:
                     logger.warning(f'Target {target_id} not found for peer {peer_id}')
@@ -63,5 +76,3 @@ if __name__ == '__main__':
     ssl_context.verify_mode = ssl.CERT_REQUIRED
 
     web.run_app(app, host=SIGNALING_SERVER_HOST, port=SIGNALING_SERVER_PORT, ssl_context=ssl_context)
-    # web.run_app(app, host=SIGNALING_SERVER_HOST, port=SIGNALING_SERVER_PORT)
-

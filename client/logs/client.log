@@ -180,3 +180,259 @@ EOFError
 2024-11-01 11:37:19,669 [INFO] __main__: ICE connection state: completed
 2024-11-01 11:37:19,674 [INFO] __main__: DataChannel is open
 2024-11-01 11:37:19,675 [INFO] __main__: Interacting with Connector
+2024-11-01 11:40:11,828 [INFO] __main__: Closed aiohttp session
+2024-11-01 11:40:11,829 [ERROR] asyncio: Task exception was never retrieved
+future: <Task finished name='Task-29' coro=<Client.interact_with_connector() done, defined at C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client1.py:262> exception=EOFError()>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client1.py", line 269, in interact_with_connector
+    choice = await aioconsole.ainput("Select an action: ")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioconsole\stream.py", line 297, in ainput
+    raise EOFError
+EOFError
+2024-11-01 11:40:11,832 [INFO] __main__: ICE connection state: closed
+2024-11-01 11:40:14,070 [INFO] __main__: DataChannel created, state: connecting
+2024-11-01 11:40:14,668 [INFO] __main__: Connected to signaling server
+2024-11-01 11:40:19,698 [INFO] __main__: Offer sent to connector
+2024-11-01 11:40:19,902 [INFO] __main__: Received answer from connector
+2024-11-01 11:40:19,903 [INFO] __main__: ICE connection state: checking
+2024-11-01 11:41:23,749 [INFO] __main__: ICE connection state: failed
+2024-11-01 11:41:23,750 [ERROR] __main__: ICE connection failed, attempting reset
+2024-11-01 11:41:23,751 [INFO] __main__: ICE connection state: closed
+2024-11-01 11:41:23,753 [INFO] __main__: DataChannel created, state: connecting
+2024-11-01 11:41:24,366 [INFO] __main__: Connected to signaling server
+2024-11-01 11:41:29,379 [INFO] __main__: Offer sent to connector
+2024-11-01 11:41:29,585 [INFO] __main__: Received answer from connector
+2024-11-01 11:41:29,588 [INFO] __main__: ICE connection state: checking
+2024-11-01 11:42:33,438 [INFO] __main__: ICE connection state: failed
+2024-11-01 11:42:33,439 [ERROR] __main__: ICE connection failed, attempting reset
+2024-11-01 11:42:33,439 [INFO] __main__: ICE connection state: closed
+2024-11-01 11:42:33,441 [INFO] __main__: DataChannel created, state: connecting
+2024-11-01 11:42:34,048 [INFO] __main__: Connected to signaling server
+2024-11-01 11:42:39,067 [INFO] __main__: Offer sent to connector
+2024-11-01 11:42:39,273 [INFO] __main__: Received answer from connector
+2024-11-01 11:42:39,274 [INFO] __main__: ICE connection state: checking
+2024-11-01 11:43:43,149 [INFO] __main__: ICE connection state: failed
+2024-11-01 11:43:43,150 [ERROR] __main__: ICE connection failed, attempting reset
+2024-11-01 11:43:43,150 [INFO] __main__: ICE connection state: closed
+2024-11-01 11:43:43,153 [INFO] __main__: DataChannel created, state: connecting
+2024-11-01 11:43:43,741 [INFO] __main__: Connected to signaling server
+2024-11-01 11:43:48,755 [INFO] __main__: Offer sent to connector
+2024-11-01 11:43:48,960 [INFO] __main__: Received answer from connector
+2024-11-01 11:43:48,961 [INFO] __main__: ICE connection state: checking
+2024-11-01 11:44:52,839 [INFO] __main__: ICE connection state: failed
+2024-11-01 11:44:52,839 [ERROR] __main__: ICE connection failed, attempting reset
+2024-11-01 11:44:52,840 [INFO] __main__: ICE connection state: closed
+2024-11-01 11:44:52,841 [INFO] __main__: DataChannel created, state: connecting
+2024-11-01 11:44:53,435 [INFO] __main__: Connected to signaling server
+2024-11-01 11:44:58,436 [INFO] __main__: Offer sent to connector
+2024-11-01 11:44:58,637 [INFO] __main__: Received answer from connector
+2024-11-01 11:44:58,638 [INFO] __main__: ICE connection state: checking
+2024-11-01 11:46:02,498 [INFO] __main__: ICE connection state: failed
+2024-11-01 11:46:02,499 [ERROR] __main__: ICE connection failed, attempting reset
+2024-11-01 11:46:02,500 [INFO] __main__: ICE connection state: closed
+2024-11-01 11:46:02,503 [INFO] __main__: DataChannel created, state: connecting
+2024-11-01 11:46:03,114 [INFO] __main__: Connected to signaling server
+2024-11-01 11:46:08,131 [INFO] __main__: Offer sent to connector
+2024-11-01 11:46:08,341 [INFO] __main__: Received answer from connector
+2024-11-01 11:46:08,343 [INFO] __main__: ICE connection state: checking
+2024-11-01 11:47:09,513 [INFO] __main__: Closed aiohttp session
+2024-11-01 11:47:09,514 [INFO] __main__: Closed aiohttp session
+2024-11-01 11:47:09,515 [INFO] __main__: Closed aiohttp session
+2024-11-01 11:47:09,515 [INFO] __main__: Closed aiohttp session
+2024-11-01 11:47:09,516 [INFO] __main__: Closed aiohttp session
+2024-11-01 11:47:09,516 [INFO] __main__: Closed aiohttp session
+2024-11-01 11:47:09,517 [ERROR] asyncio: Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001F3680C4350>
+2024-11-01 11:47:09,517 [ERROR] asyncio: Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001F36809F0D0>
+2024-11-01 11:47:09,518 [ERROR] asyncio: Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001F3680FE090>
+2024-11-01 11:47:09,519 [ERROR] asyncio: Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001F3681FD710>
+2024-11-01 11:47:09,570 [ERROR] asyncio: Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001F3680D8450>
+2024-11-01 12:05:16,408 [INFO] __main__: DataChannel created, state: connecting
+2024-11-01 12:05:16,418 [INFO] __main__: Connected to signaling server
+2024-11-01 12:06:24,985 [INFO] __main__: Closed aiohttp session
+2024-11-01 12:06:37,466 [INFO] __main__: DataChannel created, state: connecting
+2024-11-01 12:06:37,475 [INFO] __main__: Connected to signaling server
+2024-11-01 12:06:42,477 [INFO] __main__: Offer sent to connector
+2024-11-01 12:06:47,490 [INFO] __main__: Received answer from connector
+2024-11-01 12:06:47,491 [INFO] __main__: ICE connection state: checking
+2024-11-01 12:06:47,519 [INFO] __main__: ICE connection state: completed
+2024-11-01 12:06:47,524 [INFO] __main__: DataChannel is open
+2024-11-01 12:06:47,525 [INFO] __main__: Interacting with Connector
+2024-11-01 12:16:25,360 [INFO] __main__: Closed aiohttp session
+2024-11-01 12:16:25,361 [ERROR] asyncio: Task exception was never retrieved
+future: <Task finished name='Task-29' coro=<Client.interact_with_connector() done, defined at C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client1.py:263> exception=EOFError()>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client1.py", line 270, in interact_with_connector
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioconsole\stream.py", line 297, in ainput
+    raise EOFError
+EOFError
+2024-11-01 12:16:25,374 [INFO] __main__: ICE connection state: closed
+2024-11-01 12:16:56,497 [INFO] __main__: DataChannel created, state: connecting
+2024-11-01 12:16:56,506 [INFO] __main__: Connected to signaling server
+2024-11-01 12:17:01,696 [INFO] __main__: Offer sent to connector
+2024-11-01 12:17:06,880 [INFO] __main__: Received answer from connector
+2024-11-01 12:17:06,881 [INFO] __main__: ICE connection state: checking
+2024-11-01 12:17:06,905 [INFO] __main__: ICE connection state: completed
+2024-11-01 12:17:06,911 [INFO] __main__: DataChannel is open
+2024-11-01 12:17:06,911 [INFO] __main__: Interacting with Connector
+2024-11-01 12:25:17,477 [INFO] __main__: DataChannel created, state: connecting
+2024-11-01 12:25:19,534 [INFO] __main__: Closed aiohttp session
+2024-11-01 12:25:35,354 [INFO] __main__: DataChannel created, state: connecting
+2024-11-01 12:25:35,939 [INFO] __main__: Connected to signaling server
+2024-11-01 12:25:41,133 [INFO] __main__: Offer sent to connector
+2024-11-01 12:25:41,654 [INFO] __main__: Received answer from connector
+2024-11-01 12:25:41,656 [INFO] __main__: ICE connection state: checking
+2024-11-01 12:25:41,904 [ERROR] asyncio: Task exception was never retrieved
+future: <Task finished name='Task-28' coro=<TurnClientMixin.send_data() done, defined at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py:271> exception=TransactionFailed(Message(message_method=Method.CHANNEL_BIND, message_class=Class.ERROR, transaction_id=b'\xbc\xd3N L\x92m`K\x11\x99\xc0'))>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 290, in send_data
+    await self.channel_bind(channel, addr)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 111, in channel_bind
+    await self.request_with_retry(request)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 243, in request_with_retry
+    response, addr = await self.request(request)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 230, in request
+    return await transaction.run()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\stun.py", line 302, in run
+    return await self.__future
+           ^^^^^^^^^^^^^^^^^^^
+aioice.stun.TransactionFailed: STUN transaction failed (401 - )
+2024-11-01 12:25:42,242 [INFO] __main__: ICE connection state: completed
+2024-11-01 12:25:43,194 [INFO] __main__: DataChannel is open
+2024-11-01 12:25:43,196 [INFO] __main__: Interacting with Connector
+2024-11-01 12:25:53,153 [INFO] __main__: Closed aiohttp session
+2024-11-01 12:25:53,154 [ERROR] asyncio: Task exception was never retrieved
+future: <Task finished name='Task-46' coro=<Client.interact_with_connector() done, defined at C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client1.py:262> exception=EOFError()>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client1.py", line 269, in interact_with_connector
+    choice = await aioconsole.ainput("Select an action: ")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioconsole\stream.py", line 297, in ainput
+    raise EOFError
+EOFError
+2024-11-01 12:25:53,157 [INFO] __main__: ICE connection state: closed
+2024-11-01 12:25:53,226 [ERROR] asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-51' coro=<RTCPeerConnection.close() running at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiortc\rtcpeerconnection.py:500> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2024-11-01 12:25:53,227 [ERROR] asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-55' coro=<TurnClientMixin.delete() running at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py:188> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2024-11-01 12:27:57,403 [INFO] __main__: DataChannel created, state: connecting
+2024-11-01 12:27:57,997 [INFO] __main__: Connected to signaling server
+2024-11-01 12:28:03,187 [INFO] __main__: Offer sent to connector
+2024-11-01 12:28:03,697 [INFO] __main__: Received answer from connector
+2024-11-01 12:28:03,699 [INFO] __main__: ICE connection state: checking
+2024-11-01 12:28:03,939 [ERROR] asyncio: Task exception was never retrieved
+future: <Task finished name='Task-28' coro=<TurnClientMixin.send_data() done, defined at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py:271> exception=TransactionFailed(Message(message_method=Method.CHANNEL_BIND, message_class=Class.ERROR, transaction_id=b'\x16\xe6\xc5\x8e0 \xad\t_WR\xfa'))>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 290, in send_data
+    await self.channel_bind(channel, addr)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 111, in channel_bind
+    await self.request_with_retry(request)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 243, in request_with_retry
+    response, addr = await self.request(request)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 230, in request
+    return await transaction.run()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\stun.py", line 302, in run
+    return await self.__future
+           ^^^^^^^^^^^^^^^^^^^
+aioice.stun.TransactionFailed: STUN transaction failed (401 - )
+2024-11-01 12:28:04,381 [INFO] __main__: ICE connection state: completed
+2024-11-01 12:28:05,150 [INFO] __main__: DataChannel is open
+2024-11-01 12:28:05,152 [INFO] __main__: Interacting with Connector
+2024-11-01 12:29:04,729 [INFO] __main__: Closed aiohttp session
+2024-11-01 12:29:04,730 [ERROR] asyncio: Task exception was never retrieved
+future: <Task finished name='Task-54' coro=<Client.interact_with_connector() done, defined at C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client1.py:262> exception=EOFError()>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client1.py", line 269, in interact_with_connector
+    choice = await aioconsole.ainput("Select an action: ")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioconsole\stream.py", line 297, in ainput
+    raise EOFError
+EOFError
+2024-11-01 12:29:04,754 [INFO] __main__: ICE connection state: closed
+2024-11-01 12:29:04,756 [ERROR] asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-98' coro=<TurnClientMixin.delete() running at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py:175>>
+2024-11-01 12:29:04,860 [ERROR] asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-94' coro=<RTCPeerConnection.close() running at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiortc\rtcpeerconnection.py:500> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2024-11-01 12:29:09,014 [INFO] __main__: DataChannel created, state: connecting
+2024-11-01 12:29:09,622 [INFO] __main__: Connected to signaling server
+2024-11-01 12:29:14,806 [INFO] __main__: Offer sent to connector
+2024-11-01 12:29:15,004 [INFO] __main__: Received answer from connector
+2024-11-01 12:29:15,005 [INFO] __main__: ICE connection state: checking
+2024-11-01 12:29:15,247 [ERROR] asyncio: Task exception was never retrieved
+future: <Task finished name='Task-28' coro=<TurnClientMixin.send_data() done, defined at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py:271> exception=TransactionFailed(Message(message_method=Method.CHANNEL_BIND, message_class=Class.ERROR, transaction_id=b'\xa6\xdf\xa2\xde\xfb9\xac\xe1S\x18\x8bP'))>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 290, in send_data
+    await self.channel_bind(channel, addr)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 111, in channel_bind
+    await self.request_with_retry(request)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 243, in request_with_retry
+    response, addr = await self.request(request)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 230, in request
+    return await transaction.run()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\stun.py", line 302, in run
+    return await self.__future
+           ^^^^^^^^^^^^^^^^^^^
+aioice.stun.TransactionFailed: STUN transaction failed (401 - )
+2024-11-01 12:30:19,147 [INFO] __main__: ICE connection state: failed
+2024-11-01 12:30:19,148 [ERROR] __main__: ICE connection failed, attempting reset
+2024-11-01 12:30:19,149 [INFO] __main__: ICE connection state: closed
+2024-11-01 12:30:19,204 [INFO] __main__: DataChannel created, state: connecting
+2024-11-01 12:30:19,795 [INFO] __main__: Connected to signaling server
+2024-11-01 12:30:24,968 [INFO] __main__: Offer sent to connector
+2024-11-01 12:30:25,349 [INFO] __main__: Received answer from connector
+2024-11-01 12:30:25,350 [INFO] __main__: ICE connection state: checking
+2024-11-01 12:30:25,595 [ERROR] asyncio: Task exception was never retrieved
+future: <Task finished name='Task-89' coro=<TurnClientMixin.send_data() done, defined at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py:271> exception=TransactionFailed(Message(message_method=Method.CHANNEL_BIND, message_class=Class.ERROR, transaction_id=b'\xfa\x8ei\xb8\xe3\x9e\xb4\xd8\x00{{\xc4'))>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 290, in send_data
+    await self.channel_bind(channel, addr)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 111, in channel_bind
+    await self.request_with_retry(request)
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 243, in request_with_retry
+    response, addr = await self.request(request)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\turn.py", line 230, in request
+    return await transaction.run()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioice\stun.py", line 302, in run
+    return await self.__future
+           ^^^^^^^^^^^^^^^^^^^
+aioice.stun.TransactionFailed: STUN transaction failed (401 - )
+2024-11-01 12:30:26,047 [INFO] __main__: ICE connection state: completed
+2024-11-01 12:30:26,814 [INFO] __main__: DataChannel is open
+2024-11-01 12:30:26,815 [INFO] __main__: Interacting with Connector
+2024-11-01 12:31:16,769 [INFO] __main__: Closed aiohttp session
+2024-11-01 12:31:16,770 [ERROR] asyncio: Task exception was never retrieved
+future: <Task finished name='Task-116' coro=<Client.interact_with_connector() done, defined at C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client1.py:262> exception=EOFError()>
+Traceback (most recent call last):
+  File "C:\Users\ASUS\OneDrive\Desktop\capstone1\ztatest1\client\client1.py", line 269, in interact_with_connector
+    choice = await aioconsole.ainput("Select an action: ")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aioconsole\stream.py", line 297, in ainput
+    raise EOFError
+EOFError
+2024-11-01 12:31:16,772 [INFO] __main__: Closed aiohttp session
+2024-11-01 12:31:16,773 [INFO] __main__: ICE connection state: closed
+2024-11-01 12:31:16,823 [ERROR] asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-143' coro=<RTCPeerConnection.close() running at C:\Users\ASUS\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiortc\rtcpeerconnection.py:500> wait_for=<Future finished result=True>>
+2024-11-01 12:31:16,826 [ERROR] asyncio: Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000205CB3D8150>
+2024-11-01 13:09:47,942 [INFO] __main__: DataChannel created, state: connecting
+2024-11-01 13:09:47,960 [INFO] __main__: Connected to signaling server
+2024-11-01 13:09:53,236 [INFO] __main__: Offer sent to connector
+2024-11-01 13:09:58,455 [INFO] __main__: Received answer from connector
+2024-11-01 13:09:58,458 [INFO] __main__: ICE connection state: checking
+2024-11-01 13:09:58,492 [INFO] __main__: ICE connection state: completed
+2024-11-01 13:09:58,505 [INFO] __main__: DataChannel is open
+2024-11-01 13:09:58,506 [INFO] __main__: Interacting with Connector

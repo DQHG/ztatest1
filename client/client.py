@@ -1,3 +1,5 @@
+# client.py
+
 import aioconsole
 import asyncio
 import json
@@ -8,7 +10,13 @@ import sys
 import platform
 import uuid
 from aiohttp import ClientSession
-from aiortc import RTCPeerConnection, RTCSessionDescription, RTCConfiguration, RTCIceServer
+from aiortc import (
+    RTCPeerConnection,
+    RTCSessionDescription,
+    RTCConfiguration,
+    RTCIceServer,
+    RTCIceCandidate
+)
 from .config import (
     SIGNALING_SERVER_URL,
     SSL_CERT_FILE,
@@ -35,58 +43,47 @@ class Client:
         self.dns_resolver = None
         self.protected_resources = PROTECTED_RESOURCES
         self.data_queues = {}
+        self.signaling = None
+        self.session = None
 
     async def run(self):
-        # self.start_dns_server()
         await self.reset_connection()
 
     async def reset_connection(self):
         if self.pc:
             await self.pc.close()
 
-        # Cấu hình STUN và TURN Server
+        # Cấu hình STUN Server
         ice_servers = [
-        RTCIceServer(urls=["stun:numb.viagenie.ca:3478"]),
-        RTCIceServer(urls=["stun:iphone-stun.strato-iphone.de:3478"]),
-        RTCIceServer(urls=["stun:s1.taraba.net:3478"]),
-        RTCIceServer(urls=["stun:s2.taraba.net:3478"]),
-        RTCIceServer(urls=["stun:stun.2talk.com:3478"]),
-        RTCIceServer(urls=["stun:stun.3clogic.com:3478"]),
-        RTCIceServer(urls=["stun:stun.alltel.com.au:3478"]),
-        RTCIceServer(urls=["stun:stun.altar.com.pl:3478"]),
-        RTCIceServer(urls=["stun:stun.avigora.com:3478"]),
-        RTCIceServer(urls=["stun:stun.arbuz.ru:3478"]),
-        RTCIceServer(urls=["stun:stun.a-mm.tv:3478"]),
-        RTCIceServer(urls=["stun:23.21.150.121:3478"]),
-        RTCIceServer(urls=["stun:stun.advfn.com:3478"]),
-        RTCIceServer(urls=["stun:stun.1und1.de:3478"]),
-        RTCIceServer(urls=["stun:stun.actionvoip.com:3478"]),
-        RTCIceServer(urls=["stun:stun.12connect.com:3478"]),
-        RTCIceServer(urls=["stun:stun.12voip.com:3478"]),
-        RTCIceServer(urls=["stun:stun.2talk.co.nz:3478"]),
-        RTCIceServer(urls=["stun:stun.aeta-audio.com:3478"]),
-        RTCIceServer(urls=["stun:stun.acrobits.cz:3478"]),
-        RTCIceServer(urls=["stun:stun.3cx.com:3478"]),
-        RTCIceServer(urls=["stun:stun.aa.net.uk:3478"]),
-        RTCIceServer(urls=["stun:stun.aeta.com:3478"]),
-        RTCIceServer(urls=["stun:stun.antisip.com:3478"]),
-        RTCIceServer(urls=["stun:stun.annatel.net:3478"])
-    ]
+    RTCIceServer(urls=["stun:stun.relay.metered.ca:80"]),
+    RTCIceServer(urls=["turn:global.relay.metered.ca:80"], username="1a711f473eae217627b45e19", credential="6eiugfMmKE1NW+Ex"),
+    RTCIceServer(urls=["turn:global.relay.metered.ca:80?transport=tcp"], username="1a711f473eae217627b45e19", credential="6eiugfMmKE1NW+Ex"),
+    RTCIceServer(urls=["turn:global.relay.metered.ca:443"], username="1a711f473eae217627b45e19", credential="6eiugfMmKE1NW+Ex"),
+    RTCIceServer(urls=["turns:global.relay.metered.ca:443?transport=tcp"], username="1a711f473eae217627b45e19", credential="6eiugfMmKE1NW+Ex")
+        ]
 
         configuration = RTCConfiguration(iceServers=ice_servers)
         self.pc = RTCPeerConnection(configuration)
 
         # Đăng ký sự kiện ICE và DataChannel
-        self.pc.on("iceconnectionstatechange", self.on_iceconnectionstatechange)
-        self.pc.on("icecandidate", self.on_icecandidate)
+        @self.pc.on("iceconnectionstatechange")
+        async def on_iceconnectionstatechange():
+            logger.info(f"ICE connection state: {self.pc.iceConnectionState}")
+            if self.pc.iceConnectionState == "failed":
+                logger.error("ICE connection failed, attempting reset")
+                await self.reset_connection()
+
+        @self.pc.on("datachannel")
+        def on_datachannel(channel):
+            self.channel = channel
+            logger.info("DataChannel is now open")
+            self.channel.on("message", self.on_datachannel_message)
 
         # Tạo DataChannel
         self.channel = self.pc.createDataChannel("data")
         logger.info("DataChannel created, state: %s", self.channel.readyState)
 
         self.channel.on("open", self.on_datachannel_open)
-        self.channel.on("close", lambda: logger.info("DataChannel closed"))
-        self.channel.on("error", lambda e: logger.error("DataChannel error: %s", e))
         self.channel.on("message", self.on_datachannel_message)
 
         # Kết nối với Signaling Server
@@ -97,63 +94,80 @@ class Client:
         ssl_context.load_cert_chain(SSL_CERT_FILE, SSL_KEY_FILE)
         ssl_context.check_hostname = False
 
-        async with ClientSession() as session:
-            async with session.ws_connect(f"{SIGNALING_SERVER_URL}?peer_id=client", ssl=ssl_context) as ws:
-                logger.info("Connected to signaling server")
+        self.session = ClientSession()  # Tạo session để kết nối signaling
+        try:
+            self.signaling = await self.session.ws_connect(f"{SIGNALING_SERVER_URL}?peer_id=client", ssl=ssl_context)
+            logger.info("Connected to signaling server")
 
-                # Tạo và gửi offer
-                offer = await self.pc.createOffer()
-                await self.pc.setLocalDescription(offer)
-                await ws.send_json({
-                    'sdp': self.pc.localDescription.sdp,
-                    'type': self.pc.localDescription.type,
-                    'target_id': 'connector'
-                })
-                logger.info("Offer sent to connector")
+            # Tạo và gửi offer
+            offer = await self.pc.createOffer()
+            await self.pc.setLocalDescription(offer)
+            await self.signaling.send_json({
+                'sdp': self.pc.localDescription.sdp,
+                'type': self.pc.localDescription.type,
+                'target_id': 'connector'
+            })
+            logger.info("Offer sent to connector")
 
-                # Nhận phản hồi từ signaling server
-                async for msg in ws:
-                    data = json.loads(msg.data)
-                    if data.get('sdp') and data.get('type') == 'answer':
-                        answer = RTCSessionDescription(sdp=data['sdp'], type=data['type'])
-                        await self.pc.setRemoteDescription(answer)
-                        logger.info("Received answer from connector")
-                    elif data.get('candidate'):
-                        await self.pc.addIceCandidate(data['candidate'])
-                        logger.info("Added ICE candidate from connector")
+            # Nhận phản hồi từ signaling server
+            await self.receive_signaling()
+        finally:
+            await self.cleanup()  # Đảm bảo dọn dẹp session sau khi kết nối hoàn tất
 
-                    # Kiểm tra trạng thái kết nối
-                    if self.pc.iceConnectionState == "connected":
-                        logger.info("ICE connection is established")
-                        break
+    async def receive_signaling(self):
+        async for msg in self.signaling:
+            data = json.loads(msg.data)
+            if data.get('sdp') and data.get('type') == 'answer':
+                answer = RTCSessionDescription(sdp=data['sdp'], type=data['type'])
+                await self.pc.setRemoteDescription(answer)
+                logger.info("Received answer from connector")
+            elif data.get('candidate'):
+                candidate = RTCIceCandidate(
+                    sdpMid=data['candidate']['sdpMid'],
+                    sdpMLineIndex=data['candidate']['sdpMLineIndex'],
+                    candidate=data['candidate']['candidate']
+                )
+                await self.pc.addIceCandidate(candidate)
+                logger.info("Added ICE candidate from connector")
+            elif data.get('peer_info'):
+                peer_info = data['peer_info']
+                logger.debug(f"Received peer_info: {peer_info}")
+                if 'ip' in peer_info and 'port' in peer_info:
+                    await self.punch_hole(peer_info)
+                else:
+                    logger.error("peer_info is missing 'ip' or 'port'")
+            else:
+                logger.warning("Unknown message from signaling server: %s", data)
 
-                asyncio.ensure_future(self.start_tcp_proxy_server())
-                await self.pc.waitClosed()
+        # Giữ kết nối
+        await self.pc.waitClosed()
 
-    async def on_iceconnectionstatechange(self):
-        logger.info(f"ICE connection state: {self.pc.iceConnectionState}")
-        if self.pc.iceConnectionState == "connected":
-            logger.info("ICE connection successfully established")
-        elif self.pc.iceConnectionState == "failed":
-            logger.error("ICE connection failed, attempting reset")
-            await self.reset_connection()
 
-    async def on_icecandidate(self, event):
-        if event.candidate and not self.filter_candidate(event.candidate):
-            logger.info("Filtered invalid candidate")
-        else:
-            logger.info("Valid ICE candidate: %s", event.candidate)
+    async def punch_hole(self, peer_info):
+        # Thực hiện UDP hole punching
+        peer_ip = peer_info.get('ip')
+        peer_port = peer_info.get('port')
+        logger.info(f"Punching hole to {peer_ip}:{peer_port}")
 
-    def filter_candidate(self, candidate):
-        # Loại trừ các địa chỉ không hợp lệ
-        invalid_ip_ranges = ['169.254', '127.0', '10.']
-        return any(candidate.candidate.startswith(ip) for ip in invalid_ip_ranges)
+        transport, protocol = await asyncio.get_event_loop().create_datagram_endpoint(
+            lambda: asyncio.DatagramProtocol(),
+            remote_addr=(peer_ip, peer_port)
+        )
+        transport.sendto(b'0', (peer_ip, peer_port))
+        await asyncio.sleep(1)
+        transport.close()
 
-    async def on_datachannel_open(self):
-        logger.info("DataChannel is now open")
+    async def cleanup(self):
+        # Đóng session khi không cần sử dụng nữa
+        if self.session:
+            await self.session.close()
+            logger.info("Closed aiohttp session")
+
+    def on_datachannel_open(self):
+        logger.info("DataChannel is open")
         asyncio.ensure_future(self.interact_with_connector())
 
-    async def on_datachannel_message(self, message):
+    def on_datachannel_message(self, message):
         response = json.loads(message)
         action = response.get('action')
         if action == 'data':
@@ -162,20 +176,13 @@ class Client:
             data = bytes.fromhex(data_hex)
             if session_id not in self.data_queues:
                 self.data_queues[session_id] = asyncio.Queue()
-            await self.data_queues[session_id].put(data)
+            asyncio.ensure_future(self.data_queues[session_id].put(data))
         elif action == 'close':
             session_id = response.get('session_id')
             if session_id in self.data_queues:
-                await self.data_queues[session_id].put(None)
+                asyncio.ensure_future(self.data_queues[session_id].put(None))
         else:
-            await self.handle_response(response)
-
-    def start_dns_server(self):
-        resolver = LocalDNSResolver(self.protected_resources)
-        self.dns_resolver = resolver
-        dns_thread = DNSResolverThread(resolver)
-        dns_thread.start()
-        logger.info("Local DNS server started")
+            asyncio.ensure_future(self.handle_response(response))
 
     async def start_tcp_proxy_server(self):
         server = await asyncio.start_server(self.handle_tcp_connection, '0.0.0.0', 0)
@@ -183,6 +190,74 @@ class Client:
         logger.info(f'TCP Proxy Server started on {addr}')
         async with server:
             await server.serve_forever()
+
+    async def handle_tcp_connection(self, reader, writer):
+        local_addr = writer.get_extra_info('sockname')
+        dest_ip = local_addr[0]
+        dest_port = local_addr[1]
+
+        # Tạo một session_id để theo dõi phiên làm việc
+        session_id = str(uuid.uuid4())
+
+        # Gửi yêu cầu đến Connector
+        request = {'action': 'proxy_connect', 'session_id': session_id}
+        self.channel.send(json.dumps(request))
+
+        # Chuyển tiếp dữ liệu giữa reader/writer và DataChannel
+        await self.proxy_data(reader, writer, session_id)
+
+    async def proxy_data(self, reader, writer, session_id):
+        logger.info(f"Starting proxy_data session {session_id}")
+
+        # Tạo các task để chuyển tiếp dữ liệu
+        tasks = [
+            asyncio.create_task(self.tcp_to_datachannel(reader, session_id)),
+            asyncio.create_task(self.datachannel_to_tcp(writer, session_id))
+        ]
+
+        await asyncio.wait(tasks)
+
+        logger.info(f"Closing proxy_data session {session_id}")
+        writer.close()
+
+    async def tcp_to_datachannel(self, reader, session_id):
+        try:
+            while True:
+                data = await reader.read(4096)
+                if not data:
+                    logger.info(f"TCP connection closed by remote host in session {session_id}")
+                    # Gửi thông báo kết thúc đến Connector
+                    message = {'action': 'close', 'session_id': session_id}
+                    self.channel.send(json.dumps(message))
+                    break
+                # Gửi dữ liệu qua DataChannel
+                message = {
+                    'action': 'data',
+                    'session_id': session_id,
+                    'data': data.hex()
+                }
+                self.channel.send(json.dumps(message))
+        except Exception as e:
+            logger.error(f"Error in tcp_to_datachannel: {e}")
+
+    async def datachannel_to_tcp(self, writer, session_id):
+        try:
+            while True:
+                # Chờ dữ liệu từ DataChannel
+                data = await self.get_data_from_queue(session_id)
+                if data is None:
+                    break
+                writer.write(data)
+                await writer.drain()
+        except Exception as e:
+            logger.error(f"Error in datachannel_to_tcp: {e}")
+
+    async def get_data_from_queue(self, session_id):
+        if session_id not in self.data_queues:
+            self.data_queues[session_id] = asyncio.Queue()
+        queue = self.data_queues[session_id]
+        data = await queue.get()
+        return data
 
     async def interact_with_connector(self):
         logger.info("Interacting with Connector")
